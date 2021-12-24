@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+		<title>Home - Dungeon Generation</title>
+        <link href="style.css" rel="stylesheet"/>
+        <link rel="icon" href="Resources/icon.png">
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    	<script src='script.js'></script>
+    </head>
+    <body>
+        <main class="content">
+            <img class="muteToggle hidden" src="Resources/Speaker_Icon.svg" alt="Speaker" onclick="toggleMute(this)"/> 
+            <img class="return" src="Resources/Caret.svg" alt="Caret" onclick="returnTop()"/> 
+            <video class="background" autoplay muted loop>
+                <source src="Resources/Main.mp4" type="video/mp4">
+            </video>
+            <section class="banner">
+                <h1 class="title">Dungeon Generation</h1>
+                <hr class="hidden">
+                <p class="subtext hidden">Algorithmic Approach to Generation</p>
+                <button class="enter">Click to Begin</button>  
+                <img class="arrow special" src="Resources/ArrowDown_Icon.svg" alt="Arrow Down">
+            </section>
+            <section class="information">
+                <article class="chapter" id="chapter1">
+                    <h2 class="title">The Building Blocks</h2>
+                    <p> 
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor 
+                        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+                        sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit 
+                        anim id est laborum. 
+                    </p>
+                    <img class="visual" src="Resources/rouge.png" alt="Rouge Game, 1980">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
+                        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+                        in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
+                        deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sunt in culpa qui officia 
+                        deserunt mollit anim est laborum.
+                    </p>
+                    <img class="arrow hidden" src="Resources/ArrowDown_Icon.svg" alt="Arrow Down"/>
+                </article>
+                <article class="chapter" id="chapter2">
+                    <h2 class="title">Procedural Generation</h2>
+                    <p> 
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor 
+                        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+                        sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit 
+                        anim id est laborum. 
+                    </p>
+                    <img class="visual" src="Resources/procedural.gif" alt="Visualised Procedural Generation">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
+                        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+                        in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
+                        deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sunt in culpa qui officia 
+                        deserunt mollit anim est laborum.
+                    </p>
+                    <br>
+                    <img class="arrow hidden" src="Resources/ArrowDown_Icon.svg" alt="Arrow Down"/>
+                </article>
+                <article class="chapter" id="chapter3">
+                    <h2 class="title">Constructive Generation</h2>
+                    <p> 
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor 
+                        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+                        sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit 
+                        anim id est laborum. 
+                    </p>
+                    <img class="visual" src="Resources/constructive.gif" alt="Visualised Constructive Generation">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
+                        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+                        in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
+                        deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sunt in culpa qui officia 
+                        deserunt mollit anim est laborum.
+                    </p>
+                    <img class="arrow hidden" src="Resources/ArrowDown_Icon.svg" alt="Arrow Down"/>
+                </article>
+                <article class="chapter" id="chapter4">
+                    <h2 class="title">Benefits of Random Generation</h2>
+                    <p> 
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor 
+                        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+                        sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit 
+                        anim id est laborum. 
+                    </p>
+                    <video class="visual" autoplay muted loop>
+                        <source src="Resources/benefits.mp4" type="video/mp4">
+                    </video>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
+                        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+                        in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
+                        deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sunt in culpa qui officia 
+                        deserunt mollit anim est laborum.
+                    </p>
+                    <img class="arrow hidden" src="Resources/ArrowDown_Icon.svg" alt="Arrow Down"/>
+                </article>
+                <article class="chapter" id="chapter5">
+                    <h2 class="title">Generation Implementation</h2>
+                    <p>
+                        For this example, procedural generation will be applied and implemented using C# and the game engine <a href="https://unity.com/" target="_blank">Unity</a>.</p>
+                    <p>
+                        While dungeon generation can be implemented in a multitude of ways, in order to properly grasp the understanding required to create a 
+                        visually appealing and functional system, the desired outcome must be well designed and reproducable. For this implementation, a set of 
+                        rules or design specs will act as the 'floorplan' for the generation algorithim to replicate and follow. These rules create a boundary as 
+                        a way to shape the Algorithim and hold back the system from falling to infinite loops and infinite generation.
+                    </p>
+                    <p class="listTitle">
+                        These set of rules can be stated as:
+                    </p>
+                    <ul>
+                        <li>2D array initialized to act as a Grid for the dungeon.</li>
+                        <li>Place the "Spawn room" in the middle of the (grid. grid.length / 2)</li>
+                        <li>Update and get list of active neighbouring cells in the grid.</li>
+                        <li>Determine neighbour cells by adding +1/-1 to x or y axis of the selected cell.</li>
+                        <li>If neighbour cell is occupied, fail attempt.</li>
+                        <li>If neighbour cell has more than 1 already occupied neighbour, fail attempt.</li>
+                        <li>If the max amount of rooms have been created, fail attempt.</li>
+                        <li>Rooms have a 50% spawn rate.</li>
+                        <li>Spawn rate check, if true, add neighbour cell to active list.</li>
+                        <li>Repeat 3-9 till the max amount of rooms have been created.</li>
+                    </ul>
+                    <p>
+                        While these rules may govern the generation for the default floorplan and "Normal rooms", we also have the ability to add more variety and 
+                        and instill a sense of wonder and exploration by adding "Special rooms". These special rooms will have separate rules applied along with unique 
+                        functionality. These special rooms typically take the form of hidden loot rooms, boss rooms, shops, or even challenge rooms. For this implementation 
+                        however, only a shop room and boss room will be added.
+                    </p>
+                    <ul>
+                        <li>Special rooms have a 25% spawn rate.</li>
+                        <li>Special rooms cannot be connected to the spawn room. Cannot be within a +/- 2 radius to the spawn room.</li>
+                        <li>The "Boss room" must spawn on the outskirts of the generated cells in the grid. A max neighbours of 1 is allowed.</li>
+                        <li>The "Shop room" must spawn where there is a connection of 2-3 neighbouring rooms.</li>
+                    </ul>   
+                    <p><a href="Resources/DungeonGeneration.cs" target="_blank">Click to access code.</a></p>
+                </article>
+            </section>  
+        </main>
+    </body>
+</html>

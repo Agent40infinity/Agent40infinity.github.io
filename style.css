@@ -1,0 +1,182 @@
+@font-face {
+    font-family: 'Perpetua';
+    src: url('Resources/Fonts/per_____.ttf') format('truetype');
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    background-color: black;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.special {
+    opacity: 0;
+    display: none;
+}
+
+.muteToggle {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    height: 25px;
+    width: 25px;
+    filter: invert(100%);
+}
+
+video.background {
+    position: absolute;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    height: auto;
+    z-index: -1;
+}
+
+.banner {
+    margin-top: 200px;
+    text-align: center;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.623);
+    padding-top: 75px;
+	padding-bottom: 75px;
+}
+
+.title {
+    font-family: 'Perpetua';
+    font-size: 48px;
+}
+
+.subtext {
+    font-family: 'Perpetua';
+    font-size: 36px;
+}
+
+.define {
+    font-family: 'Perpetua';
+    font-size: 28px;
+    word-wrap: normal;
+    margin: 28px 20% 28px 20%;
+}
+
+.enter {
+    font-size: 24px;
+    padding: 5px 10px 5px 10px;
+    color: white;
+    background-color: black;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border: solid 1px white;
+    border-radius: 8px;
+}
+
+.enter:hover {
+    background-color: white;
+    color: black;
+    border-color: black;
+  }
+
+hr {
+    width: 0;
+    overflow: hidden;
+    border-bottom: solid 4px white;
+    border-top-width: 0px;
+}
+
+.arrow {
+    display: inline-block;
+    transform: scale(1.5);
+    filter: invert(100%);
+}
+
+.arrow:hover {
+    filter: invert(71%) sepia(3%) saturate(25%) hue-rotate(332deg) brightness(89%) contrast(97%);
+}
+
+.information {
+    padding: 10% 0px 10% 0px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.623);
+    display: none;
+}
+
+.chapter {
+    width: 80%;
+    text-align: center;
+    display: inline-block;
+    margin: 400px 10% 400px 10%;
+}
+
+.chapter p {
+    font-family: 'Perpetua';
+    font-size: 22px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.chapter#chapter5 p {
+    text-align: left;
+}
+
+.visual {
+    max-height: 200px;
+}
+
+a {
+    font-family: 'Perpetua';
+    font-size: 22px;
+    color: rgb(179, 179, 179);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(107, 107, 107);
+}
+
+a:active {
+    color: rgb(179, 179, 179);
+}
+
+ul {
+    text-align: left;
+    font-family: 'Perpetua';
+    font-size: 22px;
+}
+
+.chapter p.listTitle {
+    text-align: left;
+}
+
+.return {
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    height: 25px;
+    width: 25px;
+    color: white;
+    filter: invert(100%);
+    border-radius: 4px;
+    background-color: rgb(107, 107, 107);
+}
+
+.return:hover {
+    background-color: rgb(179, 179, 179);
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: rgb(179, 179, 179);
+    border-radius: 12px;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(107, 107, 107);
+}
