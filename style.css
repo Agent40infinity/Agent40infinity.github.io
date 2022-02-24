@@ -4,6 +4,7 @@
 }
 
 body {
+    font-family: 'Perpetua';
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
@@ -26,6 +27,7 @@ body {
     height: 25px;
     width: 25px;
     filter: invert(100%);
+    z-index: 5;
 }
 
 video.background {
@@ -35,6 +37,50 @@ video.background {
     min-height: 100%;
     height: auto;
     z-index: -1;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 50px;
+    background-color: rgba(0, 0, 0);
+    padding-top: 25px;
+    padding-bottom: 25px;
+    opacity: 0;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+header a:hover {
+    color: white;
+}
+
+header a:active {
+    color: white;
+}
+
+.nav-title.nav-item {
+    text-align: center;
+}
+
+.nav-menu.nav-item {
+
+}
+
+.menu {
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    filter: invert(100%);
+}
+
+.menu:hover {
+    filter: invert(71%) sepia(3%) saturate(25%) hue-rotate(332deg) brightness(89%) contrast(97%);
 }
 
 .banner {
@@ -47,17 +93,14 @@ video.background {
 }
 
 .title {
-    font-family: 'Perpetua';
     font-size: 48px;
 }
 
 .subtext {
-    font-family: 'Perpetua';
     font-size: 36px;
 }
 
 .define {
-    font-family: 'Perpetua';
     font-size: 28px;
     word-wrap: normal;
     margin: 28px 20% 28px 20%;
@@ -112,7 +155,6 @@ hr {
 }
 
 .chapter p {
-    font-family: 'Perpetua';
     font-size: 22px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -126,24 +168,8 @@ hr {
     max-height: 200px;
 }
 
-a {
-    font-family: 'Perpetua';
-    font-size: 22px;
-    color: rgb(179, 179, 179);
-    text-decoration: none;
-}
-
-a:hover {
-    color: rgb(107, 107, 107);
-}
-
-a:active {
-    color: rgb(179, 179, 179);
-}
-
 ul {
     text-align: left;
-    font-family: 'Perpetua';
     font-size: 22px;
 }
 
@@ -162,6 +188,7 @@ ul {
     filter: invert(100%);
     border-radius: 4px;
     background-color: rgb(107, 107, 107);
+    z-index: 5;
 }
 
 .return:hover {

@@ -12,15 +12,19 @@ $(document).ready(function()
         $('.enter').animate({opacity: 0}, 1000);
 
         setTimeout(function() {
-            $('.subtext').animate({opacity: 0}, 1000);
+            $('.title').fadeOut(1000);
+            $('.subtext').fadeOut(1000);
+
             setTimeout(function() {
-                $('.subtext').replaceWith(
-                    '<p class="define hidden">"A process or set of rules to be followed in calculations or other problem-solving operations, especially by a computer."</p>'
-                );
+                /*$('.subtext').replaceWith(
+                '<p class="define hidden">"A process or set of rules to be followed in calculations or other problem-solving operations, especially by a computer."</p>'
+                );*/
+                $('header').animate({width: '100%', opacity: 1}, 2000);
+                $('.background').animate({top: "100px"}, 1000);
                 $('.enter').fadeOut(0);
                 $('.special').css("display" , "inline-block");
                 $('.define').animate({opacity: 1}, 2000);
-                
+                    
                 setTimeout(function() {
                     $('.arrow').animate({opacity: 1}, 1500);
                     $('.information').fadeIn(2000);
