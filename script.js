@@ -72,11 +72,11 @@ $(document).ready(function()
 function toggleMute(img) {
     if (audio.muted)  {
         audio.muted = false;
-        img.src="Resources/Speaker_Icon.svg";
+        img.src="Resources/SVGs/Speaker_Icon.svg";
     }
     else {
         audio.muted = true;
-        img.src="Resources/Mute_Icon.svg";
+        img.src="Resources/SVGs/Mute_Icon.svg";
     }
 }
 
