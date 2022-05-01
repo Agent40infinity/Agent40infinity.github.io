@@ -1,6 +1,17 @@
 var audio = new Audio('Resources/landing.mp3');
 var animateFrom = 200;
 
+const database = [
+    {
+        title: "Dark Light",
+        description: "Dark Light is dark fantasy 2D metroidvania indie development Project that takes heavily inspiration from Hollow Knight and the Soulsbourne Series.",
+    },
+    {
+        title: "Bright",
+        description: "Bright is a top down, 2D horror dungeon crawler",
+    },
+];
+
 window.onbeforeunload = function () {
     window.scrollTo(0,0);
 };
@@ -34,6 +45,18 @@ $(document).ready(function()
             }, 1000);
         }, 3500);
     });
+
+    for (var i = 0; i < database.length; i++)
+    {
+        var inject = '<div class="project-item">' + 
+                     '<p>' + database[i].title + '</p>' +
+                     '<p>' + database[i].description + '</p>' 
+                     + '</div>';
+
+        $('.professional-work.inject-data').append(
+            inject
+        );
+    }
 
     $(window).scroll(function() {
         var screenTop = $(window).scrollTop();
