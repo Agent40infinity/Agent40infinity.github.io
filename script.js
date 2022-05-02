@@ -1,14 +1,20 @@
 var audio = new Audio('Resources/landing.mp3');
 var animateFrom = 200;
 
-const database = [
+const professional = [
     {
         title: "Dark Light",
-        description: "Dark Light is dark fantasy 2D metroidvania indie development Project that takes heavily inspiration from Hollow Knight and the Soulsbourne Series.",
+        image: "Resources/Database/test.jpg",
+        description: "Dark Light is a 2D metroidvania inspirated by Hollow Knight and the Soulsbourne Series.",
+        key: ["Velocity-based 2D physics controller", "Player state machine", "Dynamic save system using Json.NET"],
+        utility: ["Unity", "C#", "ShaderCore", "Indie"],
     },
     {
         title: "Bright",
+        image: "Resources/Database/test.jpg",
         description: "Bright is a top down, 2D horror dungeon crawler",
+        key: ["Procedural Dungeon Generation", "Custom Dungeon Camera", "Dynamic game events", "From scratch, A* styled pathfinding"],
+        utility: ["Unity", "C#", "University"],
     },
 ];
 
@@ -46,17 +52,9 @@ $(document).ready(function()
         }, 3500);
     });
 
-    for (var i = 0; i < database.length; i++)
-    {
-        var inject = '<div class="project-item">' + 
-                     '<p>' + database[i].title + '</p>' +
-                     '<p>' + database[i].description + '</p>' 
-                     + '</div>';
-
-        $('.professional-work.inject-data').append(
-            inject
-        );
-    }
+    loadData(professional, "professional");
+    loadData(professional, "personal");
+    
 
     $(window).scroll(function() {
         var screenTop = $(window).scrollTop();
@@ -105,4 +103,41 @@ function toggleMute(img) {
 
 function returnTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function loadData(database, type) {
+    for (var i = 0; i < database.length; i++)
+    {
+        var utility = "";
+        for (var k = 0; k < database[i].utility.length; k++)
+        {
+            utility += '<span class="project-utility-item">' + database[i].utility[k] + '</span>';
+        }
+
+        var key = "<p class=project-list-key>Notable Contributions:</p>";
+        for (var j = 0; j < database[i].key.length; j++)
+        {
+            key += '<p class="project-list-key">- ' + database[i].key[j] + '</p>';
+        }
+
+        var inject = '<div class="project-item">' + 
+                        '<div class="project-header">' +
+                            '<img class="project-img" src="' + database[i].image + '" alt="project-item-' + database[i].title + '-image"/>' +
+                            '<p class="project-title">' + database[i].title + '</p>' +
+                        '</div>' +
+                        '<div class="project-utility">' +
+                            utility +
+                        '</div>' +
+                        '<div class="project-info">' +
+                            '<p class="project-description">' + database[i].description + '</p>' +
+                            '<div class="project-list">' +
+                                key +
+                            '</div>' +
+                        '</div>' +
+                    '</div>';
+
+        $('.' + type + '-work.inject-data').append(
+            inject
+        );
+    }
 }
