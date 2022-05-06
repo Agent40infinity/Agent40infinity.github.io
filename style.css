@@ -199,14 +199,15 @@ hr {
     margin: 400px 10% 400px 10%;
 }
 
+#chapter2, #chapter3 {
+    width: 100%;
+    margin: 400px 0px 400px 0px;
+}
+
 .chapter .about {
     font-size: 22px;
     padding-top: 10px;
     padding-bottom: 10px;
-}
-
-.chapter#chapter5 p {
-    text-align: left;
 }
 
 .visual {
@@ -224,6 +225,7 @@ ul {
 
 .project-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     margin: 30px;
 }   
@@ -279,13 +281,15 @@ ul {
 }
 
 .project-utility {
-    text-align: left;
-    padding: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    padding: 7px 12px 12px 12px;
 }
 
 .project-utility-item {
     padding: 5px 15px 5px 15px;
-    margin: 0px 5px 0px 5px;
+    margin: 5px 5px 0px 5px;
     border-radius: 5px;
     background-color: rgb(45, 45, 45)
 }

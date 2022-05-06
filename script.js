@@ -10,11 +10,28 @@ const professional = [
         utility: ["Unity", "C#", "ShaderCore", "Indie"],
     },
     {
+        title: "Untitled Statistics Project",
+        image: "Resources/Database/test.jpg",
+        description: "Bright is a top down, 2D horror dungeon crawler",
+        key: [""],
+        utility: ["Unity", "C#", "Work-Experience", "University"],
+    },
+    {
         title: "Bright",
         image: "Resources/Database/test.jpg",
         description: "Bright is a top down, 2D horror dungeon crawler",
         key: ["Procedural Dungeon Generation", "Custom Dungeon Camera", "Dynamic game events", "From scratch, A* styled pathfinding"],
         utility: ["Unity", "C#", "University"],
+    },
+];
+
+const personal = [
+    {
+        title: "Agent40",
+        image: "Resources/Database/test.jpg",
+        description: "Alias used for content creation, game development, gaming, and general use during my lifetime",
+        key: [],
+        utility: ["Youtube", "Twitch", "Content Creator"],
     },
 ];
 
@@ -53,7 +70,7 @@ $(document).ready(function()
     });
 
     loadData(professional, "professional");
-    loadData(professional, "personal");
+    loadData(personal, "personal");
     
 
     $(window).scroll(function() {
@@ -114,10 +131,14 @@ function loadData(database, type) {
             utility += '<span class="project-utility-item">' + database[i].utility[k] + '</span>';
         }
 
-        var key = "<p class=project-list-key>Notable Contributions:</p>";
-        for (var j = 0; j < database[i].key.length; j++)
+        var key = "";
+        if (database[i].key.length != 0)
         {
-            key += '<p class="project-list-key">- ' + database[i].key[j] + '</p>';
+            key = "<p class=project-list-key>Notable Contributions:</p>";
+            for (var j = 0; j < database[i].key.length; j++)
+            {
+                key += '<p class="project-list-key">- ' + database[i].key[j] + '</p>';
+            }
         }
 
         var inject = '<div class="project-item">' + 
