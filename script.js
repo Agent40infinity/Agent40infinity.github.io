@@ -1,5 +1,9 @@
 var audio = new Audio('Resources/landing.mp3');
-var animateFrom = 200;
+var animateTop = 200;
+var animateHeader = 400;
+var toggle = false;
+var lastVolume = 0;
+var conversion = 250;
 
 const professional = [
     {
@@ -10,11 +14,35 @@ const professional = [
         utility: ["Unity", "C#", "ShaderCore", "Indie"],
     },
     {
-        title: "Bright",
+        title: "Untitled Statistics Project",
         image: "Resources/Database/test.jpg",
-        description: "Bright is a top down, 2D horror dungeon crawler",
+        description: "Gamification visual novel created for Central Queensland University apart of a internship program at Macquarie University",
+        key: ["Lead Programmer", "Custom Dynamic Dialogue System", "Framework creates game content based on .json files", "Completely modifiable w/o additional programming"],
+        utility: ["Unity", "C#", "Work-Experience", "University"],
+    },
+    {
+        title: "Bright",    
+        image: "Resources/Database/test.jpg",
+        description: "Bright is a top down, 2D horror dungeon crawler.",
         key: ["Procedural Dungeon Generation", "Custom Dungeon Camera", "Dynamic game events", "From scratch, A* styled pathfinding"],
         utility: ["Unity", "C#", "University"],
+    },
+];
+
+const personal = [
+    {
+        title: "Utilities Project",
+        image: "Resources/Database/test.jpg",
+        description: "A dynamic unity template created with the explicit purpose of being used as a base for all future projects.",
+        key: ["Asynchronous scene loading", "Modular save system", "Custom keybinding using .json save/loading"],
+        utility: ["Unity", "C#"],
+    },
+    {
+        title: "Agent40",
+        image: "Resources/Database/test.jpg",
+        description: "Alias used for content creation, game development, gaming, and general use during my lifetime.",
+        key: [],
+        utility: ["Youtube", "Twitch", "Content Creator"],
     },
 ];
 
@@ -25,8 +53,9 @@ window.onbeforeunload = function () {
 $(document).ready(function() 
 {
     $(".enter").one("click", function () {
-        //audio.play();
-        //audio.volume = 0.4;
+        audio.play();
+        audio.loop = true;
+        audio.volume = 0.4;
 
         $('.hidden').not('hr').animate({opacity: 1}, 3000);
         $('hr.hidden').animate({width: '40%', opacity: 1}, 2000);
@@ -37,7 +66,8 @@ $(document).ready(function()
 
             setTimeout(function() {
                 $('header').animate({width: '100%', opacity: 1}, 2000);
-                $('.muteToggle').fadeIn(2000);
+                $('.volume-container').fadeIn(2000);
+                $('.volume-container').css({display: "flex"});
                 $('.background').animate({top: "505px"}, 1000);
                 $('.enter').fadeOut(0);
                 $('.define').animate({opacity: 1}, 2000);
@@ -47,23 +77,32 @@ $(document).ready(function()
                     $('.information').fadeIn(2000);
                     $('footer').fadeIn(2000);
                     $('body').css("overflow-y" , "visible");
-                }, 4000);
+                }, 200);
             }, 1000);
         }, 3500);
     });
 
     loadData(professional, "professional");
-    loadData(professional, "personal");
+    loadData(personal, "personal");
     
 
     $(window).scroll(function() {
         var screenTop = $(window).scrollTop();
 
-        if (screenTop >= animateFrom) { 
+        if (screenTop >= animateTop) { 
             $('.return').fadeIn(200);
         } 
         else {    
             $('.return').fadeOut(200);
+        }
+
+        if (screenTop >= animateHeader)
+        {
+            $('header').css({"background-color": "rgba(0, 0, 0, 0.7)", "transition": "0.2s"});
+        }
+        else
+        {
+            $('header').css({"background-color": "rgba(0, 0, 0, 1)", "transition": "0.2s"});
         }
     });
 
@@ -88,21 +127,76 @@ $(document).ready(function()
     $(".comments").on("click", function() {
         window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
     });
+
+    $(".muteToggle").mouseover(function () { 
+        $(".slide-hide").fadeIn(200);
+    });
+
+    $(".volume-container").mouseleave(function () { 
+        $(".slide-hide").fadeOut(200);
+    });
+
+    volume = document.getElementById("slider");
+    volume.oninput = function() {
+        value = document.getElementById("slider-value");
+        value.innerHTML = slider.value;
+        audio.volume = slider.value / conversion;
+        $(this + '::-webkit-slider-runnable-track').css("background", "linear-gradient(to right, green 0%, green "+this.value +"%, #fff " + this.value + "%, white 100%)");
+    }
 });
+
+function lastAudio(toggle) {
+    switch (toggle)
+    {
+        case true:
+            audio.volume = lastVolume;
+            break;
+        case false:
+            lastVolume = audio.volume;
+            audio.volume = 0;
+            break;
+    }
+
+    value = document.getElementById("slider-value");
+    value.innerHTML = audio.volume * conversion;
+    slider = document.getElementById("slider");
+    slider.value = audio.volume * conversion;
+}
 
 function toggleMute(img) {
     if (audio.muted)  {
         audio.muted = false;
+        lastAudio(true);
         img.src="Resources/SVGs/Speaker_Icon.svg";
     }
     else {
         audio.muted = true;
+        lastAudio(false);
         img.src="Resources/SVGs/Mute_Icon.svg";
     }
 }
 
 function returnTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function scrollChapter(chapter) {
+    $([document.documentElement, document.body]).animate({scrollTop: $("#chapter" + chapter).offset().top - 125}, 1000);
+}
+
+function toggleMenu() {
+    switch (toggle)
+    {
+        case false:
+            document.getElementById("ham-nav").style.width="600px";
+            toggle = true;
+            break;
+        case true:
+            document.getElementById("ham-nav").style.width="0px";
+            toggle = false;
+            break;
+    }
+
 }
 
 function loadData(database, type) {
@@ -114,10 +208,14 @@ function loadData(database, type) {
             utility += '<span class="project-utility-item">' + database[i].utility[k] + '</span>';
         }
 
-        var key = "<p class=project-list-key>Notable Contributions:</p>";
-        for (var j = 0; j < database[i].key.length; j++)
+        var key = "";
+        if (database[i].key.length != 0)
         {
-            key += '<p class="project-list-key">- ' + database[i].key[j] + '</p>';
+            key = "<p class=project-list-key>Notable Contributions:</p>";
+            for (var j = 0; j < database[i].key.length; j++)
+            {
+                key += '<p class="project-list-key">- ' + database[i].key[j] + '</p>';
+            }
         }
 
         var inject = '<div class="project-item">' + 
