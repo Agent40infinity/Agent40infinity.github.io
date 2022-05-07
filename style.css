@@ -23,19 +23,64 @@ hr {
     margin: auto;
 }
 
-.muteToggle {
+.volume-container {
     display: none;
-    position: absolute;
-    top: 115px;
-    left: 5px;
+    position: absolute; 
+    justify-content: left;
+    top: 110px;
+    left: 0px;
+    width: 400px;
+    padding: 5px;
+    z-index: 11;
+}
+
+.volume-container p {
+    color: white;
+    font-size: 20px;
+    padding: 7px 5px 3px 5px;
+    text-align: center;
+}
+
+.muteToggle {
     height: 25px;
     width: 25px;
+    padding: 5px;
     filter: invert(100%);
     z-index: 5;
+    cursor: pointer;
 }
 
 .muteToggle:hover {
     filter: invert(71%) sepia(3%) saturate(25%) hue-rotate(332deg) brightness(89%) contrast(97%);
+}
+
+.slide-hide {
+    display: none;
+}
+
+.slider[type=range]{
+    -webkit-appearance: none;
+    background: none;
+    padding: 0px 10px 0 10px;
+}
+
+.slider[type=range]::-webkit-slider-runnable-track {
+    width: 260px;
+    height: 6px;
+    background: white;
+    border: none;
+    border-radius: 3px;
+}
+
+.slider[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    transform: translateY(-30%);
+    background: rgb(179, 179, 179);
+    cursor: pointer;
 }
 
 video.background {
@@ -51,6 +96,8 @@ video.background {
 header {
     position: fixed;
     height: 50px;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: rgba(0, 0, 0);
     padding-top: 30px;
     padding-bottom: 30px;
@@ -98,19 +145,51 @@ header hr {
     height: 25px;
     width: 25px;
     filter: invert(100%);
+    cursor: pointer;
 }
 
 .comments:hover {
     filter: invert(71%) sepia(3%) saturate(25%) hue-rotate(332deg) brightness(89%) contrast(97%);
 }
-
+  
 .menu {
     height: 25px;
     width: 25px;
     filter: invert(100%);
+    cursor: pointer;
 }
 
 .menu:hover {
+    filter: invert(71%) sepia(3%) saturate(25%) hue-rotate(332deg) brightness(89%) contrast(97%);
+}
+
+.hamburger-nav {
+    position: fixed;
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 0px;
+    background-color: rgb(26, 26, 26);
+    z-index: 9;
+    padding-top: 135px;
+    overflow-x: hidden;
+    transition: all 0.5s;
+}
+
+.hamburger-nav a {
+    width: 50%;
+    padding: 10px 15px 10px 15px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block;
+    cursor: pointer;
+}
+
+.hamburger-nav a:hover {
     filter: invert(71%) sepia(3%) saturate(25%) hue-rotate(332deg) brightness(89%) contrast(97%);
 }
 
@@ -171,6 +250,7 @@ hr {
     display: inline-block;
     transform: scale(1.5);
     filter: invert(100%);
+    cursor: pointer;
 }
 
 .arrow:hover {
@@ -317,6 +397,7 @@ footer {
     padding: 10px 20px 10px 20px;
     margin-bottom: 0px;
     filter: invert(100%);
+    cursor: pointer;
 }
 
 .socials:hover {
