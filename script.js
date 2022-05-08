@@ -22,7 +22,7 @@ const professional = [
     },
     {
         title: "Bright",    
-        image: "Resources/Database/test.jpg",
+        image: "Resources/Database/Bright.jpg",
         description: "Bright is a top down, 2D horror dungeon crawler.",
         key: ["Procedural Dungeon Generation", "Custom Dungeon Camera", "Dynamic game events", "From scratch, A* styled pathfinding"],
         utility: ["Unity", "C#", "University"],
@@ -39,7 +39,7 @@ const personal = [
     },
     {
         title: "Agent40",
-        image: "Resources/Database/test.jpg",
+        image: "Resources/Database/Agent40.jpg",
         description: "Alias used for content creation, game development, gaming, and general use during my lifetime.",
         key: [],
         utility: ["Youtube", "Twitch", "Content Creator"],
@@ -53,7 +53,7 @@ window.onbeforeunload = function () {
 $(document).ready(function() 
 {
     $(".enter").one("click", function () {
-        audio.play();
+        //  audio.play();
         audio.loop = true;
         audio.volume = 0.4;
 
@@ -141,7 +141,7 @@ $(document).ready(function()
         value = document.getElementById("slider-value");
         value.innerHTML = slider.value;
         audio.volume = slider.value / conversion;
-        $(this + '::-webkit-slider-runnable-track').css("background", "linear-gradient(to right, green 0%, green "+this.value +"%, #fff " + this.value + "%, white 100%)");
+        updateProgress();
     }
 });
 
@@ -163,6 +163,15 @@ function lastAudio(toggle) {
     slider.value = audio.volume * conversion;
 }
 
+function updateProgress() {
+    for (let e of document.querySelectorAll('input[type="range"].slider-progress')) {
+        e.style.setProperty('--value', e.value);
+        e.style.setProperty('--min', e.min == '' ? '0' : e.min);
+        e.style.setProperty('--max', e.max == '' ? '100' : e.max);
+        e.addEventListener('input', () => e.style.setProperty('--value', e.value));
+    }
+}
+
 function toggleMute(img) {
     if (audio.muted)  {
         audio.muted = false;
@@ -174,6 +183,8 @@ function toggleMute(img) {
         lastAudio(false);
         img.src="Resources/SVGs/Mute_Icon.svg";
     }
+
+    updateProgress();
 }
 
 function returnTop() {
