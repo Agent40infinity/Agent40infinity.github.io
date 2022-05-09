@@ -8,18 +8,18 @@ var conversion = 250;
 const professional = [
     {
         title: "Dark Light",
-        image: "Resources/Database/test.jpg",
+        image: "Resources/Database/DarkLight.jpg",
         description: "Dark Light is a 2D metroidvania inspirated by Hollow Knight and the Soulsbourne Series.",
         key: ["Velocity-based 2D physics controller", "Player state machine", "Dynamic save system using Json.NET"],
         utility: ["Unity", "C#", "ShaderCore", "Indie"],
     },
     {
         title: "Untitled Statistics Project",
-        image: "Resources/Database/test.jpg",
+        image: "Resources/Database/Statistics.jpg",
         description: "Gamification visual novel created for Central Queensland University apart of a internship program at Macquarie University",
         key: ["Lead Programmer", "Custom Dynamic Dialogue System", "Framework creates game content based on .json files", "Completely modifiable w/o additional programming"],
         utility: ["Unity", "C#", "Work-Experience", "University"],
-    },
+    },  
     {
         title: "Bright",    
         image: "Resources/Database/Bright.jpg",
@@ -32,7 +32,7 @@ const professional = [
 const personal = [
     {
         title: "Utilities Project",
-        image: "Resources/Database/test.jpg",
+        image: "Resources/Database/Untitled.jpg",
         description: "A dynamic unity template created with the explicit purpose of being used as a base for all future projects.",
         key: ["Asynchronous scene loading", "Modular save system", "Custom keybinding using .json save/loading"],
         utility: ["Unity", "C#"],
