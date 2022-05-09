@@ -157,9 +157,9 @@ header hr {
 
 .hamburger-nav a {
     width: 50%;
-    padding: 10px 15px 10px 15px;
+    padding: 15px; /* 15px 15px 10px 15px; */
     text-decoration: none;
-    font-size: 20px;
+    font-size: 24px; /* 20px */
     color: white;
     display: block;
     cursor: pointer;
