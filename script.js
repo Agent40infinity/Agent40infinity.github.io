@@ -14,7 +14,7 @@ const professional = [
         utility: ["Unity", "C#", "ShaderCore", "Indie"],
     },
     {
-        title: "Untitled Statistics Project",
+        title: "CQU Statistics Project",
         image: "Resources/Database/Statistics.jpg",
         description: "Gamification visual novel created for Central Queensland University apart of a internship program at Macquarie University",
         key: ["Lead Programmer", "Custom Dynamic Dialogue System", "Framework creates game content based on .json files", "Completely modifiable w/o additional programming"],
@@ -34,8 +34,22 @@ const personal = [
         title: "Utilities Project",
         image: "Resources/Database/Untitled.jpg",
         description: "A dynamic unity template created with the explicit purpose of being used as a base for all future projects.",
-        key: ["Asynchronous scene loading", "Modular save system", "Custom keybinding using .json save/loading"],
+        key: ["Asynchronous scene loading", "Modular save system", "Custom Event-based Input System"],
         utility: ["Unity", "C#"],
+    },
+    {
+        title: "Pokémon SoulSilver Remake",
+        image: "Resources/Database/SoulSilver.jpg",
+        description: "A faithful remake of the 4th generation Pokémon titles, SoulSilver & HeartGold. Please don't sue me Nintendo.",
+        key: [],
+        utility: ["Unity", "C#", "Remake"],
+    },
+    {
+        title: "Final Fantasy: Brave Exvius Battle System",
+        image: "Resources/Database/FinalFantasy.jpg",
+        description: "A recreation of the FFBE Battle System created for a major project during my HSC.",
+        key: [],
+        utility: ["Greenfoot", "Java", "Remake"],
     },
     {
         title: "Agent40",
@@ -53,7 +67,7 @@ window.onbeforeunload = function () {
 $(document).ready(function() 
 {
     $(".enter").one("click", function () {
-        //  audio.play();
+        audio.play();
         audio.loop = true;
         audio.volume = 0.4;
 
@@ -84,7 +98,6 @@ $(document).ready(function()
 
     loadData(professional, "professional");
     loadData(personal, "personal");
-    
 
     $(window).scroll(function() {
         var screenTop = $(window).scrollTop();
