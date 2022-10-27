@@ -18,7 +18,7 @@ const professional = [
         image: "Resources/Database/Summit.jpg",
         description: "Summit is a 3D third person Rogue-Like inspired by Risk of Rain 2.",
         key: ["Lead Programmer", "Modular Boss State Machine", "Systems Development", "Modular Scene Mangement", "Core Game Structure"],
-        utility: ["Unity", "C#", "ShaderCore", "University, "Indie"],
+        utility: ["Unity", "C#", "ShaderCore", "University", "Indie"],
     },
     {
         title: "CQU Statistics Project",
