@@ -1,11 +1,16 @@
-import data from './database.json' assert {type: 'json'};
-
 $(document).ready(function() {
-    loadData(data.professional, "professional");
-    loadData(data.personal, "personal");
+    loadData();
 });
 
-function loadData(database, type) {
+async function loadData() {
+    const response = await fetch('./database.json');
+    const data = await response.json();
+
+    loadProject(data.professional, "professional");
+    loadProject(data.personal, "personal");
+}
+
+async function loadProject(database, type) {
     console.log(database);
     for (let i = 0; i < database.length; i++)
     {
