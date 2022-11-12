@@ -10,7 +10,7 @@ async function loadData() {
     loadProject(data.personal, "personal");
 }
 
-async function loadProject(database, type) {
+function loadProject(database, type) {
     console.log(database);
     for (let i = 0; i < database.length; i++)
     {

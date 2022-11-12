@@ -1,0 +1,50 @@
+{
+    "language" : [
+        {
+            "title": "C#",
+            "level": "../Resources/SVGs/Location.svg"
+        },
+        {
+            "title": "C",
+            "level": "../Resources/SVGs/Location.svg"
+        },
+        {
+            "title": "ShaderCore",
+            "level": "../Resources/SVGs/Location.svg"
+        },
+        {
+            "title": "Java",
+            "level": "../Resources/SVGs/Location.svg"
+        },
+        {
+            "title": "JavaScript",
+            "level": "../Resources/SVGs/Location.svg"
+        },
+        {
+            "title": "React",
+            "level": "../Resources/SVGs/Location.svg"
+        },
+        {
+            "title": "HTML",
+            "level": "../Resources/SVGs/Location.svg"
+        },
+        {
+            "title": "CSS",
+            "level": "../Resources/SVGs/Location.svg"
+        },
+        {
+            "title": "PHP",
+            "level": "../Resources/SVGs/Location.svg"
+        },
+        {
+            "title": "Python",
+            "level": "../Resources/SVGs/Location.svg"
+        }
+    ],
+    "software" : [
+        {
+            "title": "Dark Light",
+            "level": "../Resources/SVGs/Location.svg"
+        }
+    ]
+}
