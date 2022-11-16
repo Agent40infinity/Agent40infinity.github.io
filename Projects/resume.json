@@ -43,8 +43,178 @@
     ],
     "software" : [
         {
-            "title": "Dark Light",
-            "level": "../Resources/SVGs/Location.svg"
+            "name" : "Game Engines",
+            "type" : [
+                {
+                    "title": "Unity",
+                    "level": "../Resources/SVGs/Location.svg"
+                },
+                {
+                    "title": "Unreal Engine 4",
+                    "level": "../Resources/SVGs/Location.svg"
+                },
+                {
+                    "title": "Greenfoot",
+                    "level": "../Resources/SVGs/Location.svg"
+                }
+            ]
+        },
+        {
+            "name" : "Version Control",
+            "type" : [
+                {
+                    "title": "GIT",
+                    "level": "../Resources/SVGs/Location.svg"
+                },
+                {
+                    "title": "Jenkins",
+                    "level": "../Resources/SVGs/Location.svg"
+                }
+            ]
+        },
+        {
+            "name" : "Editing",
+            "type" : [
+                {
+                    "title": "Premier Pro",
+                    "level": "../Resources/SVGs/Location.svg"
+                },
+
+                {
+                    "title": "Sony Vegas",
+                    "level": "../Resources/SVGs/Location.svg"
+                },
+                {
+                    "title": "Davinci Resolve 16",
+                    "level": "../Resources/SVGs/Location.svg"
+                }
+            ]
+        },
+        {
+            "name" : "Art",
+            "type" : [
+                {
+                    "title": "Photoshop",
+                    "level": "../Resources/SVGs/Location.svg"
+                },
+                {
+                    "title": "Cinema 4D",
+                    "level": "../Resources/SVGs/Location.svg"
+                },
+                {
+                    "title": "Blender",
+                    "level": "../Resources/SVGs/Location.svg"
+                }
+            ]
+        },
+        {
+            "name" : "IDE & Misc",
+            "type" : [
+                {
+                    "title": "Visual Studio",
+                    "level": "../Resources/SVGs/Location.svg"
+                },
+                {
+                    "title": "VSC",
+                    "level": "../Resources/SVGs/Location.svg"
+                },
+                {
+                    "title": "FileZilla",
+                    "level": "../Resources/SVGs/Location.svg"
+                },
+                {
+                    "title": "MySQL",
+                    "level": "../Resources/SVGs/Location.svg"
+                },
+                {
+                    "title": "Audacity",
+                    "level": "../Resources/SVGs/Location.svg"
+                },
+                {
+                    "title": "OBS",
+                    "level": "../Resources/SVGs/Location.svg"
+                }
+            ]
+        }
+    ],
+    "experience" : [
+        {
+            "name" : "University Projects",
+            "icon" : "../Resources/SVGs/Group.svg",
+            "list" : [
+                {
+                    "project" : "Summit - Lead Programmer", 
+                    "location" : "MQU",
+                    "date" : "July 2022 - December 2022",
+                    "logo" : "../Resources/pfp.jpg",
+                    "description" : "Student project with 5 team members, 3 programmers. 3D third person rogue-like made in Unity.",
+                    "columns" : false,
+                    "details" : [
+                        "Designed and implemented Boss State Machine.",
+                        "Modularized boss states for designer friendly implementation.",
+                        "Modularized scene management with asynchoronous loading."
+                    ]
+                },
+                {
+                    "project" : "CQU Statistics Project - Lead Programmer",
+                    "location" : "MQU",
+                    "date" : "Feburary 2022 - June 2022",
+                    "logo" : "../Resources/pfp.jpg",
+                    "description" : "Student project with 5 team members, 2 programmers. Gamification visual novel made in Unity.",
+                    "columns" : false,
+                    "details" : [
+
+                    ]
+                }
+            ]
+        },
+        {
+            "name" : "Personal Projects",
+            "icon" : "../Resources/SVGs/Profile.svg",
+            "list" : [
+                {
+                    "project" : "ScriptableObject Editor",
+                    "location" : "",
+                    "date" : "July 2022 - December 2022",
+                    "logo" : "",
+                    "description" : "Tool designed to centralize the management proccesses behind modifying ScriptableObjects.",
+                    "columns" : false,
+                    "details" : [
+
+                    ]
+                },
+                {
+                    "project" : "Dark Light",
+                    "location" : "",
+                    "date" : "July 2019 - Present",
+                    "logo" : "",
+                    "description" : "2D metroidvania inspirated by Hollow Knight and the Soulsbourne Series.",
+                    "columns" : false,
+                    "details" : [
+
+                    ]
+                }
+            ]
+        }
+    ],
+    "education" : [
+        {
+            "institute" : "Macquarie University",
+            "location" : "Sydney, Australia",
+            "date" : "2020 - 2022",
+            "degree" : "Bachelor of Game Design & Development"
+        },
+        {
+            "institute" : "Northern Sydney Institute TAFE",
+            "location" : "Sydney, Australia",
+            "date" : "2019",
+            "degree" : "Diploma of Interactive & Digital Games"
+        },
+        {
+            "institute" : "Sydney, Australia",
+            "location" : "",
+            "date" : "2008 - 2018",
+            "degree" : "High School Certificate (HSC)"
         }
     ]
 }
