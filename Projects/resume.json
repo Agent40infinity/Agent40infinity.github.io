@@ -192,10 +192,13 @@
                     "details" : [
                         "Apart of the PACE Internship program at Macquarie University, dedicated client was Central Queensland University.",
                         "Designed, implemented, and mantained systems in accordance to requirements given by the client.",
-                        "Custom Dynamic Dialogue System.",
-                        "Completely automated visual novel setup without additional programming.",
+                        "Client task: Create a gamified quiz to track student's knowledge of statisitics.",
+                        "Custom Dynamic Dialogue System with dialogue.",
                         "Full intergration with Google Sheets API v4.",
                         "Records and collects player completion data using google database.",
+                        "Completely automated visual novel setup without additional programming.",
+                        "Dialogue options used to create diverging pathways for player progress based on their performance.",
+                        "Custom commands and modifiers used to enhance dialogue with effects, sprite changes, and more.",
                         "Framework creates game content based on .json level files.",
                         "Full intergration with Json.NET framework using custom class & interface based serialization."
                     ]
@@ -216,15 +219,15 @@
                     "details" : [
                         "Tool created as a custom editor window that utilizes Unity's EditorGUI backend.",
                         "Makes use of AppDomain and System.Type 'generics' to get and modify assemblies.",
-                        "Designed to simply and centralize the creation and modification processes behind Scriptable Objects.",
+                        "Designed to simplify and centralize the creation and modification processes behind Scriptable Objects.",
                         "Utilizes a serialized window to display and give modification access to a selected ScriptableObject's fields and properties.",
                         "Allows for the deletion and renaming of the selected object within the serialized window.",
                         "Scrollview accompanied by a case-insensitive search sidebar to display all Scriptable Objects.",
-                        "Multiple filters to mask displayed selectable Scriptable Objects (Multiple filters can be active simultanously).",
+                        "Multiple filters to mask displayed selectable Scriptable Objects.",
                         "Assembly filter for masking the displayed objects to a specific assembly associated within the project.",
                         "Folder filter to mask only objects contained within a specified directory.",
                         "Type type filter to mask class derived objects.",
-                        "Custom creation window for creating new ScriptableObjects as well as new Type types of ScriptableObjects.",
+                        "Custom creation window for creating new ScriptableObjects as well as new class types of ScriptableObjects.",
                         "Tested and working for all versions of Unity past 2019 (Excluding versions recognised by Unity to cause issues)."
                     ]
                 },
@@ -236,7 +239,7 @@
                     "description" : "2D metroidvania inspirated by Hollow Knight and the Soulsbourne Series. Paused development while at Univeristy.",
                     "columns" : false,
                     "details" : [
-                        "Custom player state machine", 
+                        "Custom player state machine.", 
                         "Custom velocity based movement for fast paced mobility and combat.",
                         "Command based custom input system used to handle player movement. Allows for control over the player to be utilized in systems handling cutscenes and event triggers.", 
                         "Custom input system derived from Unity Events to allow for control configuration and keybinding storing.",
