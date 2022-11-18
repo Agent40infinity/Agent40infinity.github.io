@@ -1,44 +1,62 @@
 {
+    "legend" : [
+        {
+            "title": "Professional",
+            "level": "../Resources/SVGs/hexagon-slice-6.svg"
+        },
+        {
+            "title": "Advanced",
+            "level": "../Resources/SVGs/hexagon-slice-4.svg"
+        },
+        {
+            "title": "Intermediate",
+            "level": "../Resources/SVGs/hexagon-slice-3.svg"
+        },
+        {
+            "title": "Beginner",
+            "level": "../Resources/SVGs/hexagon-slice-1.svg"
+        }
+    ],
     "language" : [
         {
             "title": "C#",
-            "level": "../Resources/SVGs/Location.svg"
+            "level": "../Resources/SVGs/hexagon-slice-6.svg"
         },
         {
             "title": "C",
-            "level": "../Resources/SVGs/Location.svg"
+            "level": "../Resources/SVGs/hexagon-slice-1.svg"
         },
         {
             "title": "ShaderCore",
-            "level": "../Resources/SVGs/Location.svg"
+            "level": "../Resources/SVGs/hexagon-slice-4.svg"
         },
         {
             "title": "Java",
-            "level": "../Resources/SVGs/Location.svg"
+            "level": "../Resources/SVGs/hexagon-slice-4.svg"
         },
         {
             "title": "JavaScript",
-            "level": "../Resources/SVGs/Location.svg"
+            "level": "../Resources/SVGs/hexagon-slice-6.svg"
         },
         {
             "title": "React",
-            "level": "../Resources/SVGs/Location.svg"
+            "level": "../Resources/SVGs/hexagon-slice-3.svg"
         },
         {
             "title": "HTML",
-            "level": "../Resources/SVGs/Location.svg"
+            "level": "../Resources/SVGs/hexagon-slice-4.svg"
         },
         {
             "title": "CSS",
-            "level": "../Resources/SVGs/Location.svg"
+            "level": "../Resources/SVGs/hexagon-slice-4.svg"
         },
         {
             "title": "PHP",
-            "level": "../Resources/SVGs/Location.svg"
+            "level": "../Resources/SVGs/hexagon-slice-3.svg"
         },
         {
             "title": "Python",
-            "level": "../Resources/SVGs/Location.svg"
+            "level": "../Resources/SVGs/hexagon-slice-1.svg"
         }
     ],
     "software" : [
@@ -47,15 +65,15 @@
             "type" : [
                 {
                     "title": "Unity",
-                    "level": "../Resources/SVGs/Location.svg"
+                    "level": "../Resources/SVGs/hexagon-slice-6.svg"
                 },
                 {
                     "title": "Unreal Engine 4",
-                    "level": "../Resources/SVGs/Location.svg"
+                    "level": "../Resources/SVGs/hexagon-slice-1.svg"
                 },
                 {
                     "title": "Greenfoot",
-                    "level": "../Resources/SVGs/Location.svg"
+                    "level": "../Resources/SVGs/hexagon-slice-6.svg"
                 }
             ]
         },
@@ -64,11 +82,11 @@
             "type" : [
                 {
                     "title": "GIT",
-                    "level": "../Resources/SVGs/Location.svg"
+                    "level": "../Resources/SVGs/hexagon-slice-4.svg"
                 },
                 {
                     "title": "Jenkins",
-                    "level": "../Resources/SVGs/Location.svg"
+                    "level": "../Resources/SVGs/hexagon-slice-1.svg"
                 }
             ]
         },
@@ -77,16 +95,16 @@
             "type" : [
                 {
                     "title": "Premier Pro",
-                    "level": "../Resources/SVGs/Location.svg"
+                    "level": "../Resources/SVGs/hexagon-slice-4.svg"
                 },
 
                 {
                     "title": "Sony Vegas",
-                    "level": "../Resources/SVGs/Location.svg"
+                    "level": "../Resources/SVGs/hexagon-slice-4.svg"
                 },
                 {
                     "title": "Davinci Resolve 16",
-                    "level": "../Resources/SVGs/Location.svg"
+                    "level": "../Resources/SVGs/hexagon-slice-6.svg"
                 }
             ]
         },
@@ -95,15 +113,15 @@
             "type" : [
                 {
                     "title": "Photoshop",
-                    "level": "../Resources/SVGs/Location.svg"
+                    "level": "../Resources/SVGs/hexagon-slice-6.svg"
                 },
                 {
                     "title": "Cinema 4D",
-                    "level": "../Resources/SVGs/Location.svg"
+                    "level": "../Resources/SVGs/hexagon-slice-3.svg"
                 },
                 {
                     "title": "Blender",
-                    "level": "../Resources/SVGs/Location.svg"
+                    "level": "../Resources/SVGs/hexagon-slice-1.svg"
                 }
             ]
         },
@@ -112,27 +130,27 @@
             "type" : [
                 {
                     "title": "Visual Studio",
-                    "level": "../Resources/SVGs/Location.svg"
+                    "level": "../Resources/SVGs/hexagon-slice-6.svg"
                 },
                 {
                     "title": "VSC",
-                    "level": "../Resources/SVGs/Location.svg"
+                    "level": "../Resources/SVGs/hexagon-slice-6.svg"
                 },
                 {
                     "title": "FileZilla",
-                    "level": "../Resources/SVGs/Location.svg"
+                    "level": "../Resources/SVGs/hexagon-slice-6.svg"
                 },
                 {
                     "title": "MySQL",
-                    "level": "../Resources/SVGs/Location.svg"
+                    "level": "../Resources/SVGs/hexagon-slice-4.svg"
                 },
                 {
                     "title": "Audacity",
-                    "level": "../Resources/SVGs/Location.svg"
+                    "level": "../Resources/SVGs/hexagon-slice-4.svg"
                 },
                 {
                     "title": "OBS",
-                    "level": "../Resources/SVGs/Location.svg"
+                    "level": "../Resources/SVGs/hexagon-slice-6.svg"
                 }
             ]
         }
@@ -145,25 +163,41 @@
                 {
                     "project" : "Summit - Lead Programmer", 
                     "location" : "MQU",
-                    "date" : "July 2022 - December 2022",
-                    "logo" : "../Resources/pfp.jpg",
-                    "description" : "Student project with 5 team members, 3 programmers. 3D third person rogue-like made in Unity.",
-                    "columns" : false,
+                    "date" : "July 2022 - November 2022",
+                    "logo" : "../Resources/Database/Summit.jpg",
+                    "description" : "Student project with 5 team members, 3 programmers. 3D third person rogue-like made in Unity. 410+ personal hours dedicated.",
+                    "columns" : true,
                     "details" : [
-                        "Designed and implemented Boss State Machine.",
+                        "Re-engineered existing codebase focusing on efficiency, modularity, and simplicity.",
+                        "Acted as senior developer to manage & aid development processes across the board (including design and art).", 
+                        "Designed and implemented all backend systems related to gameplay and structure.",
+                        "Designed and implemented custom Boss State Machine.",
                         "Modularized boss states for designer friendly implementation.",
-                        "Modularized scene management with asynchoronous loading."
+                        "Implemented modular animation event listeners to control states",
+                        "Implemented modularized scene management with asynchoronous loading.",
+                        "Designed and assisted implementation of power-ups.",
+                        "Designed and implemented a custom interaction system utlizing listeners for modularity.",
+                        "Developed announcement and dialogue systems.",
+                        "Custom camera handler for panning, effects, and 3rd person perspective.",
+                        "Managed custom lighting and skybox handling."
                     ]
                 },
                 {
                     "project" : "CQU Statistics Project - Lead Programmer",
                     "location" : "MQU",
                     "date" : "Feburary 2022 - June 2022",
-                    "logo" : "../Resources/pfp.jpg",
-                    "description" : "Student project with 5 team members, 2 programmers. Gamification visual novel made in Unity.",
-                    "columns" : false,
+                    "logo" : "../Resources/Database/CQU.jpg",
+                    "description" : "Student project with 5 team members, 1 programmers. Gamification visual novel made in Unity.",
+                    "columns" : true,
                     "details" : [
-
+                        "Apart of the PACE Internship program at Macquarie University, dedicated client was Central Queensland University.",
+                        "Designed, implemented, and mantained systems in accordance to requirements given by the client.",
+                        "Custom Dynamic Dialogue System.",
+                        "Completely automated visual novel setup without additional programming.",
+                        "Full intergration with Google Sheets API v4.",
+                        "Records and collects player completion data using google database.",
+                        "Framework creates game content based on .json level files.",
+                        "Full intergration with Json.NET framework using custom class & interface based serialization."
                     ]
                 }
             ]
@@ -176,11 +210,22 @@
                     "project" : "ScriptableObject Editor",
                     "location" : "",
                     "date" : "July 2022 - December 2022",
-                    "logo" : "",
-                    "description" : "Tool designed to centralize the management proccesses behind modifying ScriptableObjects.",
-                    "columns" : false,
+                    "logo" : "../Resources/Database/SOE_Logo.jpg",
+                    "description" : "Published Tool designed to centralize the management proccesses behind modifying ScriptableObjects.",
+                    "columns" : true,
                     "details" : [
-
+                        "Tool created as a custom editor window that utilizes Unity's EditorGUI backend.",
+                        "Makes use of AppDomain and System.Type 'generics' to get and modify assemblies.",
+                        "Designed to simply and centralize the creation and modification processes behind Scriptable Objects.",
+                        "Utilizes a serialized window to display and give modification access to a selected ScriptableObject's fields and properties.",
+                        "Allows for the deletion and renaming of the selected object within the serialized window.",
+                        "Scrollview accompanied by a case-insensitive search sidebar to display all Scriptable Objects.",
+                        "Multiple filters to mask displayed selectable Scriptable Objects (Multiple filters can be active simultanously).",
+                        "Assembly filter for masking the displayed objects to a specific assembly associated within the project.",
+                        "Folder filter to mask only objects contained within a specified directory.",
+                        "Type type filter to mask class derived objects.",
+                        "Custom creation window for creating new ScriptableObjects as well as new Type types of ScriptableObjects.",
+                        "Tested and working for all versions of Unity past 2019 (Excluding versions recognised by Unity to cause issues)."
                     ]
                 },
                 {
@@ -188,10 +233,15 @@
                     "location" : "",
                     "date" : "July 2019 - Present",
                     "logo" : "",
-                    "description" : "2D metroidvania inspirated by Hollow Knight and the Soulsbourne Series.",
+                    "description" : "2D metroidvania inspirated by Hollow Knight and the Soulsbourne Series. Paused development while at Univeristy.",
                     "columns" : false,
                     "details" : [
-
+                        "Custom player state machine", 
+                        "Custom velocity based movement for fast paced mobility and combat.",
+                        "Command based custom input system used to handle player movement. Allows for control over the player to be utilized in systems handling cutscenes and event triggers.", 
+                        "Custom input system derived from Unity Events to allow for control configuration and keybinding storing.",
+                        "Modular interface based save system using Json.NET (Works with binary serialization).",
+                        "From scratch A* pathfinding for non-player entities."
                     ]
                 }
             ]

@@ -10,6 +10,8 @@ async function loadData() {
 
     loadCategory(data.software, "software-inject.inject-data");
 
+    loadLegend(data.legend, "legend-inject.inject-data");
+
     loadExperience(data.experience, "experience-inject.inject-data");
 
     loadEducation(data.education, "education-inject.inject-data");
@@ -26,6 +28,21 @@ function replaceChar(string) {
     }
 
     return newString;
+}
+
+function loadLegend(database, type) {
+    console.log(database);
+    for (let i = 0; i < database.length; i++) {
+        var inject = 
+        '<div class="legend-item">' + 
+            '<img class="legend-item-icon svg" src="' + database[i].level + '"></img>' +
+            '<p class="legend-item-name">' + database[i].title + '</p>' +
+        '</div>';
+
+        $('.' + type).append(
+            inject
+        );
+    }
 }
 
 function loadCategory(database, type) {
@@ -116,7 +133,7 @@ function loadList(database) {
             details += '<p class="description-entry">- ' + database[i].details[j] + '</p>';
             internal++;
 
-            if (internal > 4) {
+            if (internal > 5) {
                 details += '</div><div class="description-item">';
                 internal = 0;
             }
