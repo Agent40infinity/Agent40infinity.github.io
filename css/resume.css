@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Perpetua';
-    src: url('../Fonts/per_____.ttf') format('truetype');
+    src: url('./Resources/Fonts/per_____.ttf') format('truetype');
 }
 
 @media print and (color) {

@@ -3,7 +3,7 @@ $(document).ready(function() {
 });
 
 async function loadData() {
-    const response = await fetch('./resume.json');
+    const response = await fetch('../js/Json/resume.json');
     const data = await response.json();
 
     loadSkill(data.language, "language-inject.inject-data");

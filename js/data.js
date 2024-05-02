@@ -3,7 +3,7 @@ $(document).ready(function() {
 });
 
 async function loadData() {
-    const response = await fetch('./database.json');
+    const response = await fetch('../js/Json/database.json');
     const data = await response.json();
 
     loadProject(data.professional, "professional");

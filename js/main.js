@@ -1,9 +1,12 @@
-var audio = new Audio('Resources/landing.mp3');
-var animateTop = 200;
-var animateHeader = 400;
-var toggle = false;
+// Audio
+var masterAudio = new Audio('../Resources/Media/landing.mp3');
+var dBConversion = 250;
 var lastVolume = 0;
-var conversion = 250;
+
+// Menu
+var menuToggle = false;
+var topAnimateDist = 200;
+var headerAnimateDist = 400;
 
 window.onbeforeunload = function () {
     window.scrollTo(0,0);
@@ -12,9 +15,9 @@ window.onbeforeunload = function () {
 $(document).ready(function() 
 {
     $(".enter").one("click", function () {
-        audio.play();
-        audio.loop = true;
-        audio.volume = 0.4;
+        masterAudio.play();
+        masterAudio.loop = true;
+        masterAudio.volume = 0.4;
 
         $('.hidden').not('hr').animate({opacity: 1}, 3000);
         $('hr.hidden').animate({width: '40%', opacity: 1}, 2000);
@@ -41,17 +44,19 @@ $(document).ready(function()
         }, 3500);
     });
 
+    // Animates the header once too far down.
+    // Makes the header / navigation banner transparent.
     $(window).scroll(function() {
         var screenTop = $(window).scrollTop();
 
-        if (screenTop >= animateTop) { 
+        if (screenTop >= topAnimateDist) { 
             $('.return').fadeIn(200);
         } 
         else {    
             $('.return').fadeOut(200);
         }
 
-        if (screenTop >= animateHeader)
+        if (screenTop >= headerAnimateDist)
         {
             $('header').css({"background-color": "rgba(0, 0, 0, 0.7)", "transition": "0.2s"});
         }
@@ -61,6 +66,7 @@ $(document).ready(function()
         }
     });
 
+    // I can't remember what this does for the life of me.
     $(".arrow").on("click", function() {
         element = 0;
         scrollElement = "";
@@ -79,45 +85,69 @@ $(document).ready(function()
         console.log("#" + element);
     });
 
+    // Clicking on the comments icon will scroll you down to the 'Contact Me' footer.
     $(".comments").on("click", function() {
         window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
     });
 
+    // Both of these are used to fade in and out the volume slider.
+    // muteToggle fades in the slider.
     $(".muteToggle").mouseover(function () { 
         $(".slide-hide").fadeIn(200);
     });
 
+    //volumeContainer fades out the slider when the user isn't over both objects.
     $(".volume-container").mouseleave(function () { 
         $(".slide-hide").fadeOut(200);
     });
 
+    //Binds the slider value to a progression bar to link the audio volume with the audio playing.
     volume = document.getElementById("slider");
+    
     volume.oninput = function() {
         value = document.getElementById("slider-value");
         value.innerHTML = slider.value;
-        audio.volume = slider.value / conversion;
+        masterAudio.volume = slider.value / dBConversion;
         updateProgress();
     }
 });
 
+// Used to toggle the audio.
+function toggleMute(img) {
+    if (masterAudio.muted)  {
+        masterAudio.muted = false;
+        lastAudio(true);
+        img.src="../Resources/SVGs/Speaker_Icon.svg";
+    }
+    else {
+        masterAudio.muted = true;
+        lastAudio(false);
+        img.src="../Resources/SVGs/Mute_Icon.svg";
+    }
+
+    updateProgress();
+}
+
+// Marks the last known audio value so that when muting and unmuting, it returns to the original value.
 function lastAudio(toggle) {
     switch (toggle)
     {
         case true:
-            audio.volume = lastVolume;
+            masterAudio.volume = lastVolume;
             break;
         case false:
-            lastVolume = audio.volume;
-            audio.volume = 0;
+            lastVolume = masterAudio.volume;
+            masterAudio.volume = 0;
             break;
     }
 
     value = document.getElementById("slider-value");
-    value.innerHTML = audio.volume * conversion;
+    value.innerHTML = masterAudio.volume * dBConversion;
     slider = document.getElementById("slider");
-    slider.value = audio.volume * conversion;
+    slider.value = masterAudio.volume * dBConversion;
 }
 
+// Updates the volume of the audio using the slider after calculating the correct conversion.
 function updateProgress() {
     for (let e of document.querySelectorAll('input[type="range"].slider-progress')) {
         e.style.setProperty('--value', e.value);
@@ -127,39 +157,27 @@ function updateProgress() {
     }
 }
 
-function toggleMute(img) {
-    if (audio.muted)  {
-        audio.muted = false;
-        lastAudio(true);
-        img.src="Resources/SVGs/Speaker_Icon.svg";
-    }
-    else {
-        audio.muted = true;
-        lastAudio(false);
-        img.src="Resources/SVGs/Mute_Icon.svg";
-    }
-
-    updateProgress();
-}
-
+// Used to return to the top of the page.
 function returnTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+// Utilises the arrows to auto scroll to x chapter.
 function scrollChapter(chapter) {
     $([document.documentElement, document.body]).animate({scrollTop: $("#chapter" + chapter).offset().top - 125}, 1000);
 }
 
+// Toggles the menu.
 function toggleMenu() {
-    switch (toggle)
+    switch (menuToggle)
     {
         case false:
             document.getElementById("ham-nav").style.width="600px";
-            toggle = true;
+            menuToggle = true;
             break;
         case true:
             document.getElementById("ham-nav").style.width="0px";
-            toggle = false;
+            menuToggle = false;
             break;
     }
 }
