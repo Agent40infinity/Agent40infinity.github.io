@@ -1,3 +1,7 @@
+//Systems
+var loadState = { FirstTime: 1, Default: 2, Information: 3 };
+let portfolioState = loadState.Default;
+
 // Audio
 var masterAudio = new Audio('../Resources/Media/landing.mp3');
 var dBConversion = 250;
@@ -14,35 +18,18 @@ window.onbeforeunload = function () {
 
 $(document).ready(function() 
 {
-    $(".enter").one("click", function () {
-        masterAudio.play();
-        masterAudio.loop = true;
-        masterAudio.volume = 0.4;
+    masterAudio.volume = 0.4;
 
-        $('.hidden').not('hr').animate({opacity: 1}, 3000);
-        $('hr.hidden').animate({width: '40%', opacity: 1}, 2000);
-        $('.enter').animate({opacity: 0}, 1000);
-
-        setTimeout(function() {
-            $('.banner').fadeOut(1000);
-
-            setTimeout(function() {
-                $('header').animate({width: '100%', opacity: 1}, 2000);
-                $('.volume-container').fadeIn(2000);
-                $('.volume-container').css({display: "flex"});
-                $('.background').animate({top: "505px"}, 1000);
-                $('.enter').fadeOut(0);
-                $('.define').animate({opacity: 1}, 2000);
-                    
-                setTimeout(function() {
-                    $('.special').fadeIn(1000);
-                    $('.information').fadeIn(2000);
-                    $('footer').fadeIn(2000);
-                    $('body').css("overflow-y" , "visible");
-                }, 200);
-            }, 1000);
-        }, 3500);
-    });
+    switch (portfolioState)
+    {
+        case loadState.FirstTime:
+            FirstTimeLoad();
+            break;
+        case loadState.Default:
+            $('.banner').css({"display": "none"});
+            AddContents();
+            break;
+    }
 
     // Animates the header once too far down.
     // Makes the header / navigation banner transparent.
@@ -111,6 +98,43 @@ $(document).ready(function()
         updateProgress();
     }
 });
+
+function FirstTimeLoad()
+{
+    $(".enter").one("click", function () {
+        masterAudio.play();
+        masterAudio.loop = true;
+
+        $('.hidden').not('hr').animate({opacity: 1}, 3000);
+        $('hr.hidden').animate({width: '40%', opacity: 1}, 2000);
+        $('.enter').animate({opacity: 0}, 1000);
+
+        setTimeout(function() {
+            $('.banner').fadeOut(1000);
+
+            setTimeout(function() {
+                AddContents();
+            }, 1000);
+        }, 3500);
+    });
+}
+
+function AddContents()
+{
+    $('header').animate({width: '100%', opacity: 1}, 2000);
+    $('.volume-container').fadeIn(2000);
+    $('.volume-container').css({display: "flex"});
+    $('.background').animate({top: "505px"}, 1000);
+    $('.enter').fadeOut(0);
+    $('.define').animate({opacity: 1}, 2000);
+                    
+    setTimeout(function() {
+        $('.special').fadeIn(1000);
+        $('.information').fadeIn(2000);
+        $('footer').fadeIn(2000);
+        $('body').css("overflow-y" , "visible");
+    }, 200);
+}
 
 // Used to toggle the audio.
 function toggleMute(img) {

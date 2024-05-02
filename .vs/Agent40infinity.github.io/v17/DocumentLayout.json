@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Data\\Software\\Unity\\Github\\Agent40infinity.github.io\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Data\\Software\\Unity\\Github\\Agent40infinity.github.io\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Data\\Software\\Unity\\Github\\Agent40infinity.github.io\\js\\main.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:js\\main.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Data\\Software\\Unity\\Github\\Agent40infinity.github.io\\css\\external.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:css\\external.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Data\\Software\\Unity\\Github\\Agent40infinity.github.io\\Pages\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pages\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "style.css",
+              "DocumentMoniker": "D:\\Data\\Software\\Unity\\Github\\Agent40infinity.github.io\\css\\style.css",
+              "RelativeDocumentMoniker": "css\\style.css",
+              "ToolTip": "D:\\Data\\Software\\Unity\\Github\\Agent40infinity.github.io\\css\\style.css",
+              "RelativeToolTip": "css\\style.css",
+              "ViewState": "AQIAAMIAAAAAAAAAAAAAAMUAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-05-02T12:26:04.922Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "main.js",
+              "DocumentMoniker": "D:\\Data\\Software\\Unity\\Github\\Agent40infinity.github.io\\js\\main.js",
+              "RelativeDocumentMoniker": "js\\main.js",
+              "ToolTip": "D:\\Data\\Software\\Unity\\Github\\Agent40infinity.github.io\\js\\main.js",
+              "RelativeToolTip": "js\\main.js",
+              "ViewState": "AQIAABgAAAAAAAAAAAAiwCkAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-05-02T12:26:01.268Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "external.css",
+              "DocumentMoniker": "D:\\Data\\Software\\Unity\\Github\\Agent40infinity.github.io\\css\\external.css",
+              "RelativeDocumentMoniker": "css\\external.css",
+              "ToolTip": "D:\\Data\\Software\\Unity\\Github\\Agent40infinity.github.io\\css\\external.css",
+              "RelativeToolTip": "css\\external.css",
+              "ViewState": "AQIAAKkAAAAAAAAAAAAlwMkAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-05-02T12:25:55.575Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "index.html",
+              "DocumentMoniker": "D:\\Data\\Software\\Unity\\Github\\Agent40infinity.github.io\\Pages\\index.html",
+              "RelativeDocumentMoniker": "Pages\\index.html",
+              "ToolTip": "D:\\Data\\Software\\Unity\\Github\\Agent40infinity.github.io\\Pages\\index.html",
+              "RelativeToolTip": "Pages\\index.html",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-05-02T12:25:35.76Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
