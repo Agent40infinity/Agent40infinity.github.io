@@ -3,9 +3,9 @@
     <head>
         <meta charset="utf-8">
 		<title>Aiden Nathan - Game Developer (Programming & Design)</title>
-        <link href="style.css" rel="stylesheet"/>
-        <link href="external.css" rel="stylesheet"/>
-        <link rel="icon" href="Resources/icon.png">
+        <link href="../css/style.css" rel="stylesheet"/>
+        <link href="../css/external.css" rel="stylesheet"/>
+        <link rel="icon" href="../Resources/icon.png">
         <link rel="canonical" href="https://aiden.fyi/">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="Aiden Nathan">
@@ -27,18 +27,18 @@
         <meta name="twitter:description" content="Game development & design portfolio of Aiden Nathan. Indie Developer, graduate of Macquarie University.">
         <meta name="twitter:image" content="">
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    	<script src='main.js'></script>
-        <script type="module" src='data.js'></script>
+    	<script src='../js/main.js'></script>
+        <script type="module" src='../js/data.js'></script>
     </head>
     <body>
         <div class="volume-container">
-            <img class="muteToggle hidden" src="Resources/SVGs/Speaker_Icon.svg" alt="Speaker" onclick="toggleMute(this)"/> 
+            <img class="muteToggle" src="../Resources/SVGs/Speaker_Icon.svg" alt="Speaker" onclick="toggleMute(this)"/> 
             <input class="styled-slider slider-progress slide-hide" type="range" min="0" max="100" value="100" id="slider">
             <p class="slider-value slide-hide" id="slider-value">100</p>
         </div>
-        <img class="return" src="Resources/SVGs/Caret.svg" alt="Caret" onclick="returnTop()"/> 
+        <img class="return" src="../Resources/SVGs/Caret.svg" alt="Caret" onclick="returnTop()"/> 
         <video class="background" autoplay muted loop>
-            <source src="Resources/Main.mp4" type="video/mp4">
+            <source src="../Resources/Media/Main.mp4" type="video/mp4">
         </video>
         <header class="navbar">
             <div class="nav-menu nav-item">
@@ -63,7 +63,7 @@
                 </a>
             </div>
             <div class="nav-socials nav-item">
-                <img class="comments" src="Resources/SVGs/Comments.svg" alt="Comments">
+                <img class="comments" src="../Resources/SVGs/Comments.svg" alt="Comments">
             </div>
         </header>
         <div class="hamburger-nav" id="ham-nav">
@@ -71,7 +71,7 @@
             <a onclick="scrollChapter(2)">Professional Work</a>
             <a onclick="scrollChapter(3)">Personal Work</a>
             <a onclick="scrollChapter(4)">Contact Me</a>
-            <a href="https://aiden.fyi/Projects/resume.html" target="_blank">Resume</a>
+            <a href="https://aiden.fyi/Pages/resume.html" target="_blank">Resume</a>
         </div>
         <main class="content">
             <section class="banner">
@@ -80,11 +80,11 @@
                 <p class="subtext hidden">Game Programmer & Designer</p>
                 <button class="enter">Press to Enter</button>
             </section>
-            <img class="arrow special" src="Resources/SVGs/ArrowDown_Icon.svg" alt="Arrow Down"/>
+            <img class="arrow special" src="../Resources/SVGs/ArrowDown_Icon.svg" alt="Arrow Down"/>
             <section class="information">
                 <article class="chapter" id="chapter1">
                     <h2 class="title">About Me</h2>
-                    <img class="visual" src="Resources/pfp.jpg" alt="Rouge Game, 1980">
+                    <img class="visual" src="../Resources/pfp.jpg" alt="Rouge Game, 1980">
                     <p class="about"> 
                         Hi I'm Aiden! I'm a graduate game's programmer and designer with a Bachelor of Game Development from Macquarie University. 
                         Currently I've been developing an indie project by the name of Dark Light (TBA) while looking for work.
@@ -99,19 +99,19 @@
                         details about each project, click the cards below.
                     </p>
                     <p class="about">
-                        <a href="https://aiden.fyi/Projects/resume.html" target="_blank"> Resume </a>
+                        <a href="https://aiden.fyi/Pages/resume.html" target="_blank"> Resume </a>
                     </p>
-                    <img class="arrow" src="Resources/SVGs/ArrowDown_Icon.svg" alt="Arrow Down"/>
+                    <img class="arrow" src="../Resources/SVGs/ArrowDown_Icon.svg" alt="Arrow Down"/>
                 </article>
                 <article class="chapter" id="chapter2">
                     <h2 class="title">Professional Work</h2>
                     <div class="project-container professional-work inject-data"></div>
-                    <img class="arrow" src="Resources/SVGs/ArrowDown_Icon.svg" alt="Arrow Down"/>
+                    <img class="arrow" src="../Resources/SVGs/ArrowDown_Icon.svg" alt="Arrow Down"/>
                 </article>
                 <article class="chapter" id="chapter3"> 
                     <h2 class="title">Personal Work</h2>
                     <div class="project-container personal-work inject-data"></div>
-                    <img class="arrow" src="Resources/SVGs/ArrowDown_Icon.svg" alt="Arrow Down"/>
+                    <img class="arrow" src="../Resources/SVGs/ArrowDown_Icon.svg" alt="Arrow Down"/>
                 </article>
             </section>  
         </main>
@@ -120,11 +120,11 @@
                 <h2 class="title">Contact Me</h2>
                 <p>Feel free to contact me using any of the specified contact methods below:</p>
                 <div>
-                    <a href="https://twitter.com/Agent40infinity/" target="_blank"><img class="socials" src="Resources/SVGs/Twitter.svg" alt="Twitter"></a>
-                    <a href="https://www.linkedin.com/in/aiden-nathan-agent40/" target="_blank"><img class="socials" src="Resources/SVGs/LinkedIn.svg" alt="LinkedIn"></a>
-                    <a href="https://github.com/Agent40infinity" target="_blank"><img class="socials" src="Resources/SVGs/Github.svg" alt="Github"></a>
-                    <a href="https://www.instagram.com/agent40infinity/" target="_blank"><img class="socials" src="Resources/SVGs/Instagram.svg" alt="Instagram"></a>
-                    <a href="mailto: me@aiden.fyi" target="_blank"><img class="socials" src="Resources/SVGs/Email.svg" alt="Email"></a>
+                    <a href="https://twitter.com/Agent40infinity/" target="_blank"><img class="socials" src="../Resources/SVGs/Twitter.svg" alt="Twitter"></a>
+                    <a href="https://www.linkedin.com/in/aiden-nathan-agent40/" target="_blank"><img class="socials" src="../Resources/SVGs/LinkedIn.svg" alt="LinkedIn"></a>
+                    <a href="https://github.com/Agent40infinity" target="_blank"><img class="socials" src="../Resources/SVGs/Github.svg" alt="Github"></a>
+                    <a href="https://www.instagram.com/agent40infinity/" target="_blank"><img class="socials" src="../Resources/SVGs/Instagram.svg" alt="Instagram"></a>
+                    <a href="mailto: me@aiden.fyi" target="_blank"><img class="socials" src="../Resources/SVGs/Email.svg" alt="Email"></a>
                 </div>  
             </section>
             <section class="copyright">

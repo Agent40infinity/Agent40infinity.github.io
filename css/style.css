@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Perpetua';
-    src: url('Resources/Fonts/per_____.ttf') format('truetype');
+    src: url('../Resources/Fonts/per_____.ttf') format('truetype');
 }
 
 @media print and (color) {
     * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
- }
+}
 
 * {
     font-family: 'Perpetua';
