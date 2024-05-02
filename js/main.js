@@ -1,6 +1,11 @@
 //Systems
 var loadState = { FirstTime: 1, Default: 2, Information: 3 };
-let portfolioState = loadState.Default;
+let portfolioState = loadState.FirstTime;
+
+if (localStorage.getItem("Visited") == "true") 
+{
+    portfolioState = loadState.Default 
+}
 
 // Audio
 var masterAudio = new Audio('../Resources/Media/landing.mp3');
@@ -114,6 +119,7 @@ function FirstTimeLoad()
 
             setTimeout(function() {
                 AddContents();
+                localStorage.setItem("Visited", true);
             }, 1000);
         }, 3500);
     });
