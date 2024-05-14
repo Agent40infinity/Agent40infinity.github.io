@@ -33,21 +33,24 @@ function loadProject(database, type) {
             }
         }
 
-        var inject = '<div class="project-item">' + 
-                        '<div class="project-header">' +
-                            '<img class="project-img" src="' + database[i].image + '" alt="project-item-' + database[i].title + '-image"/>' +
-                            '<p class="project-title">' + database[i].title + '</p>' +
+        var inject = 
+            '<div class="project-item">' + 
+                (database[i].link != null ? '<a  href="' + database[i].link + '" target=_>' : '') +
+                    '<div class="project-header">' +
+                        '<img class="project-img" src="' + database[i].image + '" alt="project-item-' + database[i].title + '-image"/>' +
+                        (database[i].title != "" ? '<p class="project-title">' : '<p class="project-title" style="opacity: 0;">') + database[i].title + '</p>' +
+                    '</div>' +
+                    '<div class="project-utility">' +
+                        utility +
+                    '</div>' +
+                    '<div class="project-info">' +
+                        '<p class="project-description">' + database[i].description + '</p>' +
+                        '<div class="project-list">' +
+                            key +
                         '</div>' +
-                        '<div class="project-utility">' +
-                            utility +
-                        '</div>' +
-                        '<div class="project-info">' +
-                            '<p class="project-description">' + database[i].description + '</p>' +
-                            '<div class="project-list">' +
-                                key +
-                            '</div>' +
-                        '</div>' +
-                    '</div>';
+                    '</div>' + 
+                '</a>' +
+            '</div>';
 
         $('.' + type + '-work.inject-data').append(
             inject
@@ -56,3 +59,5 @@ function loadProject(database, type) {
 
     console.log("Database: '" + type + "' Projects Loaded!")
 }
+
+//'<a href="' + database[i].link + '">' +  inject + '</a>'
