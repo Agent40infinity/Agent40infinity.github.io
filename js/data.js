@@ -3,15 +3,18 @@ $(document).ready(function() {
 });
 
 async function loadData() {
-    const response = await fetch('../js/Json/database.json');
-    const data = await response.json();
+    try {
+        const response = await fetch('../js/Json/database.json');
+        const data = await response.json();
 
-    loadProject(data.professional, "professional");
-    loadProject(data.personal, "personal");
+        loadProject(data.professional, "professional");
+        loadProject(data.personal, "personal");
+    } catch (error) {
+        console.error(error);
+    }
 }
 
 function loadProject(database, type) {
-    console.log(database);
     for (let i = 0; i < database.length; i++)
     {
         var utility = "";
@@ -50,4 +53,6 @@ function loadProject(database, type) {
             inject
         );
     }
+
+    console.log("Database: '" + type + "' Projects Loaded!")
 }

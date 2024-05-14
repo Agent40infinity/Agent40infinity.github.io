@@ -3,18 +3,18 @@ $(document).ready(function() {
 });
 
 async function loadData() {
-    const response = await fetch('../js/Json/resume.json');
-    const data = await response.json();
+    try {
+        const response = await fetch('../js/Json/resume.json');
+        const data = await response.json();
 
-    loadSkill(data.language, "language-inject.inject-data");
-
-    loadCategory(data.software, "software-inject.inject-data");
-
-    loadLegend(data.legend, "legend-inject.inject-data");
-
-    loadExperience(data.experience, "experience-inject.inject-data");
-
-    loadEducation(data.education, "education-inject.inject-data");
+        loadSkill(data.language, "language-inject.inject-data");
+        loadCategory(data.software, "software-inject.inject-data");
+        loadLegend(data.legend, "legend-inject.inject-data");
+        loadExperience(data.experience, "experience-inject.inject-data");
+        loadEducation(data.education, "education-inject.inject-data");
+    } catch (error) {
+        console.log(error);
+    }
 }
 
 function replaceChar(string) {

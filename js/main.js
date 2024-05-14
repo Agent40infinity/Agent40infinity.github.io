@@ -1,8 +1,9 @@
 //Systems
 var loadState = { FirstTime: 1, Default: 2, Information: 3 };
 let portfolioState = loadState.FirstTime;
+let visited = localStorage.getItem("Visited");
 
-if (localStorage.getItem("Visited") == "true") 
+if (visited == "true") 
 {
     portfolioState = loadState.Default 
 }
@@ -33,6 +34,7 @@ $(document).ready(function()
         case loadState.Default:
             $('.banner').css({"display": "none"});
             AddContents();
+            DefaultAudio();
             break;
     }
 
@@ -107,8 +109,7 @@ $(document).ready(function()
 function FirstTimeLoad()
 {
     $(".enter").one("click", function () {
-        masterAudio.play();
-        masterAudio.loop = true;
+        playAudio();
 
         $('.hidden').not('hr').animate({opacity: 1}, 3000);
         $('hr.hidden').animate({width: '40%', opacity: 1}, 2000);
@@ -133,7 +134,7 @@ function AddContents()
     $('.background').animate({top: "505px"}, 1000);
     $('.enter').fadeOut(0);
     $('.define').animate({opacity: 1}, 2000);
-                    
+
     setTimeout(function() {
         $('.special').fadeIn(1000);
         $('.information').fadeIn(2000);
@@ -145,6 +146,10 @@ function AddContents()
 // Used to toggle the audio.
 function toggleMute(img) {
     if (masterAudio.muted)  {
+        if (visited == "true" && masterAudio.paused) {
+            playAudio();
+        }
+
         masterAudio.muted = false;
         lastAudio(true);
         img.src="../Resources/SVGs/Speaker_Icon.svg";
@@ -156,6 +161,17 @@ function toggleMute(img) {
     }
 
     updateProgress();
+}
+
+function playAudio() {
+    masterAudio.play();
+    masterAudio.loop = true;
+}
+
+function DefaultAudio() {
+    var mute = $('.muteToggle').first();
+    toggleMute(mute);
+    mute.attr("src","../Resources/SVGs/Mute_Icon.svg");
 }
 
 // Marks the last known audio value so that when muting and unmuting, it returns to the original value.
