@@ -2,6 +2,14 @@
     "professional" : [
         {
             "title": "",
+            "image": "../Resources/Database/Varsity.jpg",
+            "description": "Junior Game Developer at Powercor, working on Varsity.",
+            "key": ["Varsity is a Training Application for Powercor & Citipower Electricians and Lineies with a VR counterpart.", "Junior Game Developer", "Fullstack Web Development", "Immersive Technology (VR)"],
+            "utility": ["Unity", "C#", "HLSL",  ".NET", "Blazor", "Powercor"],
+            "link": "https://apps.apple.com/us/app/varsity-immersive-learning/id1535418137"
+        },
+        {
+            "title": "",
             "image": "../Resources/Database/SOE.jpg",
             "description": "The ScriptableObject Editor is a tool designed to centralize the management proccesses behind modifying ScriptableObjects.",
             "key": ["System.Type manipulation", "Serialized object & property modification", "Modular Editor Tool", "Custom Creation Window"],
