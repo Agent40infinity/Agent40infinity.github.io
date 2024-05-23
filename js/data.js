@@ -49,7 +49,7 @@ function loadProject(database, type) {
                             key +
                         '</div>' +
                     '</div>' + 
-                '</a>' +
+                (database[i].link != null ? '</a>' : '') +
             '</div>';
 
         $('.' + type + '-work.inject-data').append(
