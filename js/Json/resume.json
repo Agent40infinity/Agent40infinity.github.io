@@ -24,11 +24,23 @@
         },
         {
             "title": "C",
-            "level": "../Resources/SVGs/hexagon-slice-1.svg"
+            "level": "../Resources/SVGs/hexagon-slice-3.svg"
+        },
+        {
+            "title":".NET",
+            "level": "../Resources/SVGs/hexagon-slice-4.svg"
         },
         {
             "title": "ShaderCore",
             "level": "../Resources/SVGs/hexagon-slice-4.svg"
+        },
+        {
+            "title": "HLSL",
+            "level": "../Resources/SVGs/hexagon-slice-4.svg"
+        },
+        {
+            "title": "Rust",
+            "level": "../Resources/SVGs/hexagon-slice-1.svg"
         },
         {
             "title": "Java",
@@ -126,7 +138,28 @@
             ]
         },
         {
-            "name" : "IDE & Misc",
+            "name":"Media",
+            "type" : [
+                {
+                    "title": "FileZilla",
+                    "level": "../Resources/SVGs/hexagon-slice-6.svg"
+                },
+                {
+                    "title": "Audacity",
+                    "level": "../Resources/SVGs/hexagon-slice-4.svg"
+                },
+                {
+                    "title": "OBS",
+                    "level": "../Resources/SVGs/hexagon-slice-6.svg"
+                },
+                {
+                    "title": "Resolve",
+                    "level": "../Resources/SVGs/hexagon-slice-4.svg"
+                }
+            ]
+        },
+        {
+            "name" : "IDEs & Frameworks",
             "type" : [
                 {
                     "title": "Visual Studio",
@@ -137,25 +170,62 @@
                     "level": "../Resources/SVGs/hexagon-slice-6.svg"
                 },
                 {
-                    "title": "FileZilla",
-                    "level": "../Resources/SVGs/hexagon-slice-6.svg"
-                },
-                {
                     "title": "MySQL",
                     "level": "../Resources/SVGs/hexagon-slice-4.svg"
                 },
                 {
-                    "title": "Audacity",
-                    "level": "../Resources/SVGs/hexagon-slice-4.svg"
+                    "title": "ASP.NET",
+                    "level": "../Resources/SVGs/hexagon-slice-1.svg"
                 },
                 {
-                    "title": "OBS",
-                    "level": "../Resources/SVGs/hexagon-slice-6.svg"
+                    "title": "Blazor",
+                    "level": "../Resources/SVGs/hexagon-slice-3.svg"
                 }
             ]
         }
     ],
     "experience" : [
+        {
+            "name" : "Professional Projects",
+            "icon" : "../Resources/SVGs/Company.svg",
+            "list" : [
+                {
+                    "project" : "Jr Game Developer",
+                    "location" : "Powercor",
+                    "date" : "Feburary 2023 - Present",
+                    "logo" : "../Resources/Database/Varsity_Logo.jpg",
+                    "description" : "Powercor Australia - Victoria, Australia",
+                    "columns" : true,
+                    "details" : [
+                        "Jr Game Developer for IOS training application 'Varsity'.",
+                        "Full Stack Web Developer for user results of Varsity.",
+                        "Immersive Technology Developer for VR training application."
+                    ]
+                },
+                {
+                    "project" : "ScriptableObject Editor",
+                    "location" : "Indie",
+                    "date" : "July 2022 - December 2022",
+                    "logo" : "../Resources/Database/SOE_Logo.jpg",
+                    "description" : "Published Tool designed to centralize the management proccesses behind modifying ScriptableObjects.",
+                    "columns" : true,
+                    "details" : [
+                        "Tool created as a custom editor window that utilizes Unity's EditorGUI backend.",
+                        "Makes use of AppDomain and System.Type 'generics' to get and modify assemblies.",
+                        "Designed to simplify and centralize the creation and modification processes behind Scriptable Objects.",
+                        "Utilizes a serialized window to display and give modification access to a selected ScriptableObject's fields and properties.",
+                        "Allows for the deletion and renaming of the selected object within the serialized window.",
+                        "Scrollview accompanied by a case-insensitive search sidebar to display all Scriptable Objects.",
+                        "Multiple filters to mask displayed selectable Scriptable Objects.",
+                        "Assembly filter for masking the displayed objects to a specific assembly associated within the project.",
+                        "Folder filter to mask only objects contained within a specified directory.",
+                        "Type type filter to mask class derived objects.",
+                        "Custom creation window for creating new ScriptableObjects as well as new class types of ScriptableObjects.",
+                        "Tested and working for all versions of Unity past 2019 (Excluding versions recognised by Unity to cause issues)."
+                    ]
+                }
+            ]
+        },
         {
             "name" : "University Projects",
             "icon" : "../Resources/SVGs/Group.svg",
@@ -209,28 +279,6 @@
             "name" : "Personal Projects",
             "icon" : "../Resources/SVGs/Profile.svg",
             "list" : [
-                {
-                    "project" : "ScriptableObject Editor",
-                    "location" : "",
-                    "date" : "July 2022 - December 2022",
-                    "logo" : "../Resources/Database/SOE_Logo.jpg",
-                    "description" : "Published Tool designed to centralize the management proccesses behind modifying ScriptableObjects.",
-                    "columns" : true,
-                    "details" : [
-                        "Tool created as a custom editor window that utilizes Unity's EditorGUI backend.",
-                        "Makes use of AppDomain and System.Type 'generics' to get and modify assemblies.",
-                        "Designed to simplify and centralize the creation and modification processes behind Scriptable Objects.",
-                        "Utilizes a serialized window to display and give modification access to a selected ScriptableObject's fields and properties.",
-                        "Allows for the deletion and renaming of the selected object within the serialized window.",
-                        "Scrollview accompanied by a case-insensitive search sidebar to display all Scriptable Objects.",
-                        "Multiple filters to mask displayed selectable Scriptable Objects.",
-                        "Assembly filter for masking the displayed objects to a specific assembly associated within the project.",
-                        "Folder filter to mask only objects contained within a specified directory.",
-                        "Type type filter to mask class derived objects.",
-                        "Custom creation window for creating new ScriptableObjects as well as new class types of ScriptableObjects.",
-                        "Tested and working for all versions of Unity past 2019 (Excluding versions recognised by Unity to cause issues)."
-                    ]
-                },
                 {
                     "project" : "Dark Light",
                     "location" : "",
