@@ -196,10 +196,17 @@
                     "logo" : "../Resources/Database/Varsity_Logo.jpg",
                     "description" : "Powercor Australia - Victoria, Australia",
                     "columns" : true,
+                    "selected" : true,
                     "details" : [
                         "Jr Game Developer for IOS training application 'Varsity'.",
                         "Full Stack Web Developer for user results of Varsity.",
-                        "Immersive Technology Developer for VR training application."
+                        "Immersive Technology Developer for VR training application.",
+                        "Designed, Implemented, and Maintained complex systems including;",
+                        "Reflection based MVVM data management, linked through data binding GUI.",
+                        "Local results cache for user data posting to AWS backend.",
+                        "VR & IOS object selection outlining with HLSL.",
+                        "'Activity, step' entity component system for gameplay loop.",
+                        "Restructure and optimisation of web frontend for user results in Blazor."
                     ]
                 },
                 {

@@ -141,7 +141,7 @@ function loadList(database) {
         details += '</div></div>';
 
         var item = 
-        '<div class="project-item">' + 
+        (database[i].selected ? '<div class="project-item selected">' : '<div class="project-item">') + 
             logo +
             '<div class=project-item-info>' + 
                 '<div class="item-info-bar">' +
