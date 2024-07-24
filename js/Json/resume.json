@@ -190,7 +190,7 @@
             "icon" : "../Resources/SVGs/Company.svg",
             "list" : [
                 {
-                    "project" : "Jr Game Developer",
+                    "project" : "Game Developer",
                     "location" : "Powercor",
                     "date" : "Feburary 2023 - Present",
                     "logo" : "../Resources/Database/Varsity_Logo.jpg",
@@ -198,7 +198,7 @@
                     "columns" : true,
                     "selected" : true,
                     "details" : [
-                        "Jr Game Developer for IOS training application 'Varsity'.",
+                        "Game Developer for IOS training application 'Varsity'.",
                         "Full Stack Web Developer for user results of Varsity.",
                         "Immersive Technology Developer for VR training application.",
                         "Designed, Implemented, and Maintained complex systems including;",
