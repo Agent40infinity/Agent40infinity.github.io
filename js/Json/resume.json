@@ -51,10 +51,6 @@
             "level": "../Resources/SVGs/hexagon-slice-6.svg"
         },
         {
-            "title": "React",
-            "level": "../Resources/SVGs/hexagon-slice-3.svg"
-        },
-        {
             "title": "HTML",
             "level": "../Resources/SVGs/hexagon-slice-4.svg"
         },
@@ -93,7 +89,7 @@
             "name" : "Version Control",
             "type" : [
                 {
-                    "title": "GIT",
+                    "title": "Git",
                     "level": "../Resources/SVGs/hexagon-slice-4.svg"
                 },
                 {
@@ -103,20 +99,31 @@
             ]
         },
         {
-            "name" : "Editing",
+            "name" : "IDEs & Frameworks",
             "type" : [
                 {
-                    "title": "Premier Pro",
-                    "level": "../Resources/SVGs/hexagon-slice-4.svg"
-                },
-
-                {
-                    "title": "Sony Vegas",
-                    "level": "../Resources/SVGs/hexagon-slice-4.svg"
-                },
-                {
-                    "title": "Davinci Resolve 16",
+                    "title": "Visual Studio",
                     "level": "../Resources/SVGs/hexagon-slice-6.svg"
+                },
+                {
+                    "title": "VSC",
+                    "level": "../Resources/SVGs/hexagon-slice-6.svg"
+                },
+                {
+                    "title": "MySQL",
+                    "level": "../Resources/SVGs/hexagon-slice-4.svg"
+                },
+                {
+                    "title": "React",
+                    "level": "../Resources/SVGs/hexagon-slice-3.svg"
+                },
+                {
+                    "title": "ASP.NET",
+                    "level": "../Resources/SVGs/hexagon-slice-1.svg"
+                },
+                {
+                    "title": "Blazor",
+                    "level": "../Resources/SVGs/hexagon-slice-3.svg"
                 }
             ]
         },
@@ -159,27 +166,20 @@
             ]
         },
         {
-            "name" : "IDEs & Frameworks",
+            "name" : "Editing",
             "type" : [
                 {
-                    "title": "Visual Studio",
-                    "level": "../Resources/SVGs/hexagon-slice-6.svg"
+                    "title": "Premier Pro",
+                    "level": "../Resources/SVGs/hexagon-slice-4.svg"
                 },
+
                 {
-                    "title": "VSC",
-                    "level": "../Resources/SVGs/hexagon-slice-6.svg"
-                },
-                {
-                    "title": "MySQL",
+                    "title": "Sony Vegas",
                     "level": "../Resources/SVGs/hexagon-slice-4.svg"
                 },
                 {
-                    "title": "ASP.NET",
-                    "level": "../Resources/SVGs/hexagon-slice-1.svg"
-                },
-                {
-                    "title": "Blazor",
-                    "level": "../Resources/SVGs/hexagon-slice-3.svg"
+                    "title": "Davinci Resolve 16",
+                    "level": "../Resources/SVGs/hexagon-slice-6.svg"
                 }
             ]
         }
