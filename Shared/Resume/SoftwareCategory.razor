@@ -2,7 +2,7 @@
     @foreach (var category in Data)
     {
         <div class="skill-item-category">
-            <SkillBar Data="@category.type" />
+            <SkillBar Data="@category.type" Software=true/>
             <div class="item-category-sub">
                 <hr class="horizontal">
                 <p class="item-category-name"> @category.name </p>
