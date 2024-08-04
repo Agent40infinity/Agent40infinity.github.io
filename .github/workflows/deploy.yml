@@ -21,7 +21,7 @@ jobs:
 
     # publishes Blazor project to the release-folder
     - name: Publish Blazor Project
-      run: dotnet publish aidenfyi.csproj -c Release -o release --nologo
+      run: dotnet publish aiden.fyi.csproj -c Release -o release --nologo
 
     # add .nojekyll file to tell GitHub pages to not treat this as a Jekyll project. (Allow files and folders starting with an underscore)
     - name: Go away Jekyll
