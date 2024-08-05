@@ -2,7 +2,7 @@
 {
     public class SkillItem
     {
-        public string title { get; set; }
-        public int level { get; set; }
+        public string title { get; set; } = "";
+        public int level { get; set; } = 1;
     }
 }

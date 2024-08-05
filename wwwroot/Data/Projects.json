@@ -1,7 +1,8 @@
 {
   "professional": [
     {
-      "title": "",
+      "title": "Varsity",
+      "displayTitle" : false,
       "image": "../Resources/Database/Varsity.jpg",
       "description": "Game Developer at Powercor, working on Varsity.",
       "key": [ "Varsity is a Training Application for Powercor & Citipower Electricians and Lineies with a VR counterpart.", "Game Developer", "Fullstack Web Development", "Immersive Technology (VR)" ],
@@ -9,7 +10,8 @@
       "link": "https://apps.apple.com/us/app/varsity-immersive-learning/id1535418137"
     },
     {
-      "title": "",
+      "title": "Scriptable Object Editor",
+      "displayTitle": false,
       "image": "../Resources/Database/SOE.jpg",
       "description": "The ScriptableObject Editor is a tool designed to centralize the management proccesses behind modifying ScriptableObjects.",
       "key": [ "System.Type manipulation", "Serialized object & property modification", "Modular Editor Tool", "Custom Creation Window" ],
@@ -17,7 +19,8 @@
       "link": "https://assetstore.unity.com/packages/tools/utilities/scriptable-object-editor-235840"
     },
     {
-      "title": "",
+      "title": "Summit",
+      "displayTitle": false,
       "image": "../Resources/Database/Summit.jpg",
       "description": "Summit is a 3D third person Rogue-Like inspired by Risk of Rain 2.",
       "key": [ "Lead Programmer", "Modular Boss State Machine", "Systems Development", "Modular Scene Mangement", "Core Game Structure" ],
@@ -28,7 +31,7 @@
       "title": "Dark Light",
       "image": "../Resources/Database/DarkLight.jpg",
       "description": "Dark Light is a 2D metroidvania inspirated by Hollow Knight and the Soulsbourne Series.",
-      "key": [ "Velocity-based 2D physics controller", "Player state machine", "Dynamic save system using Json.NET" ],
+      "key": [ "Entity state machines", "Modular interpreter save system", "Velocity-based 2D physics controller" ],
       "utility": [ "Unity", "C#", "HLSL", "Indie" ]
     },
     {
@@ -48,11 +51,11 @@
   ],
   "personal": [
     {
-      "title": "Utilities Project",
+      "title": "Aiden.fyi",
       "image": "../Resources/Database/Untitled.jpg",
-      "description": "A dynamic unity template created with the explicit purpose of being used as a base for all future projects.",
-      "key": [ "Asynchronous scene loading", "Modular save system", "Custom Event-based Input System" ],
-      "utility": [ "Unity", "C#" ]
+      "description": "My Portfolio was created with raw html, css, and js then transitioned into Blazor.",
+      "key": [ "Click here to learn more about the development progress of my portfolio!" ],
+      "utility": [ "Blazor", ".NET", "Html", "CSS", "JavaScript" ]
     },
     {
       "title": "Pokémon SoulSilver Remake",
@@ -73,7 +76,7 @@
       "image": "../Resources/Database/Agent40.jpg",
       "description": "Alias used for content creation, game development, gaming, and general use during my lifetime.",
       "key": [],
-      "utility": [ "Youtube", "Twitch", "Content Creator" ]
+      "utility": [ "Youtube", "Twitch", "Content Creator", "Game Development" ]
     }
   ]
 }

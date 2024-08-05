@@ -2,10 +2,10 @@
     @foreach (var project in Projects)
     {
         <div class="project-item">
-            <a href="@project.link">
+            <a href="/projects/@project.title">
                 <div class="project-header">
                     <img class="project-img" src="@project.image" alt="project-item-@project.title-image" />
-                    @if (project.title != "")
+                    @if (project.displayTitle)
                     {
                         <p class="project-title"> @project.title </p>
                     }
@@ -18,13 +18,17 @@
                 </div>
                 <div class="project-info">
                     <p class="project-description"> @project.description </p>
-                    <div class="project-list">
-                        <p class=project-list-key> Notable Contributions: </p>
-                        @foreach (var key in project.key)
-                        {
-                            <p class="project-list-key">- @key</p>
-                        }
-                    </div>
+                    @if (project.key.Count() > 0)
+                    {
+                        <div class="project-list">
+                            <p class=project-list-key> Notable Contributions: </p>
+                            @foreach (var key in project.key)
+                            {
+                                <p class="project-list-key">- @key</p>
+                            }
+                        </div>
+                    }
+
                 </div>
             </a>
         </div>
