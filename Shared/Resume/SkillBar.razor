@@ -1,0 +1,19 @@
+﻿<div class="@(Software ? "software" : "") skill-bar">
+    @foreach (var skill in Data)
+    {
+        <Skill Title="@skill.title" Level="@skill.level" />
+    }
+</div>
+
+@code {
+    [Parameter]
+    public List<SkillItem> Data { get; set; } = new List<SkillItem>();
+
+    [Parameter]
+    public bool Software { get; set; } = false;
+}
+<style>
+    .software.skill-bar {
+        margin: 0;
+    }
+</style>
