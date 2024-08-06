@@ -1,4 +1,4 @@
-﻿@foreach (var experience in Data)
+﻿@foreach (var experience in Data.Where(x => !registered.Contains(x)))
 {
     <div class="project-item @(experience.selected ? "selected" : "")">
         @if (experience.logo != "")
@@ -7,33 +7,38 @@
             <hr class="vertical">
         }
         <div class=project-item-info>
-            <div class="item-info-bar">
-                <p class="skill-item-name"> @experience.project </p>
-                <p class="skill-item-location"> @experience.location </p>
-                <p class="skill-item-name"> @experience.date </p>
-            </div>
-            <hr class="horizontal">
-            <div class="item-info-description">
-                <p class="description-text"> @experience.description </p>
-                <div class="info-description@(experience.columns ? "-columns" : "")">
-                    @if (experience.columns)
-                    {
-                        int columnCount = 0;
-                        int descriptionCount = 0;
+            @foreach (var item in Data.Where(x => x.location == experience.location && x.description == experience.description))
+            {
+                registered.Add(item);
 
-                        while (descriptionCount < experience.details.Count)
-                        {
-                            <ExperienceDescriptionColumn Data=@experience.details.Skip(columnCount * increment).Take(increment).ToList() />
-                            descriptionCount += increment;
-                            columnCount++;
-                        }
-                    }
-                    else
-                    {
-                        <ExperienceDescriptionColumn Data=@experience.details />
-                    }
+                <div class="item-info-bar">
+                    <p class="skill-item-name"> @item.project </p>
+                    <p class="skill-item-location"> @item.location </p>
+                    <p class="skill-item-name"> @item.date </p>
                 </div>
-            </div>
+                <hr class="horizontal">
+                <div class="item-info-description">
+                    <p class="description-text"> @item.description </p>
+                    <div class="info-description@(item.columns ? "-columns" : "")">
+                        @if (item.columns)
+                        {
+                            int columnCount = 0;
+                            int descriptionCount = 0;
+
+                            while (descriptionCount < item.details.Count)
+                            {
+                                <ExperienceDescriptionColumn Data=@item.details.Skip(columnCount * increment).Take(increment).ToList() />
+                                descriptionCount += increment;
+                                columnCount++;
+                            }
+                        }
+                        else
+                        {
+                            <ExperienceDescriptionColumn Data=@item.details />
+                        }
+                    </div>
+                </div>
+            }
         </div>
     </div>
 }
@@ -41,6 +46,7 @@
 @code {
     [Parameter]
     public List<Components.Experience> Data { get; set; } = new List<Components.Experience>();
-    //
+    
+    private List<Components.Experience> registered = new List<Components.Experience>();
     private const int increment = 6;
 }

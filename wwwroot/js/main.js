@@ -26,17 +26,17 @@ $(document).ready(function()
 {
     masterAudio.volume = 0.4;
 
-    switch (portfolioState)
-    {
-        case loadState.FirstTime:
-            FirstTimeLoad();
-            break;
-        case loadState.Default:
+    //switch (portfolioState)
+    //{
+    //    case loadState.FirstTime:
+    //        FirstTimeLoad();
+    //        break;
+    //    case loadState.Default:
             $('.banner').css({"display": "none"});
             AddContents();
             DefaultAudio();
-            break;
-    }
+    //        break;
+    //}
 
     // Animates the header once too far down.
     // Makes the header / navigation banner transparent.

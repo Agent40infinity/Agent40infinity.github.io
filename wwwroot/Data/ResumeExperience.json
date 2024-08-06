@@ -6,7 +6,7 @@
       {
         "project": "Game Developer",
         "location": "Powercor",
-        "date": "Feburary 2023 - Present",
+        "date": "April 2023 - Present",
         "logo": "../Resources/Database/Varsity_Logo.jpg",
         "description": "Powercor Australia - Victoria, Australia",
         "columns": true,
@@ -22,6 +22,12 @@
           "'Activity, step' entity component system for gameplay loop.",
           "Restructure and optimisation of web frontend for user results in Blazor."
         ]
+      },
+      {
+        "project": "Jr Game Developer",
+        "location": "Powercor",
+        "date": "Feburary 2023 - April 2023",
+        "description": "Powercor Australia - Victoria, Australia"
       },
       {
         "project": "ScriptableObject Editor",
