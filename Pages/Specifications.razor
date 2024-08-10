@@ -3,6 +3,13 @@
 <Header />
 <Footer />
 
+<script>
+    $(document).ready(function () {
+        $('header').css({ width: '100%', opacity: 1 });
+        $('footer').css({ display: 'block', opacity: 1 });
+    });
+</script>
+
 @code {
     [Parameter]
     public string Title { get; set; } = "";

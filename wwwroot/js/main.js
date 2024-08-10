@@ -1,7 +1,7 @@
 //Systems
 var loadState = { FirstTime: 1, Default: 2, Information: 3 };
-let portfolioState = loadState.FirstTime;
-let visited = localStorage.getItem("Visited");
+var portfolioState = loadState.FirstTime;
+var visited = localStorage.getItem("Visited");
 
 if (visited == "true") 
 {
@@ -9,7 +9,7 @@ if (visited == "true")
 }
 
 // Audio
-var masterAudio = new Audio('../Resources/Media/landing.mp3');
+var masterAudio = new Audio('Resources/Media/landing.mp3');
 var dBConversion = 250;
 var lastVolume = 0;
 
@@ -26,37 +26,30 @@ $(document).ready(function()
 {
     masterAudio.volume = 0.4;
 
-    //switch (portfolioState)
-    //{
-    //    case loadState.FirstTime:
-    //        FirstTimeLoad();
-    //        break;
-    //    case loadState.Default:
+    switch (portfolioState)
+    {
+        case loadState.FirstTime:
+            FirstTimeLoad();
+            break;
+        case loadState.Default:
             $('.banner').css({"display": "none"});
             AddContents();
             DefaultAudio();
-    //        break;
-    //}
+            break;
+    }
 
     // Animates the header once too far down.
     // Makes the header / navigation banner transparent.
-    $(window).scroll(function() {
+    $(window).scroll(function () {
         var screenTop = $(window).scrollTop();
-
-        if (screenTop >= topAnimateDist) { 
-            $('.return').fadeIn(200);
-        } 
-        else {    
-            $('.return').fadeOut(200);
-        }
 
         if (screenTop >= headerAnimateDist)
         {
-            $('header').css({"background-color": "rgba(0, 0, 0, 0.7)", "transition": "0.2s"});
+            $('header').css({"background-color": "rgba(0, 0, 0, 0.7)", "transition": "0.5s"});
         }
         else
         {
-            $('header').css({"background-color": "rgba(0, 0, 0, 1)", "transition": "0.2s"});
+            $('header').css({"background-color": "rgba(0, 0, 0, 1)", "transition": "0.5s"});
         }
     });
 
@@ -201,11 +194,6 @@ function updateProgress() {
         e.style.setProperty('--max', e.max == '' ? '100' : e.max);
         e.addEventListener('input', () => e.style.setProperty('--value', e.value));
     }
-}
-
-// Used to return to the top of the page.
-function returnTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 // Utilises the arrows to auto scroll to x chapter.
