@@ -1,5 +1,6 @@
 ﻿@page "/projects/resume"
 @inject HttpClient http
+@inject IJSRuntime js
 
 <body>
     <header>
@@ -87,6 +88,13 @@
         categories = await http.GetFromJsonAsync<List<Components.SoftwareCategory>>("Data/ResumeSoftware.json");
         education = await http.GetFromJsonAsync<List<Study>>("Data/ResumeEducation.json");
         experience = await http.GetFromJsonAsync<List<Components.ExperienceCategory>>("Data/ResumeExperience.json");
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await base.OnAfterRenderAsync(firstRender);
+
+        await js.InvokeVoidAsync("Rendered");
     }
 }
 
