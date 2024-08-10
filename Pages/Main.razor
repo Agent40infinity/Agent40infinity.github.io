@@ -1,15 +1,17 @@
 ﻿@page "/"
 @inject HttpClient http
+@inject NavigationManager NavManager
 
 <script src='js/main.js'></script>
 
 <VolumeSlider />
-
+<Return />
 <video class="background" autoplay muted loop>
     <source src="Resources/Media/Main.mp4" type="video/mp4">
 </video>
 <Header />
 <main class="content">
+    <Banner />
     <img class="arrow special" src="Resources/SVGs/ArrowDown_Icon.svg" alt="Arrow Down" />
     <section class="information">
         <article class="chapter" id="chapter1">
@@ -72,6 +74,7 @@
 
     body {
         overflow-x: hidden;
+        overflow-y: hidden;
         background-color: black;
     }
 
@@ -155,6 +158,7 @@
         padding: 10% 0px 10% 0px;
         color: white;
         background-color: rgba(0, 0, 0, 0.623);
+        display: none;
     }
 
     .chapter {

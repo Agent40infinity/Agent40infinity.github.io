@@ -1,5 +1,27 @@
 ﻿<img class="return" src="../Resources/SVGs/Caret.svg" alt="Caret" onclick="returnTop()" />
 
+<script>
+    $(document).ready(function () {
+        // Animates the header once too far down.
+        // Makes the header / navigation banner transparent.
+        $(window).scroll(function () {
+            var screenTop = $(window).scrollTop();
+
+            if (screenTop >= topAnimateDist) {
+                $('.return').fadeIn(200);
+            }
+            else {
+                $('.return').fadeOut(200);
+            }
+        });
+    });
+
+    // Used to return to the top of the page.
+    function returnTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>
+
 <style>
 .return {
     display: none;
