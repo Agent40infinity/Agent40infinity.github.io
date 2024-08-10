@@ -1,5 +1,6 @@
 ﻿@page "/"
 @inject HttpClient http
+@inject IJSRuntime js
 @inject NavigationManager NavManager
 
 <script src='js/main.js'></script>
@@ -16,7 +17,7 @@
     <section class="information">
         <article class="chapter" id="chapter1">
             <h2 class="title">About Me</h2>
-            <img class="visual" src="Resources/pfp.jpg" alt="Rouge Game, 1980">
+            <img class="visual" src="Resources/pfp.jpg" alt="It's Me.'">
             <p class="about">
                 Hi I'm Aiden, a Game Developer currently working for Powercor Australia. Previously, I've completed a Bachelor of Game Development at Macquarie University. <br>
                 Currently, I'm working full-time while maintaining and publishing extension packages on the Unity Asset Store alongside an Indie title "Dark Light".
@@ -61,6 +62,10 @@
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
+        await Task.Delay(0000);
+
+        await js.InvokeVoidAsync("Rendered");
+
         await base.OnAfterRenderAsync(firstRender);
     }
 }

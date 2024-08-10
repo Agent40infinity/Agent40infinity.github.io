@@ -1,4 +1,5 @@
 ﻿@page "/projects/{Title}"
+@inject IJSRuntime js
 
 <Header />
 <Footer />
@@ -13,4 +14,11 @@
 @code {
     [Parameter]
     public string Title { get; set; } = "";
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await base.OnAfterRenderAsync(firstRender);
+
+        await js.InvokeVoidAsync("Rendered");
+    }
 }
