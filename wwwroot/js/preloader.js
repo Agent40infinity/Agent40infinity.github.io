@@ -1,7 +1,7 @@
-function Rendered() {
-    $('.pre-loader').fadeOut(1000);
+function Rendered(duration) {
+    $('.pre-loader').fadeOut(duration);
 }
 
-function Unloaded() {
-    $('.pre-loader').fadeOut(1000);
+function Unloaded(duration) {
+    $('.pre-loader').fadeIn(duration);
 }

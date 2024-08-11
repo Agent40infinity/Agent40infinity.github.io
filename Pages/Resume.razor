@@ -1,6 +1,7 @@
 ﻿@page "/projects/resume"
 @inject HttpClient http
 @inject IJSRuntime js
+@inject NavigationManager NavManager
 
 <body>
     <header>
@@ -28,7 +29,7 @@
             </div>
         </div>
         <div class="container">
-            <p>Portfolio: <a href="https://aiden.fyi/" target="_blank">https://aiden.fyi/</a></p>
+            <p>Portfolio: <a @onclick="@( () => Navigation.NavigateTo(NavManager, js, "/"))" target="_blank">https://aiden.fyi/</a></p>
             <p class="web">Download: <a href="../projects/Aiden_NathanCV.pdf" target="_blank">Pdf Version</a></p>
         </div>
     </header>

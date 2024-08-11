@@ -62,6 +62,8 @@ a, .btn-link {
 }
 
 .pre-loader {
+    display: block;
+    position: fixed;
     z-index: 100;
 }
 
