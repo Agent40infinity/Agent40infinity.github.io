@@ -31,7 +31,7 @@
                 details about each project, click the cards below.
             </p>
             <p class="about">
-                <a href="/projects/resume"> Resume </a>
+                <a @onclick="@( () => Navigation.NavigateTo(NavManager, js,"/projects/resume"))"> Resume </a>
             </p>
             <img class="arrow" src="Resources/SVGs/ArrowDown_Icon.svg" alt="Arrow Down" />
         </article>
@@ -62,9 +62,7 @@
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        await Task.Delay(0000);
-
-        await js.InvokeVoidAsync("Rendered");
+        await js.InvokeVoidAsync("Rendered", Navigation.duration);
 
         await base.OnAfterRenderAsync(firstRender);
     }
@@ -97,19 +95,6 @@
 
     .subtext {
         font-size: 36px;
-    }
-
-    a {
-        color: white;
-        text-decoration: none;
-    }
-
-    a:hover {
-        color: white;
-    }
-
-    a:active {
-        color: white;
     }
 
     video.background {
