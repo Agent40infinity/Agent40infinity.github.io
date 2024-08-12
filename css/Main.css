@@ -12,14 +12,14 @@ a {
     text-decoration: none;
 }
 
-    a:hover {
-        cursor: pointer;
-        color: white;
-    }
+a:hover {
+    cursor: pointer;
+    color: white;
+}
 
-    a:active {
-        color: white;
-    }
+a:active {
+    color: white;
+}
 
 ::-webkit-scrollbar {
     width: 6px;
