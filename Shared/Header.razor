@@ -1,9 +1,12 @@
-﻿<header class="navbar">
+﻿@inject NavigationManager NavManager
+@inject IJSRuntime js
+
+<header class="navbar">
     <div class="nav-menu nav-item">
         <HamburgerMenu />
     </div>
     <div class="nav-title nav-item">
-        <a href="/">
+        <a @onclick="@( () => Navigation.NavigateTo(NavManager, js,"/"))">
             <span class="nav-title-top">Aiden Nathan</span>
             <hr>
             <span class="nav-title-sub">Game Programmer & Designer</span>
