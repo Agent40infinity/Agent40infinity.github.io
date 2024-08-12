@@ -93,9 +93,12 @@
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        await base.OnAfterRenderAsync(firstRender);
+        if (firstRender)
+        {
+            await js.InvokeVoidAsync("Rendered");
+        }
 
-        await js.InvokeVoidAsync("Rendered");
+        await base.OnAfterRenderAsync(firstRender);
     }
 }
 
