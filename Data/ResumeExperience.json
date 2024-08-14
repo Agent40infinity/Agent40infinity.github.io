@@ -12,7 +12,7 @@
         "columns": false,
         "selected": true,
         "details": [
-          "Redesigned and implemented core gameplay loop to better improve the user's interactive experience.'",
+          "Redesigned and implemented core gameplay loop to better improve the user's interactive experience.",
           "Improved data collection and visibility to allow for better user feedback and results.",
           "Prevented user data loss by caching data locally to improve user retention and reduce frustration.",
           "Dramatically improved the user interface and load times for the customer when reviewing user results.",
