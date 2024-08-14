@@ -54,7 +54,7 @@
       },
       {
         "title": "Blazor",
-        "level": "3"
+        "level": "4"
       }
     ]
   },
@@ -89,10 +89,6 @@
       {
         "title": "OBS",
         "level": "6"
-      },
-      {
-        "title": "Resolve",
-        "level": "4"
       }
     ]
   },
