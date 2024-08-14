@@ -12,10 +12,13 @@
         "columns": false,
         "selected": true,
         "details": [
+          "Redesigned and implemented core gameplay loop to better improve the user's interactive experience.'",
           "Improved data collection and visibility to allow for better user feedback and results.",
           "Prevented user data loss by caching data locally to improve user retention and reduce frustration.",
           "Dramatically improved the user interface and load times for the customer when reviewing user results.",
-          "Redesigned core gameplay loop to better improve the user's interactive experience.'"
+          "Implemented unit testing for Git Flow validation to maintain a healthy production environment for the customer.",
+          "Refactored legacy codebase to improve maintainability and remove code debt.",
+          "Documented design processes and implementation of developed and legacy code to improve future productivity."
         ]
       },
       {
@@ -26,8 +29,9 @@
         "columns": false,
         "details": [
           "Worked closely with a dedicated team of designers, lead programmer, and project manager.",
-          "Lead a small team of designers to redesign and better the user experience for 'Varsity'.",
-          "Designed and Implemented multi-platform interaction experience aimed at improving Accessibility.",
+          "Lead a small team of designers to redesign and implement an improved user interface to better the user experience.",
+          "Designed and Implemented multi-platform tool interactions aimed to improve accessibility and visual clarity for the user.",
+          "Updated and refactored VR experience to improve user interaction and features.",
           "Onboarded and trained multiple developers including a senior."
         ]
       },
@@ -36,21 +40,17 @@
         "location": "Indie",
         "date": "July 2022 - December 2022",
         "logo": "../Resources/Database/SOE_Logo.jpg",
-        "description": "Published Tool designed to centralize the management proccesses behind modifying ScriptableObjects.",
+        "description": "An object management editor tool published on the Unity Asset Store.",
         "columns": true,
         "details": [
-          "Tool created as a custom editor window that utilizes Unity's EditorGUI backend.",
-          "Makes use of AppDomain and System.Type 'generics' to get and modify assemblies.",
-          "Designed to simplify and centralize the creation and modification processes behind Scriptable Objects.",
-          "Utilizes a serialized window to display and give modification access to a selected ScriptableObject's fields and properties.",
-          "Allows for the deletion and renaming of the selected object within the serialized window.",
-          "Scrollview accompanied by a case-insensitive search sidebar to display all Scriptable Objects.",
-          "Multiple filters to mask displayed selectable Scriptable Objects.",
-          "Assembly filter for masking the displayed objects to a specific assembly associated within the project.",
-          "Folder filter to mask only objects contained within a specified directory.",
-          "Type type filter to mask class derived objects.",
-          "Custom creation window for creating new ScriptableObjects as well as new class types of ScriptableObjects.",
-          "Tested and working for all versions of Unity past 2019 (Excluding versions recognised by Unity to cause issues)."
+          "Designed to simplify Scriptable Object modification to improve developer workflow.",
+          "Aid game designers with folder management, object filtering, and type masking.",
+          "Multi-window user interface for centralized control over scriptable objects.",
+          "Supports user created assets and third party / custom packages.",
+          "Tested and built for all versions of Unity past '2019.4'.",
+          "Provides the user with settings to tailor the experience towards the developer's needs.",
+          "Designed and Implemented modularly allowing for user driven additions to be made.",
+          "Easily customisable UI designed to be bent to the user's visual taste."
         ]
       }
     ]

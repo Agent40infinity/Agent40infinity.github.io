@@ -18,7 +18,7 @@
                 </div>
                 <hr class="horizontal">
                 <div class="item-info-description">
-                    @if (Data.First() == item)
+                    @if (Data.Where(x => x.location == experience.location && x.description == experience.description).First() == item)
                     {
                         <p class="description-text"> @item.description </p>
                     }
