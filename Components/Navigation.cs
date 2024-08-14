@@ -9,10 +9,12 @@ namespace aiden.fyi.Components
 
         public static async Task NavigateTo(NavigationManager navManager, IJSRuntime js, string page)
         {
+            var forceRefresh = navManager.ToAbsoluteUri(page).AbsoluteUri == navManager.Uri;
+
             await js.InvokeVoidAsync("Unloaded", duration);
             await Task.Delay(duration);
 
-            navManager.NavigateTo(page);
+            navManager.NavigateTo(page, forceRefresh);
         }
     }
 }
