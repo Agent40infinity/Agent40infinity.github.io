@@ -18,7 +18,10 @@
                 </div>
                 <hr class="horizontal">
                 <div class="item-info-description">
-                    <p class="description-text"> @item.description </p>
+                    @if (Data.First() == item)
+                    {
+                        <p class="description-text"> @item.description </p>
+                    }
                     <div class="info-description@(item.columns ? "-columns" : "")">
                         @if (item.columns)
                         {

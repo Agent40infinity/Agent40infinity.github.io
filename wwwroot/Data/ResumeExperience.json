@@ -9,25 +9,27 @@
         "date": "April 2023 - Present",
         "logo": "../Resources/Database/Varsity_Logo.jpg",
         "description": "Powercor Australia - Victoria, Australia",
-        "columns": true,
+        "columns": false,
         "selected": true,
         "details": [
-          "Game Developer for IOS training application 'Varsity'.",
-          "Full Stack Web Developer for user results of Varsity.",
-          "Immersive Technology Developer for VR training application.",
-          "Designed, Implemented, and Maintained complex systems including;",
-          "Reflection based MVVM data management, linked through data binding GUI.",
-          "Local results cache for user data posting to AWS backend.",
-          "VR & IOS object selection outlining with HLSL.",
-          "'Activity, step' entity component system for gameplay loop.",
-          "Restructure and optimisation of web frontend for user results in Blazor."
+          "Improved data collection and visibility to allow for better user feedback and results.",
+          "Prevented user data loss by caching data locally to improve user retention and reduce frustration.",
+          "Dramatically improved the user interface and load times for the customer when reviewing user results.",
+          "Redesigned core gameplay loop to better improve the user's interactive experience.'"
         ]
       },
       {
         "project": "Jr Game Developer",
         "location": "Powercor",
         "date": "Feburary 2023 - April 2023",
-        "description": "Powercor Australia - Victoria, Australia"
+        "description": "Powercor Australia - Victoria, Australia",
+        "columns": false,
+        "details": [
+          "Worked closely with a dedicated team of designers, lead programmer, and project manager.",
+          "Lead a small team of designers to redesign and better the user experience for 'Varsity'.",
+          "Designed and Implemented multi-platform interaction experience aimed at improving Accessibility.",
+          "Onboarded and trained multiple developers including a senior."
+        ]
       },
       {
         "project": "ScriptableObject Editor",
