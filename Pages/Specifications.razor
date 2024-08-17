@@ -1,12 +1,15 @@
 ﻿@page "/projects/{Title}"
 @inject IJSRuntime js
 
-<Header />
+<Header Toggled="true"/>
+<div class="specifications">
+    <p class="title">In Progress!</p>
+    <p class="subtext">Check back later for more details.</p>
+</div>
 <Footer />
 
 <script>
     $(document).ready(function () {
-        $('header').css({ width: '100%', opacity: 1 });
         $('footer').css({ display: 'block', opacity: 1 });
     });
 </script>
@@ -17,8 +20,41 @@
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        await base.OnAfterRenderAsync(firstRender);
+        if (firstRender)
+        {
+            await js.InvokeVoidAsync("Rendered", Navigation.duration);
+        }
 
-        await js.InvokeVoidAsync("Rendered");
+        await base.OnAfterRenderAsync(firstRender);
     }
 }
+
+<style>
+    * {
+        font-family: 'Perpetua';
+        margin: 0px;
+        padding: 0px;
+    }
+
+    body {
+        overflow-x: hidden;
+        overflow-y: hidden;
+        background-color: black;
+    }
+
+    .specifications {
+        padding-top: 500px;
+        padding-bottom: 400px;
+        width: 100%;
+        text-align: center;
+        color: white;
+    }
+
+    .title {
+        font-size: 48px;
+    }
+
+    .subtext {
+        font-size: 36px;
+    }
+</style>
