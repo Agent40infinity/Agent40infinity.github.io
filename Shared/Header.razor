@@ -1,7 +1,7 @@
 ﻿@inject NavigationManager NavManager
 @inject IJSRuntime js
 
-<header class="navbar">
+<header class="navbar" style=@(Toggled ? "width: 100%; opacity: 1;" : "")>
     <div class="nav-menu nav-item">
         <HamburgerMenu />
     </div>
@@ -18,6 +18,11 @@
 </header>
 
 <NavMenu /> 
+
+@code {
+    [Parameter]
+    public bool Toggled { get; set; } = false;
+}
 
 <style>
     a {
