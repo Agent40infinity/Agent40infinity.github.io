@@ -95,6 +95,11 @@
     {
         if (firstRender)
         {
+            while (experience == null || experience.Count == 0)
+            {
+                await Task.Delay(100);    
+            }
+
             await js.InvokeVoidAsync("Rendered");
         }
 
