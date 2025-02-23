@@ -4,10 +4,14 @@ function Rendered(duration) {
 
 function Loaded(duration) {
     $('.pre-loader').fadeOut(duration);
+
+    $('.pre-loader').removeClass("faded-black")
 }
 
 function Unloaded(duration) {
     $('.pre-loader').fadeIn(duration);
+
+    $('.pre-loader').addClass("faded-black")
 }
 
 function OnImagesLoaded(duration) {

@@ -1,4 +1,6 @@
-﻿<footer>
+﻿@inject IJSRuntime js
+
+<footer>
     <section class="contact" id="chapter4">
         <h2 class="title">Contact Me</h2>
         <p>Feel free to contact me using any of the specified contact methods below:</p>
@@ -15,6 +17,28 @@
         <p>Background image credit: <a href="https://twitter.com/CamiUnknown" target="_blank">Camille Unknown</a></p>
     </section>
 </footer>
+
+<script>
+    function OnFooterLoaded() {
+        console.log($('body').height());
+
+        if ($('body').height() < screen.height) {
+            $('footer').css({ position: 'fixed', bottom: 0, width: "100%" });
+        }
+    }
+</script>
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await Task.Delay(1000);
+
+            await js.InvokeVoidAsync("OnFooterLoaded");
+        }
+    }
+}
 
 <style>
 

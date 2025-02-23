@@ -1,16 +1,21 @@
 ﻿@page "/projects/{Title}"
 @inject IJSRuntime js
 
-<Header Toggled="true"/>
+<VolumeSlider />
+<Header Toggled="true" />
 <div class="specifications">
     <p class="title">In Progress!</p>
     <p class="subtext">Check back later for more details.</p>
 </div>
+<@Title />
+
 <Footer />
 
 <script>
     $(document).ready(function () {
         $('footer').css({ display: 'block', opacity: 1 });
+        $('.volume-container').fadeIn(2000);
+        $('.volume-container').css({ display: "flex" });
     });
 </script>
 
@@ -44,7 +49,6 @@
 
     .specifications {
         padding-top: 500px;
-        padding-bottom: 400px;
         width: 100%;
         text-align: center;
         color: white;
