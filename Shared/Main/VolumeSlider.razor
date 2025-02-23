@@ -4,6 +4,38 @@
     <p class="slider-value slide-hide" id="slider-value">100</p>
 </div>
 
+<script>
+    $(document).ready(function () {
+        masterAudio.volume = 0.4;
+
+        var muted = localStorage.getItem("Muted");
+
+        masterAudio.muted = muted;
+        updateProgress();
+
+        // Both of these are used to fade in and out the volume slider.
+        // muteToggle fades in the slider.
+        $(".muteToggle").mouseover(function () {
+            $(".slide-hide").fadeIn(200);
+        });
+
+        //volumeContainer fades out the slider when the user isn't over both objects.
+        $(".volume-container").mouseleave(function () {
+            $(".slide-hide").fadeOut(200);
+        });
+
+        //Binds the slider value to a progression bar to link the audio volume with the audio playing.
+        volume = document.getElementById("slider");
+
+        volume.oninput = function () {
+            value = document.getElementById("slider-value");
+            value.innerHTML = slider.value;
+            masterAudio.volume = slider.value / dBConversion;
+            updateProgress();
+        }
+    });
+</script>
+
 <style>
     .volume-container {
         display: none;

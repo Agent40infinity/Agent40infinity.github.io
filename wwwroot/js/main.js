@@ -8,11 +8,6 @@ if (visited == "true")
     portfolioState = loadState.Default 
 }
 
-// Audio
-var masterAudio = new Audio('Resources/Media/landing.mp3');
-var dBConversion = 250;
-var lastVolume = 0;
-
 // Menu
 var menuToggle = false;
 var topAnimateDist = 200;
@@ -24,8 +19,6 @@ window.onbeforeunload = function () {
 
 $(document).ready(function() 
 {
-    masterAudio.volume = 0.4;
-
     switch (portfolioState)
     {
         case loadState.FirstTime:
@@ -76,27 +69,6 @@ $(document).ready(function()
     $(".comments").on("click", function() {
         window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
     });
-
-    // Both of these are used to fade in and out the volume slider.
-    // muteToggle fades in the slider.
-    $(".muteToggle").mouseover(function () { 
-        $(".slide-hide").fadeIn(200);
-    });
-
-    //volumeContainer fades out the slider when the user isn't over both objects.
-    $(".volume-container").mouseleave(function () { 
-        $(".slide-hide").fadeOut(200);
-    });
-
-    //Binds the slider value to a progression bar to link the audio volume with the audio playing.
-    volume = document.getElementById("slider");
-    
-    volume.oninput = function() {
-        value = document.getElementById("slider-value");
-        value.innerHTML = slider.value;
-        masterAudio.volume = slider.value / dBConversion;
-        updateProgress();
-    }
 });
 
 function FirstTimeLoad()
@@ -134,66 +106,6 @@ function AddContents()
         $('footer').fadeIn(2000);
         $('body').css("overflow-y" , "visible");
     }, 200);
-}
-
-// Used to toggle the audio.
-function toggleMute(img) {
-    if (masterAudio.muted)  {
-        if (visited == "true" && masterAudio.paused) {
-            playAudio();
-        }
-
-        masterAudio.muted = false;
-        lastAudio(true);
-        img.src="../Resources/SVGs/Speaker_Icon.svg";
-    }
-    else {
-        masterAudio.muted = true;
-        lastAudio(false);
-        img.src="../Resources/SVGs/Mute_Icon.svg";
-    }
-
-    updateProgress();
-}
-
-function playAudio() {
-    masterAudio.play();
-    masterAudio.loop = true;
-}
-
-function DefaultAudio() {
-    var mute = $('.muteToggle').first();
-    toggleMute(mute);
-    mute.attr("src","../Resources/SVGs/Mute_Icon.svg");
-}
-
-// Marks the last known audio value so that when muting and unmuting, it returns to the original value.
-function lastAudio(toggle) {
-    switch (toggle)
-    {
-        case true:
-            masterAudio.volume = lastVolume;
-            break;
-        case false:
-            lastVolume = masterAudio.volume;
-            masterAudio.volume = 0;
-            break;
-    }
-
-    value = document.getElementById("slider-value");
-    value.innerHTML = masterAudio.volume * dBConversion;
-    slider = document.getElementById("slider");
-    slider.value = masterAudio.volume * dBConversion;
-}
-
-// Updates the volume of the audio using the slider after calculating the correct conversion.
-function updateProgress() {
-    for (let e of document.querySelectorAll('input[type="range"].slider-progress')) {
-        e.style.setProperty('--value', e.value);
-        e.style.setProperty('--min', e.min == '' ? '0' : e.min);
-        e.style.setProperty('--max', e.max == '' ? '100' : e.max);
-        e.addEventListener('input', () => e.style.setProperty('--value', e.value));
-    }
 }
 
 // Utilises the arrows to auto scroll to x chapter.
