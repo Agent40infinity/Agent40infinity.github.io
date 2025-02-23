@@ -4,13 +4,24 @@
     "icon": "../Resources/SVGs/Company.svg",
     "list": [
       {
+        "project": "Game Developer & Software Engineer",
+        "location": "Red Cartel",
+        "date": "August 2024 - Present",
+        "logo": "../Resources/Database/RedCartel_Logo.jpg",
+        "description": "Red Cartel, XRG - NSW, Australia",
+        "columns": false,
+        "selected": true,
+        "details": [
+          "Check back later!"
+        ]
+      },
+      {
         "project": "Game Developer",
         "location": "Powercor",
-        "date": "April 2023 - Present",
+        "date": "April 2023 - July 2024",
         "logo": "../Resources/Database/Varsity_Logo.jpg",
         "description": "Powercor Australia - Victoria, Australia",
         "columns": false,
-        "selected": true,
         "details": [
           "Redesigned and implemented core gameplay loop to better improve the user's interactive experience.",
           "Improved data collection and visibility to allow for better user feedback and results.",
