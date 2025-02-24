@@ -31,7 +31,6 @@ function playAudio() {
 
 function DefaultAudio() {
     var mute = $('.muteToggle').first();
-    toggleMute(mute);
     mute.attr("src", "../Resources/SVGs/Mute_Icon.svg");
 }
 

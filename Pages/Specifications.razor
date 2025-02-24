@@ -1,27 +1,55 @@
 ﻿@page "/projects/{Title}"
 @inject IJSRuntime js
+@using System.Reflection;
 
 <VolumeSlider />
 <Header Toggled="true" />
-<div class="specifications">
-    <p class="title">In Progress!</p>
-    <p class="subtext">Check back later for more details.</p>
-</div>
-<@Title />
+
+@if (selectedType != null)
+{
+    @renderFragment
+}
+else
+{
+    <div class="specifications">
+        <p class="title">In Progress!</p>
+        <p class="subtext">Check back later for more details.</p>
+    </div>
+}
 
 <Footer />
 
 <script>
     $(document).ready(function () {
-        $('footer').css({ display: 'block', opacity: 1 });
-        $('.volume-container').fadeIn(2000);
-        $('.volume-container').css({ display: "flex" });
+    $('footer').css({ display: 'block', opacity: 1 });
+    $('.volume-container').fadeIn(2000);
+    $('.volume-container').css({ display: "flex" });
     });
 </script>
 
 @code {
     [Parameter]
     public string Title { get; set; } = "";
+
+    Type[] components => Assembly
+        .GetExecutingAssembly()
+        .GetTypes()
+        .Where(t => t.BaseType == typeof(ComponentBase))
+        .ToArray();
+    Type? selectedType;
+
+    RenderFragment renderFragment;
+
+    protected override async Task OnInitializedAsync()
+    {
+        selectedType = components.Where(t => t.Name.ToUpper() == Title.ToUpper()).FirstOrDefault();
+
+        renderFragment = (builder) =>
+        {
+            builder.OpenComponent(0, selectedType);
+            builder.CloseComponent();
+        };
+    }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
