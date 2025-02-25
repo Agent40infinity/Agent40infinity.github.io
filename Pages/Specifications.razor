@@ -40,9 +40,14 @@ else
 
     RenderFragment renderFragment;
 
-    protected override async Task OnInitializedAsync()
+    protected override void OnInitialized()
     {
         selectedType = components.Where(t => t.Name.ToUpper() == Title.ToUpper()).FirstOrDefault();
+
+        if (selectedType == null)
+        {
+            return;    
+        }
 
         renderFragment = (builder) =>
         {

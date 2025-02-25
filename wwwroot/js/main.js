@@ -27,7 +27,6 @@ $(document).ready(function()
         case loadState.Default:
             $('.banner').css({"display": "none"});
             AddContents();
-            DefaultAudio();
             break;
     }
 
