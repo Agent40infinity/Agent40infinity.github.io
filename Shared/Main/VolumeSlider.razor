@@ -8,10 +8,9 @@
     const float dbConversion = 250;
 
     private int volume
-
     {
-    set { Audio.Volume = value / dbConversion; }
-    get { return (int) (Audio.Volume* dbConversion); }
+        set { Audio.Volume = value / dbConversion; }
+        get { return (int)(Audio.Volume * dbConversion); }
     }
 
     private List<string> VolumeIcons = new List<string>()
@@ -19,11 +18,6 @@
         "../Resources/SVGs/Speaker_Icon.svg",
         "../Resources/SVGs/Mute_Icon.svg"
     };
-
-    private void Yes(int value)
-    {
-        Audio.Volume = value / dbConversion;
-    }
 }
 
 <script>
