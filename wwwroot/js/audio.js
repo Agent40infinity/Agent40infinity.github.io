@@ -13,13 +13,12 @@ function toggleMute() {
 
     lastVolume = masterAudio.volume;
     masterAudio.volume = 0;
-
-    updateProgress();
 }
 
 function togglePlay() {
     if (visited == "true" && masterAudio.paused) {
-        playAudio();
+        masterAudio.play();
+        masterAudio.loop = true;
     }
 
     masterAudio.volume = lastVolume;
@@ -28,24 +27,6 @@ function togglePlay() {
     updateProgress();
 }
 
-function playAudio() {
-    masterAudio.play();
-    masterAudio.loop = true;
-
-    masterAudio.volume = lastVolume;
-}
-
-// Updates the volume of the audio using the slider after calculating the correct conversion.
-function updateProgress() {
-    value = document.getElementById("slider-value");
-    value.innerHTML = masterAudio.volume * dBConversion;
-    slider = document.getElementById("slider");
-    slider.value = masterAudio.volume * dBConversion;
-
-    for (let e of document.querySelectorAll('input[type="range"].slider-progress')) {
-        e.style.setProperty('--value', e.value);
-        e.style.setProperty('--min', e.min == '' ? '0' : e.min);
-        e.style.setProperty('--max', e.max == '' ? '100' : e.max);
-        e.addEventListener('input', () => e.style.setProperty('--value', e.value));
-    }
+function SetVolume(volume) {
+    masterAudio.volume = volume;
 }

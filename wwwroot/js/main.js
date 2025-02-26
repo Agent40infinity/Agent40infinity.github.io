@@ -73,7 +73,7 @@ $(document).ready(function()
 function FirstTimeLoad()
 {
     $(".enter").one("click", function () {
-        playAudio();
+        togglePlay()
 
         $('.hidden').not('hr').animate({opacity: 1}, 3000);
         $('hr.hidden').animate({width: '40%', opacity: 1}, 2000);

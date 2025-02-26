@@ -1,4 +1,6 @@
-﻿<div class="volume-container">
+﻿@inject IJSRuntime js
+
+<div class="volume-container">
     <img class="muteToggle" src="@VolumeIcons[Convert.ToInt32(Audio.Muted)]" alt="Speaker" @onclick=@(Audio.Toggle) onmouseup=@( Audio.Muted ? "togglePlay()" : "toggleMute()" ) />
     <input class="styled-slider slider-progress slide-hide" type="range" min="0" max="100" @bind="volume" @bind:event="oninput" id="slider" />
     <p class="slider-value slide-hide" id="slider-value">@volume</p>
@@ -9,8 +11,8 @@
 
     private int volume
     {
-        set { Audio.Volume = value / dbConversion; }
         get { return (int)(Audio.Volume * dbConversion); }
+        set { Audio.Volume = value / dbConversion; js.InvokeVoidAsync("SetVolume", Audio.Volume); }
     }
 
     private List<string> VolumeIcons = new List<string>()
