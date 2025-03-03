@@ -1,8 +1,17 @@
 {
   "professional": [
     {
+      "title": "Red Cartel",
+      "displayTitle": false,
+      "image": "../Resources/Database/RedCartel.jpg",
+      "description": "Game Developer & Software Engineer at Red Cartel, XRG.",
+      "key": [ "Nothing for now" ],
+      "utility": [ "Unity", "C#", ".NET", "Red Cartel", "XRG" ],
+      "link": "https://xrgroup.com.au/our-companies/"
+    },
+    {
       "title": "Varsity",
-      "displayTitle" : false,
+      "displayTitle": false,
       "image": "../Resources/Database/Varsity.jpg",
       "description": "Game Developer at Powercor, working on Varsity.",
       "key": [ "Varsity is a Training Application for Powercor & Citipower Electricians and Lineies with a VR counterpart.", "Game Developer", "Fullstack Web Development", "Immersive Technology (VR)" ],
