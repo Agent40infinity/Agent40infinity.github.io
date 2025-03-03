@@ -1,28 +1,75 @@
 ﻿@page "/projects/{Title}"
 @inject IJSRuntime js
+@using System.Reflection;
 
-<Header Toggled="true"/>
-<div class="specifications">
-    <p class="title">In Progress!</p>
-    <p class="subtext">Check back later for more details.</p>
-</div>
+<VolumeSlider />
+<Header Toggled="true" />
+
+@if (selectedType != null)
+{
+    @renderFragment
+}
+else
+{
+    <div class="specifications">
+        <p class="title">In Progress!</p>
+        <p class="subtext">Check back later for more details.</p>
+    </div>
+}
+
 <Footer />
 
 <script>
     $(document).ready(function () {
-        $('footer').css({ display: 'block', opacity: 1 });
+    $('footer').css({ display: 'block', opacity: 1 });
+    $('.volume-container').fadeIn(2000);
+    $('.volume-container').css({ display: "flex" });
     });
+
+    function OnFooterLoaded() {
+        console.log($('body').height());
+
+        if ($('body').height() < screen.height) {
+            $('footer').css({ position: 'fixed', bottom: 0, width: "100%" });
+        }
+    }
 </script>
 
 @code {
     [Parameter]
     public string Title { get; set; } = "";
 
+    Type[] components => Assembly
+        .GetExecutingAssembly()
+        .GetTypes()
+        .Where(t => t.BaseType == typeof(ComponentBase))
+        .ToArray();
+    Type? selectedType;
+
+    RenderFragment renderFragment;
+
+    protected override void OnInitialized()
+    {
+        selectedType = components.Where(t => t.Name.ToUpper() == Title.ToUpper()).FirstOrDefault();
+
+        if (selectedType == null)
+        {
+            return;    
+        }
+
+        renderFragment = (builder) =>
+        {
+            builder.OpenComponent(0, selectedType);
+            builder.CloseComponent();
+        };
+    }
+
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
         {
             await js.InvokeVoidAsync("Rendered", Navigation.duration);
+            await js.InvokeVoidAsync("OnFooterLoaded");
         }
 
         await base.OnAfterRenderAsync(firstRender);
@@ -44,7 +91,6 @@
 
     .specifications {
         padding-top: 500px;
-        padding-bottom: 400px;
         width: 100%;
         text-align: center;
         color: white;

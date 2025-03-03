@@ -1,9 +1,12 @@
-﻿<div class="hamburger-nav" id="ham-nav">
+﻿@inject NavigationManager NavManager
+@inject IJSRuntime js
+
+<div class="hamburger-nav" id="ham-nav">
     <a onclick="scrollChapter(1)">About Me</a>
     <a onclick="scrollChapter(2)">Professional Work</a>
     <a onclick="scrollChapter(3)">Personal Work</a>
     <a onclick="scrollChapter(4)">Contact Me</a>
-    <a href="/projects/resume">Resume</a>
+    <a @onclick="@( () => Navigation.NavigateTo(NavManager, js,"/projects/resume"))">Resume</a>
 </div>
 
 <style>

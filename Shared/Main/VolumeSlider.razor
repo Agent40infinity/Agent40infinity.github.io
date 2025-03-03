@@ -1,8 +1,48 @@
-﻿<div class="volume-container">
-    <img class="muteToggle" src="../Resources/SVGs/Speaker_Icon.svg" alt="Speaker" onclick="toggleMute(this)" />
-    <input class="styled-slider slider-progress slide-hide" type="range" min="0" max="100" value="100" id="slider">
-    <p class="slider-value slide-hide" id="slider-value">100</p>
+﻿@inject IJSRuntime js
+
+<div class="volume-container">
+    <img class="muteToggle" src="@VolumeIcons[Convert.ToInt32(Audio.Muted)]" alt="Speaker" @onclick=@(() => { Audio.Toggle(); Volume = Volume; }) />
+    <input class="styled-slider slider-progress slide-hide" type="range" min="0" max="100" @bind="Volume" @bind:event="oninput" id="slider" />
+    <p class="slider-value slide-hide" id="slider-value">@Volume</p>
 </div>
+
+@code {
+    const float dbConversion = 250;
+
+    private int Volume
+    {
+        get { return (int)(Audio.Volume * dbConversion); }
+        set 
+        { 
+            Audio.Volume = value / dbConversion;
+
+            Audio.Muted = Audio.Volume == 0 ? true : false;
+
+            js.InvokeVoidAsync("SetVolume", Audio.Volume, Audio.Muted);
+        }
+    }
+
+    private List<string> VolumeIcons = new List<string>()
+    {
+        "../Resources/SVGs/Speaker_Icon.svg",
+        "../Resources/SVGs/Mute_Icon.svg"
+    };
+}
+
+<script>
+    $(document).ready(function () {
+        // Both of these are used to fade in and out the volume slider.
+        // muteToggle fades in the slider.
+        $(".muteToggle").mouseover(function () {
+            $(".slide-hide").fadeIn(200);
+        });
+
+        //volumeContainer fades out the slider when the user isn't over both objects.
+        $(".volume-container").mouseleave(function () {
+            $(".slide-hide").fadeOut(200);
+        });
+    });
+</script>
 
 <style>
     .volume-container {

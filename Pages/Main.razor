@@ -19,15 +19,15 @@
             <h2 class="title">About Me</h2>
             <img class="visual" src="Resources/pfp.jpg" alt="It's Me.'">
             <p class="about">
-                Hi I'm Aiden, a Game Developer currently working for Powercor Australia. Previously, I've completed a Bachelor of Game Development at Macquarie University. <br>
-                Currently, I'm working full-time while maintaining and publishing extension packages on the Unity Asset Store alongside an Indie title "Dark Light".
+                Hi I'm Aiden, a Game Developer and Software Engineer currently working at Red Cartel. Previously, I worked for Powercor Australia and have completed a Bachelor of Game Development at Macquarie University. <br>
+                Currently, I'm working full-time while maintaining and publishing editor tools on the <a href="https://assetstore.unity.com/publishers/75209">Unity Asset Store</a> alongside personal projects "Dark Light" and "HG/SS Remake".
             </p>
             <p class="about">
-                This portfolio is designed to show off most of the game development projects that I've worked on or participated in since I was 13.
-                These projects range from professional to indie and include in-development and finished works.
+                This portfolio is designed to show off my most prominent works to date from age 13.
+                These game development projects range from professional full-time work to indie and include in-development and finished works.
             </p>
             <p class="about">
-                This page is dedicated to my desire to express creativity through improvement over well-designed complex systems. To view more in-depth
+                This page is dedicated to my desire to express creativity and improvement over well-designed complex systems and tools. To view more in-depth
                 details about each project, click the cards below.
             </p>
             <p class="about">
@@ -64,6 +64,7 @@
     {
         if (firstRender)
         {
+            Console.WriteLine("Rendered");
             await js.InvokeVoidAsync("Rendered", Navigation.duration);
         }
 

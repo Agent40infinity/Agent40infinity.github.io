@@ -29,7 +29,7 @@
             </div>
         </div>
         <div class="container">
-            <p>Portfolio: <a @onclick="@( () => Navigation.NavigateTo(NavManager, js, "/"))" target="_blank">https://aiden.fyi/</a></p>
+            <p>Portfolio: <a @onclick="@( async () => { await js.InvokeVoidAsync("SetVolume", Audio.Volume, Audio.Muted = wasMuted); await Navigation.NavigateTo(NavManager, js, "/"); })" target="_blank">https://aiden.fyi/</a></p>
             <p class="web">Download: <a href="../projects/Aiden_NathanCV.pdf" target="_blank">Pdf Version</a></p>
         </div>
     </header>
@@ -67,8 +67,8 @@
     </main>
     <footer>
         <section class="copyright">
-            <p>Copyright © 2022 by Aiden Nathan | All images, logos and names are used with permission.</p>
-            <p>Resume made with html & css, version 1.2</p>
+            <p>Copyright © 2025 by Aiden Nathan | All images, logos and names are used with permission.</p>
+            <p>Portfolio & Resume made with Blazor. Version 1.4.</p>
         </section>
     </footer>
 </body>
@@ -80,8 +80,13 @@
     private List<Study> education = new List<Study>();
     private List<Components.ExperienceCategory> experience = new List<Components.ExperienceCategory>();
 
+    private bool wasMuted;
+
     protected override async Task OnInitializedAsync()
     {
+        wasMuted = Audio.Muted;
+        await js.InvokeVoidAsync("SetVolume", Audio.Volume, Audio.Muted = true);
+
         var skills = await http.GetFromJsonAsync<Dictionary<string, List<SkillItem>>>("Data/ResumeSkills.json");
         legend = skills["legend"];
         languages = skills["language"];
