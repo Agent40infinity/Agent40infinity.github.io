@@ -18,28 +18,6 @@
     </section>
 </footer>
 
-<script>
-    function OnFooterLoaded() {
-        console.log($('body').height());
-
-        if ($('body').height() < screen.height) {
-            $('footer').css({ position: 'fixed', bottom: 0, width: "100%" });
-        }
-    }
-</script>
-
-@code {
-    protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        if (firstRender)
-        {
-            await Task.Delay(1000);
-
-            await js.InvokeVoidAsync("OnFooterLoaded");
-        }
-    }
-}
-
 <style>
 
     footer {

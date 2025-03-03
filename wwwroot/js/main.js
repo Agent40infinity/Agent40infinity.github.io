@@ -21,9 +21,6 @@ $(document).ready(function()
 {
     switch (portfolioState)
     {
-        case loadState.FirstTime:
-            FirstTimeLoad();
-            break;
         case loadState.Default:
             $('.banner').css({"display": "none"});
             AddContents();
@@ -69,27 +66,6 @@ $(document).ready(function()
         window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
     });
 });
-
-function FirstTimeLoad()
-{
-    $(".enter").one("click", function () {
-
-        SetVolume(0.4, false)
-
-        $('.hidden').not('hr').animate({opacity: 1}, 3000);
-        $('hr.hidden').animate({width: '40%', opacity: 1}, 2000);
-        $('.enter').animate({opacity: 0}, 1000);
-
-        setTimeout(function() {
-            $('.banner').fadeOut(1000);
-
-            setTimeout(function() {
-                AddContents();
-                localStorage.setItem("Visited", true);
-            }, 1000);
-        }, 3500);
-    });
-}
 
 function AddContents()
 {

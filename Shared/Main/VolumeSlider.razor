@@ -18,7 +18,7 @@
 
             Audio.Muted = Audio.Volume == 0 ? true : false;
 
-            js.InvokeVoidAsync("SetVolume", Audio.Volume);
+            js.InvokeVoidAsync("SetVolume", Audio.Volume, Audio.Muted);
         }
     }
 

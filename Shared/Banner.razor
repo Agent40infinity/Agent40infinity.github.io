@@ -1,9 +1,37 @@
-﻿<section class="banner">
+﻿@inject IJSRuntime js
+
+<section class="banner">
     <h1 class="title">Aiden Nathan</h1>
     <hr class="hidden">
     <p class="subtext hidden">Game Programmer & Designer</p>
-    <button class="enter">Press to Enter</button>
+    <button class="enter" @onclick="FirstTimeLoad">Press to Enter</button>
 </section>
+
+<script>
+    function FirstTimeLoad() {
+        $('.hidden').not('hr').animate({ opacity: 1 }, 3000);
+        $('hr.hidden').animate({ width: '40%', opacity: 1 }, 2000);
+        $('.enter').animate({ opacity: 0 }, 1000);
+
+        setTimeout(function () {
+            $('.banner').fadeOut(1000);
+
+            setTimeout(function () {
+                AddContents();
+                localStorage.setItem("Visited", true);
+            }, 1000);
+        }, 3500);
+    }
+</script>
+
+@code {
+    private void FirstTimeLoad()
+    {
+        js.InvokeVoidAsync("SetVolume", Audio.Volume = 0.4f, Audio.Muted = false);
+
+        js.InvokeVoidAsync("FirstTimeLoad");
+    }
+}
 
 <style>
     .banner {

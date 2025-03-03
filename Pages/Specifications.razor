@@ -25,6 +25,14 @@ else
     $('.volume-container').fadeIn(2000);
     $('.volume-container').css({ display: "flex" });
     });
+
+    function OnFooterLoaded() {
+        console.log($('body').height());
+
+        if ($('body').height() < screen.height) {
+            $('footer').css({ position: 'fixed', bottom: 0, width: "100%" });
+        }
+    }
 </script>
 
 @code {
@@ -61,6 +69,7 @@ else
         if (firstRender)
         {
             await js.InvokeVoidAsync("Rendered", Navigation.duration);
+            await js.InvokeVoidAsync("OnFooterLoaded");
         }
 
         await base.OnAfterRenderAsync(firstRender);

@@ -1,7 +1,7 @@
 var masterAudio = new Audio('Resources/Media/landing.mp3');
 
 function SetVolume(volume, muted) {
-    if (visited == "true" && masterAudio.paused) {
+    if (masterAudio.paused) {
         masterAudio.play();
         masterAudio.loop = true;
     }
