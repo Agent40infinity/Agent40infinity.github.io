@@ -1,7 +1,7 @@
 # Portfolio Repository
 
 > [!NOTE]
-> This portfolio was originally created using raw HTML, CSS, and JS. After learning Blazor, it was transitioned to WebAssembly. Some code may still be legacy.
+> Aiden.fyi was originally created using raw HTML, CSS, and JS. After learning Blazor, it was transitioned to WebAssembly. Some code may still be legacy.
 
 ### Auto Publish & Deploy
 Utilising a Gitflow workflow and Github Actions, this portfolio is able to Auto Publish and Deploy straight to Github Pages. Steps towards auto publishing:
