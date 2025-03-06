@@ -1,13 +1,13 @@
 {
   "professional": [
     {
-      "title": "Red Cartel",
+      "title": "Operator",
       "displayTitle": false,
       "image": "../Resources/Database/RedCartel.jpg",
       "description": "Game Developer & Software Engineer at Red Cartel, XRG.",
-      "key": [ "Nothing for now" ],
+      "key": [ "Operator XR is a specialised Police Training & Military Simulation System for Virtual Reality." ],
       "utility": [ "Unity", "C#", ".NET", "Red Cartel", "XRG" ],
-      "link": "https://xrgroup.com.au/our-companies/"
+      "link": "https://operatorxr.com/"
     },
     {
       "title": "Varsity",
@@ -60,18 +60,20 @@
   ],
   "personal": [
     {
-      "title": "Aiden.fyi",
+      "title": "Portfolio",
       "image": "../Resources/Database/Untitled.jpg",
-      "description": "My Portfolio was created with raw html, css, and js then transitioned into Blazor.",
+      "description": "Aiden.fyi was created with raw HTML, CSS, & JS then later transitioned to Blazor.",
       "key": [ "Click here to learn more about the development progress of my portfolio!" ],
-      "utility": [ "Blazor", ".NET", "Html", "CSS", "JavaScript" ]
+      "utility": [ "Blazor", ".NET", "Html", "CSS", "JavaScript" ],
+      "link": "https://github.com/Agent40infinity/Agent40infinity.github.io"
     },
     {
       "title": "Pokémon SoulSilver Remake",
       "image": "../Resources/Database/SoulSilver.jpg",
       "description": "A faithful remake of the 4th generation Pokémon titles, SoulSilver & HeartGold. Please don't sue me Nintendo.",
       "key": [],
-      "utility": [ "Unity", "C#", "Remake" ]
+      "utility": [ "Unity", "C#", "Remake" ],
+      "link": "https://github.com/Agent40infinity/Pokemon-4th-Gen-Remake"
     },
     {
       "title": "Final Fantasy: Brave Exvius Battle System",

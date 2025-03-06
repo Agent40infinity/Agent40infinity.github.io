@@ -13,11 +13,27 @@
         </a>
     </div>
     <div class="nav-socials nav-item">
-        <img class="comments" src="../Resources/SVGs/Comments.svg" alt="Comments">
+        <img class="comments" src="../Resources/SVGs/Comments.svg" onclick="ToBottom()" alt="Comments">
     </div>
 </header>
 
 <NavMenu /> 
+
+<script>
+    const headerAnimateDist = 400;
+
+    // Animates the header once too far down.
+    // Makes the header / navigation banner transparent.
+    $(window).scroll(function () {
+        var screenTop = $(window).scrollTop();
+
+        $('header').css(screenTop >= headerAnimateDist ? {"background-color": "rgba(0, 0, 0, 0.7)", "transition": "0.5s"} : {"background-color": "rgba(0, 0, 0, 1)", "transition": "0.5s"});
+    });
+
+    function ToBottom() {
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+</script>
 
 @code {
     [Parameter]

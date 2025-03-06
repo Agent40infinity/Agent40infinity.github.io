@@ -5,7 +5,7 @@
     @foreach (var project in Projects)
     { 
         <div class="project-item">
-            <a @onclick="@( () => Navigation.NavigateTo(NavManager, js, "/projects/" + project.title))">
+            <a href="@project.link" target="_blank" @onclick="@( () => Navigation.NavigateTo(NavManager, js, "/projects/" + project.title))">
                 <div class="project-header">
                     <img class="project-img" src="@project.image" alt="project-item-@project.title-image" />
                     @if (project.displayTitle)

@@ -8,11 +8,6 @@ if (visited == "true")
     portfolioState = loadState.Default 
 }
 
-// Menu
-var menuToggle = false;
-var topAnimateDist = 200;
-var headerAnimateDist = 400;
-
 window.onbeforeunload = function () {
     window.scrollTo(0,0);
 };
@@ -26,21 +21,6 @@ $(document).ready(function()
             AddContents();
             break;
     }
-
-    // Animates the header once too far down.
-    // Makes the header / navigation banner transparent.
-    $(window).scroll(function () {
-        var screenTop = $(window).scrollTop();
-
-        if (screenTop >= headerAnimateDist)
-        {
-            $('header').css({"background-color": "rgba(0, 0, 0, 0.7)", "transition": "0.5s"});
-        }
-        else
-        {
-            $('header').css({"background-color": "rgba(0, 0, 0, 1)", "transition": "0.5s"});
-        }
-    });
 
     // I can't remember what this does for the life of me.
     $(".arrow").on("click", function() {
@@ -59,11 +39,6 @@ $(document).ready(function()
 
         $([document.documentElement, document.body]).animate({scrollTop: $("#chapter" + element).offset().top - 125}, 1000);
         console.log("#" + element);
-    });
-
-    // Clicking on the comments icon will scroll you down to the 'Contact Me' footer.
-    $(".comments").on("click", function() {
-        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
     });
 });
 
@@ -87,19 +62,4 @@ function AddContents()
 // Utilises the arrows to auto scroll to x chapter.
 function scrollChapter(chapter) {
     $([document.documentElement, document.body]).animate({scrollTop: $("#chapter" + chapter).offset().top - 125}, 1000);
-}
-
-// Toggles the menu.
-function toggleMenu() {
-    switch (menuToggle)
-    {
-        case false:
-            document.getElementById("ham-nav").style.width="600px";
-            menuToggle = true;
-            break;
-        case true:
-            document.getElementById("ham-nav").style.width="0px";
-            menuToggle = false;
-            break;
-    }
 }
