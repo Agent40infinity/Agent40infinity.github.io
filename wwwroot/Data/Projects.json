@@ -5,7 +5,7 @@
       "displayTitle": false,
       "image": "../Resources/Database/RedCartel.jpg",
       "description": "Game Developer & Software Engineer at Red Cartel, XRG.",
-      "key": [ "Operator XR is a specialised Police Training & Military Simulation System for Virtual Reality." ],
+      "key": [ "Operator XR is a specialised Police Training & Military Simulation System for Virtual Reality.", "Game Developer", "Software Engineer" ],
       "utility": [ "Unity", "C#", ".NET", "Red Cartel", "XRG" ],
       "link": "https://operatorxr.com/"
     },

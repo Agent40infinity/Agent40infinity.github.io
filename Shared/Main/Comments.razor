@@ -1,0 +1,21 @@
+﻿<img class="comments" src="../Resources/SVGs/Comments.svg" onclick="ToBottom()" alt="Comments">
+
+<script>
+    function ToBottom() {
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+</script>
+
+<style>
+    .comments {
+        height: 25px;
+        width: 25px;
+        padding: 12.5px;
+        filter: invert(100%);
+        cursor: pointer;
+    }
+
+    .comments:hover {
+        filter: invert(71%) sepia(3%) saturate(25%) hue-rotate(332deg) brightness(89%) contrast(97%);
+    }
+</style>

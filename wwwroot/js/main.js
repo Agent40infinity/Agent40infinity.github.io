@@ -27,18 +27,10 @@ $(document).ready(function()
         element = 0;
         scrollElement = "";
 
-        if ($(this).hasClass('special')) {
-            element = "1";  
-        }
-        else
-        {
-            scrollElement = $(this).parent().attr('id');
-            element = parseInt(scrollElement.replace(/[^0-9]/g, '')) + 1; 
-            console.log(element);
-        }
+        scrollElement = $(this).parent().attr('id');
+        element = parseInt(scrollElement.replace(/[^0-9]/g, '')) + 1; 
 
         $([document.documentElement, document.body]).animate({scrollTop: $("#chapter" + element).offset().top - 125}, 1000);
-        console.log("#" + element);
     });
 });
 

@@ -3,7 +3,7 @@
 @inject IJSRuntime js
 @inject NavigationManager NavManager
 
-<script src='js/main.js'></script>
+<script src='js/Main.js'></script>
 
 <VolumeSlider />
 <Return />
@@ -13,7 +13,6 @@
 <Header />
 <main class="content">
     <Banner />
-    <img class="arrow special" src="Resources/SVGs/ArrowDown_Icon.svg" alt="Arrow Down" />
     <section class="information">
         <article class="chapter" id="chapter1">
             <h2 class="title">About Me</h2>
@@ -134,18 +133,11 @@
         transform: scale(1.5);
         filter: invert(100%);
         cursor: pointer;
+        padding: 20px;
     }
 
     .arrow:hover {
         filter: invert(71%) sepia(3%) saturate(25%) hue-rotate(332deg) brightness(89%) contrast(97%);
-    }
-
-    .arrow.special {
-        display: none;
-        position: absolute;
-        top: 235px;
-        left: 49.4%;
-        z-index: 5;
     }
 
     .information {
