@@ -6,13 +6,18 @@
       {
         "project": "Game Developer & Software Engineer",
         "location": "Red Cartel",
-        "date": "August 2024 - Present",
+        "date": "August 2024 - March 2025",
         "logo": "../Resources/Database/RedCartel_Logo.jpg",
         "description": "Red Cartel, xReality Group - NSW, Australia",
         "columns": false,
         "selected": true,
         "details": [
-          "Check back later!"
+          "Worked in a team of 20+ including programmers, designers, artists, engineers, and admin.",
+          "Collaborated with clients to design and implement core gameplay features and resolve bugs.",
+          "Minimized user blunder by providing operators with tools for monitoring user training progress.",
+          "Lead the development of automated gameplay unit testing to eliminate redundancies within development and quality assurance.",
+          "Reconstructed multi-platform camera system into a modular perspective system that greatly improved operator accessibility and user experience.",
+          "Maintained asset bundling for cross platform data sync to increase product performance and reduce customer wait times."
         ]
       },
       {

@@ -5,7 +5,7 @@
       "displayTitle": false,
       "image": "../Resources/Database/RedCartel.jpg",
       "description": "Game Developer & Software Engineer at Red Cartel, XRG.",
-      "key": [ "Operator XR is a specialised Police Training & Military Simulation System for Virtual Reality.", "Game Developer", "Software Engineer" ],
+      "key": [ "Operator XR is a specialised Police Training & Military Simulation System for Virtual Reality.", "Game Developer", "Software Engineer", "Reconstructured multi-platform all-in-one camera system.", "VR Perspective, Top-Down Controller, First-Person, & Track-Aligned." ],
       "utility": [ "Unity", "C#", ".NET", "Red Cartel", "XRG" ],
       "link": "https://operatorxr.com/"
     },
@@ -35,6 +35,24 @@
       "key": [ "Lead Programmer", "Modular Boss State Machine", "Systems Development", "Modular Scene Mangement", "Core Game Structure" ],
       "utility": [ "Unity", "C#", "HLSL", "University", "Indie" ],
       "link": "https://coolevil98.itch.io/summitbuild"
+    }
+  ],
+  "personal": [
+    {
+      "title": "Portfolio",
+      "image": "../Resources/Database/Untitled.jpg",
+      "description": "Aiden.fyi was created with raw HTML, CSS, & JS then later transitioned to Blazor.",
+      "key": [ "Click here to learn more about the development progress of my portfolio!" ],
+      "utility": [ "Blazor", ".NET", "Html", "CSS", "JavaScript" ],
+      "link": "https://github.com/Agent40infinity/Agent40infinity.github.io"
+    },
+    {
+      "title": "Pokémon SoulSilver Remake",
+      "image": "../Resources/Database/SoulSilver.jpg",
+      "description": "A faithful remake of the 4th generation Pokémon titles, SoulSilver & HeartGold. Please don't sue me Nintendo.",
+      "key": [],
+      "utility": [ "Unity", "C#", "Remake" ],
+      "link": "https://github.com/Agent40infinity/Pokemon-4th-Gen-Remake"
     },
     {
       "title": "Dark Light",
@@ -56,24 +74,6 @@
       "description": "Bright is a top down, 2D horror dungeon crawler.",
       "key": [ "Procedural Dungeon Generation", "Custom Dungeon Camera", "Dynamic game events", "From scratch, A* styled pathfinding" ],
       "utility": [ "Unity", "C#", "University" ]
-    }
-  ],
-  "personal": [
-    {
-      "title": "Portfolio",
-      "image": "../Resources/Database/Untitled.jpg",
-      "description": "Aiden.fyi was created with raw HTML, CSS, & JS then later transitioned to Blazor.",
-      "key": [ "Click here to learn more about the development progress of my portfolio!" ],
-      "utility": [ "Blazor", ".NET", "Html", "CSS", "JavaScript" ],
-      "link": "https://github.com/Agent40infinity/Agent40infinity.github.io"
-    },
-    {
-      "title": "Pokémon SoulSilver Remake",
-      "image": "../Resources/Database/SoulSilver.jpg",
-      "description": "A faithful remake of the 4th generation Pokémon titles, SoulSilver & HeartGold. Please don't sue me Nintendo.",
-      "key": [],
-      "utility": [ "Unity", "C#", "Remake" ],
-      "link": "https://github.com/Agent40infinity/Pokemon-4th-Gen-Remake"
     },
     {
       "title": "Final Fantasy: Brave Exvius Battle System",
