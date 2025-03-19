@@ -26,6 +26,10 @@
       {
         "title": "Jenkins",
         "level": "1"
+      },
+      {
+        "title": "Jira",
+        "level": "4"
       }
     ]
   },
@@ -50,7 +54,7 @@
       },
       {
         "title": "ASP.NET",
-        "level": "1"
+        "level": "3"
       },
       {
         "title": "Blazor",

@@ -1,0 +1,59 @@
+﻿@page "/projects"
+@inject HttpClient http
+@inject IJSRuntime js
+
+<script src='js/SubPage.js'></script>
+
+<VolumeSlider />
+<Return />
+<Header Toggled="true" />
+
+<main class="content">
+    <ProjectContainer Projects="@AllProjects" />
+</main>
+
+<Footer />
+
+@code {
+    public List<Project> AllProjects = new List<Project>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        var ProjectTypes = await http.GetFromJsonAsync<Dictionary<string, List<Project>>>("Data/Projects.json");
+        AllProjects = ProjectTypes["professional"];
+        AllProjects.AddRange(ProjectTypes["personal"]);
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            Console.WriteLine("Rendered");
+            await js.InvokeVoidAsync("Rendered", Navigation.duration);
+        }
+
+        await base.OnAfterRenderAsync(firstRender);
+    }
+}
+
+<style>
+    * {
+        font-family: 'Perpetua';
+        margin: 0px;
+        padding: 0px;
+    }
+
+    body {
+        overflow-x: hidden;
+        overflow-y: hidden;
+        background-color: black;
+    }
+
+    .content {
+        padding-top: 300px;
+        padding-bottom: 300px;
+        width: 100%;
+        text-align: center;
+        color: white;
+    }
+</style>

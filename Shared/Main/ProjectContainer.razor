@@ -5,7 +5,7 @@
     @foreach (var project in Projects)
     { 
         <div class="project-item">
-            <a @onclick="@( () => Navigation.NavigateTo(NavManager, js, "/projects/" + project.title))">
+            <a href="@project.link" target="_blank" @onclick="@( () => Navigation.NavigateTo(NavManager, js, "/projects/" + project.title))">
                 <div class="project-header">
                     <img class="project-img" src="@project.image" alt="project-item-@project.title-image" />
                     @if (project.displayTitle)
@@ -49,12 +49,13 @@
         flex-wrap: wrap;
         justify-content: center;
         margin: 30px;
+        max-width: 1920px;
+        margin: auto;
     }
 
     .project-item {
         width: 400px;
         margin: 15px;
-        padding-bottom: 20px;
         background-color: rgb(26, 26, 26);
         border-radius: 25px;
         transition: all 0.2s;
@@ -87,11 +88,9 @@
         position: absolute;
         bottom: 0;
         width: 100%;
-        left: 50%;
-        transform: translateX(-50%);
         background: rgba(0, 0, 0, 0.85);
         font-size: 24px;
-        padding: 15px;
+        padding: 15px 0 15px 0;
     }
 
     .project-info {
@@ -100,7 +99,7 @@
     }
 
     .project-description {
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
 
     .project-list {

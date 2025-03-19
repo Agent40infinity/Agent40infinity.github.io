@@ -27,6 +27,10 @@
       "level": "3"
     },
     {
+      "title": "C++",
+      "level":  "1"
+    },
+    {
       "title": ".NET",
       "level": "4"
     },
@@ -36,7 +40,7 @@
     },
     {
       "title": "HLSL",
-      "level": "4"
+      "level": "3"
     },
     {
       "title": "Rust",

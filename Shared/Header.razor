@@ -13,11 +13,23 @@
         </a>
     </div>
     <div class="nav-socials nav-item">
-        <img class="comments" src="../Resources/SVGs/Comments.svg" alt="Comments">
+        <Comments />
     </div>
 </header>
 
 <NavMenu /> 
+
+<script>
+    const headerAnimateDist = 400;
+
+    // Animates the header once too far down.
+    // Makes the header / navigation banner transparent.
+    $(window).scroll(function () {
+        var screenTop = $(window).scrollTop();
+
+        $('header').css(screenTop >= headerAnimateDist ? {"background-color": "rgba(0, 0, 0, 0.7)", "transition": "0.5s"} : {"background-color": "rgba(0, 0, 0, 1)", "transition": "0.5s"});
+    });
+</script>
 
 @code {
     [Parameter]
@@ -71,17 +83,5 @@
 
     .nav-title-sub {
         font-size: 20px;
-    }
-
-    .comments {
-        height: 25px;
-        width: 25px;
-        padding: 12.5px;
-        filter: invert(100%);
-        cursor: pointer;
-    }
-
-    .comments:hover {
-        filter: invert(71%) sepia(3%) saturate(25%) hue-rotate(332deg) brightness(89%) contrast(97%);
     }
 </style>
