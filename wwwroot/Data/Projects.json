@@ -47,10 +47,10 @@
       "link": "https://github.com/Agent40infinity/Agent40infinity.github.io"
     },
     {
-      "title": "Pokémon SoulSilver Remake",
+      "title": "Project Heart & Soul",
       "image": "../Resources/Database/SoulSilver.jpg",
-      "description": "A faithful remake of the 4th generation Pokémon titles, SoulSilver & HeartGold. Please don't sue me Nintendo.",
-      "key": [],
+      "description": "A remake of 4th generation Pokémon titles, SoulSilver & HeartGold in Unity.",
+      "key": [ "Open Sourced", "Custom Modular Systems", "Custom Tools" ],
       "utility": [ "Unity", "C#", "Remake" ],
       "link": "https://github.com/Agent40infinity/Pokemon-4th-Gen-Remake"
     },
