@@ -27,7 +27,9 @@
 @code {
     private void FirstTimeLoad()
     {
-        js.InvokeVoidAsync("SetVolume", Audio.Volume = 0.4f, Audio.Muted = false);
+        Audio.Volume = 0.4f;
+        Audio.Muted = false;
+        Audio.SetVolume(js);
 
         js.InvokeVoidAsync("FirstTimeLoad");
     }

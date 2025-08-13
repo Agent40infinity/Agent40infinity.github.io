@@ -1,4 +1,7 @@
-﻿namespace aiden.fyi.Components
+﻿using Microsoft.AspNetCore.Components;
+using Microsoft.JSInterop;
+
+namespace aiden.fyi.Components
 {
     public static class Audio
     {
@@ -21,6 +24,11 @@
                 Volume = lastVolume;
                 lastVolume = 0;
             }
+        }
+
+        public static async Task SetVolume(IJSRuntime js)
+        {
+            await js.InvokeVoidAsync("SetVolume", Volume, Muted);
         }
     }
 }
