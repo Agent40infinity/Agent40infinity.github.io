@@ -26,9 +26,9 @@ namespace aiden.fyi.Components
             }
         }
 
-        public static async Task SetVolume(IJSRuntime js)
+        public static void SetVolume(IJSRuntime js)
         {
-            await js.InvokeVoidAsync("SetVolume", Volume, Muted);
+            js.InvokeVoidAsync("SetVolume", Volume, Muted);
         }
     }
 }
