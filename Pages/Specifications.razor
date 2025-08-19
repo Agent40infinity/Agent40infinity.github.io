@@ -41,6 +41,7 @@ else
         .GetTypes()
         .Where(t => t.BaseType == typeof(ComponentBase))
         .ToArray();
+
     Type? selectedType;
 
     RenderFragment renderFragment;
@@ -51,7 +52,7 @@ else
 
         if (selectedType == null)
         {
-            return;    
+            return;
         }
 
         renderFragment = (builder) =>

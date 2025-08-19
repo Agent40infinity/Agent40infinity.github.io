@@ -1,4 +1,4 @@
-﻿@page "/projects/resume"
+﻿@page "/projects/Resume"
 @inject HttpClient http
 @inject IJSRuntime js
 @inject NavigationManager NavManager
@@ -29,7 +29,7 @@
             </div>
         </div>
         <div class="container">
-            <p>Portfolio: <a @onclick="@( async () => { await js.InvokeVoidAsync("SetVolume", Audio.Volume, Audio.Muted = wasMuted); await Navigation.NavigateTo(NavManager, js, "/"); })" target="_blank">https://aiden.fyi/</a></p>
+            <p>Portfolio: <a @onclick="@( async () => { Audio.Muted = wasMuted; Audio.SetVolume(js); await Navigation.NavigateTo(NavManager, js, "/"); })" target="_blank">https://aiden.fyi/</a></p>
             <p class="web">Download: <a href="../projects/Aiden_NathanCV.pdf" target="_blank">Pdf Version</a></p>
         </div>
     </header>
@@ -68,7 +68,7 @@
     <footer>
         <section class="copyright">
             <p>Copyright © 2025 by Aiden Nathan | All images, logos and names are used with permission.</p>
-            <p>Portfolio & Resume made with Blazor. Version 1.4.</p>
+            <p>Portfolio & Resume made with Blazor. Version 1.5</p>
         </section>
     </footer>
 </body>
@@ -85,7 +85,9 @@
     protected override async Task OnInitializedAsync()
     {
         wasMuted = Audio.Muted;
-        await js.InvokeVoidAsync("SetVolume", Audio.Volume, Audio.Muted = true);
+        Audio.Muted = true;
+
+        Audio.SetVolume(js);
 
         var skills = await http.GetFromJsonAsync<Dictionary<string, List<SkillItem>>>("Data/ResumeSkills.json");
         legend = skills["legend"];
