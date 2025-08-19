@@ -33,3 +33,15 @@ a:active {
 ::-webkit-scrollbar-thumb:hover {
     background: rgb(107, 107, 107);
 }
+
+@media (max-width: 1920px) {
+    #chapter1 {
+        margin: 90px 10% 400px 10%;
+    }
+}
+
+@media (min-width: 1921px) {
+    #chapter1 {
+        margin: 400px 10% 400px 10%;
+    }
+}
