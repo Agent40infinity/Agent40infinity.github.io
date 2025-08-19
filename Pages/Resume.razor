@@ -28,8 +28,10 @@
                 </div>
             </div>
         </div>
-        <div class="container">
-            <p>Portfolio: <a @onclick="@( async () => { Audio.Muted = wasMuted; Audio.SetVolume(js); await Navigation.NavigateTo(NavManager, js, "/"); })" target="_blank">https://aiden.fyi/</a></p>
+        <div class="linkbar">
+            <a class="linkbar-item" href="https://github.com/Agent40infinity" target="_blank"> Github </a>
+            <p class="linkbar-item"> Portfolio: <a @onclick="@(async () => { Audio.Muted = wasMuted; Audio.SetVolume(js); await Navigation.NavigateTo(NavManager, js, "/"); })" target="_blank">https://aiden.fyi/</a></p>
+            <a class="linkbar-item" href="https://assetstore.unity.com/publishers/75209" target="_blank"> Unity </a>
             <p class="web">Download: <a href="../projects/Aiden_NathanCV.pdf" target="_blank">Pdf Version</a></p>
         </div>
     </header>
@@ -180,15 +182,24 @@
         right: 10px;
     }
 
-    .container {
-        padding: 8px;
+    .linkbar {
+        padding: 8px 30px 8px 30px;
         text-align: center;
         font-size: 24px;
         background-color: rgb(45, 45, 45);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
     }
 
-    .container a {
+    .linkbar a {
         text-decoration: underline;
+    }
+
+    .linkbar-item {
+        margin: 0 100px 0 100px;
     }
 
     .info {
