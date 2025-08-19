@@ -30,7 +30,9 @@
                 details about each project, click the cards below.
             </p>
             <p class="about">
-                <a @onclick="@( () => Navigation.NavigateTo(NavManager, js,"/projects/resume"))"> Resume </a>
+                <a @onclick="@(() => Navigation.NavigateTo(NavManager, js, "/projects/resume"))">
+                    <img class="cv" src="Resources/SVGs/Resume.svg" alt="Resume SVG" />
+                </a>
             </p>
             <img class="arrow" src="Resources/SVGs/ArrowDown_Icon.svg" alt="Arrow Down" />
         </article>
@@ -136,12 +138,25 @@
         padding: 20px;
     }
 
-    .arrow:hover {
+    .cv {
+        display: inline-block;
+        width: 64px;
+        height: auto;
+        filter: invert(100%);
+        cursor: pointer;
+        padding-top: 0px;
+    }
+
+    .arrow:hover{
         filter: invert(71%) sepia(3%) saturate(25%) hue-rotate(332deg) brightness(89%) contrast(97%);
     }
 
+    .cv:hover {
+        filter: invert(90%) sepia(3%) saturate(25%) hue-rotate(332deg) brightness(89%) contrast(97%);
+    }
+
     .information {
-        padding: 10% 0px 10% 0px;
+        padding: 110px 0px 10% 0px;
         color: white;
         background-color: rgba(0, 0, 0, 0.623);
         display: none;
