@@ -45,7 +45,7 @@
                             <img class="sub-icon svg" src="../Resources/SVGs/Code_Icon.svg" alt="field">
                             <p class="sub-title">Languages</p>
                         </div>
-                        <SkillBar Data="@(List<SkillItem>)Data.Resume["languages"]"/>
+                        <SkillBar Data="@{(List<SkillItem>)Data.Resume["languages"]}"/>
                     </div>
                     <div class="skill-box">
                         <div class="sub-box">
@@ -76,12 +76,6 @@
 </body>
 
 @code {
-    private List<SkillItem> legend = new List<SkillItem>();
-    private List<SkillItem> languages = new List<SkillItem>();
-    private List<Components.SoftwareCategory> categories = new List<Components.SoftwareCategory>();
-    private List<Study> education = new List<Study>();
-    private List<Components.ExperienceCategory> experience = new List<Components.ExperienceCategory>();
-
     private bool wasMuted;
 
     protected override async Task OnInitializedAsync()
