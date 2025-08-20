@@ -58,7 +58,12 @@
 
     protected override async Task OnInitializedAsync()
     {
-        ProjectTypes = await http.GetFromJsonAsync<Dictionary<string, List<Project>>>("Data/Projects.json");
+        var projects = await http.GetFromJsonAsync<Dictionary<string, List<Project>>>("Data/Projects.json");
+
+        if (projects != null)
+        {
+            ProjectTypes = projects;
+        }
     }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)

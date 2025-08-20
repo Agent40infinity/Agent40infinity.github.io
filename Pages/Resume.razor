@@ -92,12 +92,17 @@
         Audio.SetVolume(js);
 
         var skills = await http.GetFromJsonAsync<Dictionary<string, List<SkillItem>>>("Data/ResumeSkills.json");
+
+        #pragma warning disable CS8602
         legend = skills["legend"];
         languages = skills["language"];
+        #pragma warning disable CS8602
 
+        #pragma warning disable CS8601
         categories = await http.GetFromJsonAsync<List<Components.SoftwareCategory>>("Data/ResumeSoftware.json");
         education = await http.GetFromJsonAsync<List<Study>>("Data/ResumeEducation.json");
         experience = await http.GetFromJsonAsync<List<Components.ExperienceCategory>>("Data/ResumeExperience.json");
+        #pragma warning restore CS8601
     }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
