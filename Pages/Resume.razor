@@ -35,38 +35,41 @@
             <p class="web">Download: <a href="../projects/Aiden_NathanCV.pdf" target="_blank">Pdf Version</a></p>
         </div>
     </header>
-    <main class="info">
-        <section class="skills">
-            <p class="title">Skills</p>
-            <div class="skill-container">
-                <div>
-                    <div class="skill-box">
-                        <div class="sub-box">
-                            <img class="sub-icon svg" src="../Resources/SVGs/Code_Icon.svg" alt="field">
-                            <p class="sub-title">Languages</p>
+    @if (Data.Resume != null && Data.Languages != null)
+    {
+        <main class="info">
+            <section class="skills">
+                <p class="title">Skills</p>
+                <div class="skill-container">
+                    <div>
+                        <div class="skill-box">
+                            <div class="sub-box">
+                                <img class="sub-icon svg" src="../Resources/SVGs/Code_Icon.svg" alt="field">
+                                <p class="sub-title">Languages</p>
+                            </div>
+                            <SkillBar Data="@Data.Legend"/>
                         </div>
-                        <SkillBar Data="@{(List<SkillItem>)Data.Resume["languages"]}"/>
-                    </div>
-                    <div class="skill-box">
-                        <div class="sub-box">
-                            <img class="sub-icon svg" src="../Resources/SVGs/Software_Icon.svg" alt="field">
-                            <p class="sub-title">Software</p>
+                        <div class="skill-box">
+                            <div class="sub-box">
+                                <img class="sub-icon svg" src="../Resources/SVGs/Software_Icon.svg" alt="field">
+                                <p class="sub-title">Software</p>
+                            </div>
+                            <SoftwareCategory Data="@Data.Software"/>
                         </div>
-                        <SoftwareCategory Data="@categories"/>
                     </div>
+                    <Legend Data="@Data.Legend" />
                 </div>
-                <Legend Data="@legend" />
-            </div>
-        </section>
-        <section class="Experience">
-            <p class="title">Experience</p>
-            <ExperienceCategory Data=@experience />
-        </section>
-        <section class="Education">
-            <p class="title">Education</p>
-            <Education Data="@education"/>
-        </section>
-    </main>
+            </section>
+            <section class="Experience">
+                <p class="title">Experience</p>
+                <ExperienceCategory Data=@Data.Experience />
+            </section>
+            <section class="Education">
+                <p class="title">Education</p>
+                <Education Data="@Data.Education" />
+            </section>
+        </main>
+    }
     <footer>
         <section class="copyright">
             <p>Copyright © 2025 by Aiden Nathan | All images, logos and names are used with permission.</p>
@@ -89,22 +92,16 @@
         {
             #pragma warning disable CS8601
             Data.Resume = await http.GetFromJsonAsync<Dictionary<string, object>>("Data/Resume.json");
+            Console.WriteLine(Data.Resume);
             #pragma warning restore CS8601
-
-            languages = (List<SkillItem>)Data.Resume["languages"];
-            legend = (List<SkillItem>)Data.Resume["legend"];
-            categories = (List<skillset>)
-        }
-
-        if (Data.Resume)
-        
+        }       
     }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
         {
-            while (experience == null || experience.Count == 0)
+            while (Data.Experience == null || Data.Experience.Count == 0)
             {
                 await Task.Delay(100);    
             }
