@@ -30,22 +30,22 @@
                 details about each project, click the cards below.
             </p>
             <p class="about">
-                <a @onclick="@(() => Navigation.NavigateTo(NavManager, js, "/projects/resume"))">
+                <a @onclick="@(() => Navigation.NavigateTo(NavManager, js, "/projects/Resume"))">
                     <img class="cv" src="Resources/SVGs/Resume.svg" alt="Resume SVG" />
                 </a>
             </p>
             <img class="arrow" src="Resources/SVGs/ArrowDown_Icon.svg" alt="Arrow Down" />
         </article>
-        @if (ProjectTypes.Count > 0)
+        @if (Data.Projects.Count > 0)
         {
             <article class="chapter" id="chapter2">
                 <h2 class="title">Professional Work</h2>
-                <ProjectContainer Projects="@ProjectTypes["professional"]" />
+                <ProjectContainer Projects="@Data.Projects["professional"]" />
                 <img class="arrow" src="Resources/SVGs/ArrowDown_Icon.svg" alt="Arrow Down" />
             </article>
             <article class="chapter" id="chapter3">
                 <h2 class="title">Personal Work</h2>
-                <ProjectContainer Projects="@ProjectTypes["personal"]" />
+                <ProjectContainer Projects="@Data.Projects["personal"]" />
                 <img class="arrow" src="Resources/SVGs/ArrowDown_Icon.svg" alt="Arrow Down" />
             </article>
         }
@@ -54,11 +54,14 @@
 <Footer />
 
 @code {
-    public Dictionary<string, List<Project>> ProjectTypes = new Dictionary<string, List<Project>>();
-
     protected override async Task OnInitializedAsync()
     {
-        ProjectTypes = await http.GetFromJsonAsync<Dictionary<string, List<Project>>>("Data/Projects.json");
+        if (Data.Projects != null)
+        {
+            #pragma warning disable CS8601
+            Data.Projects = await http.GetFromJsonAsync<Dictionary<string, List<Project>>>("Data/Projects.json");
+            #pragma warning restore CS8601
+        }
     }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
@@ -140,7 +143,7 @@
 
     .cv {
         display: inline-block;
-        width: 64px;
+        width: 50px;
         height: auto;
         filter: invert(100%);
         cursor: pointer;

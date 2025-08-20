@@ -28,43 +28,50 @@
                 </div>
             </div>
         </div>
-        <div class="container">
-            <p>Portfolio: <a @onclick="@( async () => { Audio.Muted = wasMuted; Audio.SetVolume(js); await Navigation.NavigateTo(NavManager, js, "/"); })" target="_blank">https://aiden.fyi/</a></p>
-            <p class="web">Download: <a href="../projects/Aiden_NathanCV.pdf" target="_blank">Pdf Version</a></p>
+        <div class="linkbar">
+            <a class="linkbar-item" href="https://github.com/Agent40infinity" target="_blank"> <img class="linkbar-svg" src="../Resources/SVGs/Github_Lockup.svg" alt="icon" /> </a>
+            <hr class="vertical smol">
+            <a class="linkbar-item" @onclick="@(async () => { Audio.Muted = wasMuted; Audio.SetVolume(js); await Navigation.NavigateTo(NavManager, js, "/"); })" target="_blank">https://aiden.fyi/</a>
+            <hr class="vertical smol">
+            <a class="linkbar-item" href="https://assetstore.unity.com/publishers/75209" target="_blank"> <img class="linkbar-svg asset-store" src="../Resources/SVGs/Unity_Asset_Store.svg" alt="icon" /> </a>
         </div>
+        <p class="web">Download: <a href="../projects/Aiden_NathanCV.pdf" target="_blank">Pdf Version</a></p>
     </header>
-    <main class="info">
-        <section class="skills">
-            <p class="title">Skills</p>
-            <div class="skill-container">
-                <div>
-                    <div class="skill-box">
-                        <div class="sub-box">
-                            <img class="sub-icon svg" src="../Resources/SVGs/Code_Icon.svg" alt="field">
-                            <p class="sub-title">Languages</p>
+    @if (Data.Resume != null && Data.Resume.Count != 0)
+    {
+        <main class="info">
+            <section class="skills">
+                <p class="title">Skills</p>
+                <div class="skill-container">
+                    <div>
+                        <div class="skill-box">
+                            <div class="sub-box">
+                                <img class="sub-icon svg" src="../Resources/SVGs/Code_Icon.svg" alt="field">
+                                <p class="sub-title">Languages</p>
+                            </div>
+                            <SkillBar Data="@Data.Languages"/>
                         </div>
-                        <SkillBar Data="@languages"/>
-                    </div>
-                    <div class="skill-box">
-                        <div class="sub-box">
-                            <img class="sub-icon svg" src="../Resources/SVGs/Software_Icon.svg" alt="field">
-                            <p class="sub-title">Software</p>
+                        <div class="skill-box">
+                            <div class="sub-box">
+                                <img class="sub-icon svg" src="../Resources/SVGs/Software_Icon.svg" alt="field">
+                                <p class="sub-title">Software</p>
+                            </div>
+                            <SoftwareCategory Data="@Data.Software"/>
                         </div>
-                        <SoftwareCategory Data="@categories"/>
                     </div>
+                    <Legend Data="@Data.Legend" />
                 </div>
-                <Legend Data="@legend" />
-            </div>
-        </section>
-        <section class="Experience">
-            <p class="title">Experience</p>
-            <ExperienceCategory Data=@experience />
-        </section>
-        <section class="Education">
-            <p class="title">Education</p>
-            <Education Data="@education"/>
-        </section>
-    </main>
+            </section>
+            <section class="Experience">
+                <p class="title">Experience</p>
+                <ExperienceCategory Data=@Data.Experience />
+            </section>
+            <section class="Education">
+                <p class="title">Education</p>
+                <Education Data="@Data.Education" />
+            </section>
+        </main>
+    }
     <footer>
         <section class="copyright">
             <p>Copyright © 2025 by Aiden Nathan | All images, logos and names are used with permission.</p>
@@ -74,12 +81,6 @@
 </body>
 
 @code {
-    private List<SkillItem> legend = new List<SkillItem>();
-    private List<SkillItem> languages = new List<SkillItem>();
-    private List<Components.SoftwareCategory> categories = new List<Components.SoftwareCategory>();
-    private List<Study> education = new List<Study>();
-    private List<Components.ExperienceCategory> experience = new List<Components.ExperienceCategory>();
-
     private bool wasMuted;
 
     protected override async Task OnInitializedAsync()
@@ -89,20 +90,27 @@
 
         Audio.SetVolume(js);
 
-        var skills = await http.GetFromJsonAsync<Dictionary<string, List<SkillItem>>>("Data/ResumeSkills.json");
-        legend = skills["legend"];
-        languages = skills["language"];
+        if (Data.Resume != null && Data.Resume.Count != 0)
+        {
+            return;
+        }
 
-        categories = await http.GetFromJsonAsync<List<Components.SoftwareCategory>>("Data/ResumeSoftware.json");
-        education = await http.GetFromJsonAsync<List<Study>>("Data/ResumeEducation.json");
-        experience = await http.GetFromJsonAsync<List<Components.ExperienceCategory>>("Data/ResumeExperience.json");
+        var resume = await http.GetFromJsonAsync<Dictionary<string, System.Text.Json.JsonElement>>("Data/Resume.json");
+
+        if (resume == null)
+        {
+            Console.WriteLine("'Resume' database was incorrectly loaded or missing.");
+            return;    
+        }
+
+        Data.Resume = resume;
     }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
         {
-            while (experience == null || experience.Count == 0)
+            while (Data.Resume == null || Data.Resume.Count == 0)
             {
                 await Task.Delay(100);    
             }
@@ -180,15 +188,34 @@
         right: 10px;
     }
 
-    .container {
-        padding: 8px;
+    .linkbar {
+        padding: 8px 30px 8px 30px;
         text-align: center;
         font-size: 24px;
         background-color: rgb(45, 45, 45);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
     }
 
-    .container a {
+    .linkbar a {
         text-decoration: underline;
+    }
+
+    .linkbar-item {
+        margin: auto 100px auto 100px;
+        width: 150px;
+    }
+
+    .linkbar-svg.asset-store {
+        height: 18px;
+    }
+
+    .linkbar-svg {
+        height: 21px;
+        width: auto;
     }
 
     .info {
@@ -399,6 +426,10 @@
         width: 100%;
         border-bottom: solid 2px white;
         border-top-width: 0px;
+    }
+
+    .vertical.smol {
+        min-height: 20px;
     }
 
     .vertical {
