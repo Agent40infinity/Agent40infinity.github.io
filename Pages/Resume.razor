@@ -35,7 +35,7 @@
             <p class="web">Download: <a href="../projects/Aiden_NathanCV.pdf" target="_blank">Pdf Version</a></p>
         </div>
     </header>
-    @if (Data.Resume != null && Data.Languages != null)
+    @if (Data.Resume != null)
     {
         <main class="info">
             <section class="skills">
@@ -45,7 +45,7 @@
                         <div class="skill-box">
                             <div class="sub-box">
                                 <img class="sub-icon svg" src="../Resources/SVGs/Code_Icon.svg" alt="field">
-                                <p class="sub-title">Languages</p>
+                                <p class="sub-title">@Data.Languages</p>
                             </div>
                             <SkillBar Data="@Data.Legend"/>
                         </div>
@@ -88,20 +88,29 @@
 
         Audio.SetVolume(js);
 
-        if (Data.Resume != null)
+        if (Data.Resume == null)
         {
-            #pragma warning disable CS8601
-            Data.Resume = await http.GetFromJsonAsync<Dictionary<string, object>>("Data/Resume.json");
-            Console.WriteLine(Data.Resume);
-            #pragma warning restore CS8601
-        }       
+            return;
+        }
+
+        var resume = await http.GetFromJsonAsync<Dictionary<string, object>>("Data/Resume.json");
+
+        if (resume == null)
+        {
+            Console.WriteLine("'Resume' database was incorrectly loaded or missing.");
+            return;    
+        }
+
+        Data.Resume = resume;
+
+        await Task.Delay(10);
     }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
         {
-            while (Data.Experience == null || Data.Experience.Count == 0)
+            while (Data.Resume == null || Data.Resume.Count == 0)
             {
                 await Task.Delay(100);    
             }
