@@ -45,7 +45,7 @@
                             <img class="sub-icon svg" src="../Resources/SVGs/Code_Icon.svg" alt="field">
                             <p class="sub-title">Languages</p>
                         </div>
-                        <SkillBar Data="@languages"/>
+                        <SkillBar Data="@(List<SkillItem>)Data.Resume["languages"]"/>
                     </div>
                     <div class="skill-box">
                         <div class="sub-box">
@@ -91,18 +91,19 @@
 
         Audio.SetVolume(js);
 
-        var skills = await http.GetFromJsonAsync<Dictionary<string, List<SkillItem>>>("Data/ResumeSkills.json");
+        if (Data.Resume != null)
+        {
+            #pragma warning disable CS8601
+            Data.Resume = await http.GetFromJsonAsync<Dictionary<string, object>>("Data/Resume.json");
+            #pragma warning restore CS8601
 
-        #pragma warning disable CS8602
-        legend = skills["legend"];
-        languages = skills["language"];
-        #pragma warning disable CS8602
+            languages = (List<SkillItem>)Data.Resume["languages"];
+            legend = (List<SkillItem>)Data.Resume["legend"];
+            categories = (List<skillset>)
+        }
 
-        #pragma warning disable CS8601
-        categories = await http.GetFromJsonAsync<List<Components.SoftwareCategory>>("Data/ResumeSoftware.json");
-        education = await http.GetFromJsonAsync<List<Study>>("Data/ResumeEducation.json");
-        experience = await http.GetFromJsonAsync<List<Components.ExperienceCategory>>("Data/ResumeExperience.json");
-        #pragma warning restore CS8601
+        if (Data.Resume)
+        
     }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)

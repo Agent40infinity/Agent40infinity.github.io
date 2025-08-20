@@ -1,0 +1,350 @@
+{
+  "experience": [
+    {
+      "name": "Professional Projects",
+      "icon": "../Resources/SVGs/Company.svg",
+      "list": [
+        {
+          "project": "Game Developer & Software Engineer",
+          "location": "Red Cartel",
+          "date": "August 2024 - March 2025",
+          "logo": "../Resources/Database/RedCartel_Logo.jpg",
+          "description": "Red Cartel, xReality Group - NSW, Australia",
+          "columns": false,
+          "selected": true,
+          "details": [
+            "Worked in a team of 20+ including programmers, designers, artists, engineers, and admin.",
+            "Collaborated with clients to design and implement core gameplay features and resolve bugs.",
+            "Minimized user blunder by providing operators with tools for monitoring user training progress.",
+            "Lead the development of automated gameplay unit testing to eliminate redundancies within development and quality assurance.",
+            "Reconstructed multi-platform camera system into a modular perspective system that greatly improved operator accessibility and user experience.",
+            "Maintained Asset Bundles used for cross platform data sharing, allowing for optimised performance and reduced customer frustration."
+          ]
+        },
+        {
+          "project": "Game Developer",
+          "location": "Powercor",
+          "date": "April 2023 - July 2024",
+          "logo": "../Resources/Database/Varsity_Logo.jpg",
+          "description": "Powercor Australia - Victoria, Australia",
+          "columns": false,
+          "details": [
+            "Redesigned and implemented core gameplay loop to better improve the user's interactive experience.",
+            "Improved data collection and visibility to allow for better user feedback and results.",
+            "Prevented user data loss by caching data locally to improve user retention and reduce frustration.",
+            "Dramatically improved the user interface and load times for the customer when reviewing user results.",
+            "Implemented unit testing for Git Flow validation to maintain a healthy production environment for the customer.",
+            "Refactored legacy codebase to improve maintainability and remove code debt.",
+            "Documented design processes and implementation of developed and legacy code to improve future productivity."
+          ]
+        },
+        {
+          "project": "Jr Game Developer",
+          "location": "Powercor",
+          "date": "Feburary 2023 - April 2023",
+          "description": "Powercor Australia - Victoria, Australia",
+          "columns": false,
+          "details": [
+            "Worked closely with a dedicated team of designers, lead programmer, and project manager.",
+            "Lead a small team of designers to redesign and implement an improved user interface to better the user experience.",
+            "Designed and Implemented multi-platform tool interactions aimed to improve accessibility and visual clarity for the user.",
+            "Updated and refactored VR experience to improve user interaction and features.",
+            "Onboarded and trained multiple developers including a senior."
+          ]
+        },
+        {
+          "project": "ScriptableObject Editor",
+          "location": "Indie",
+          "date": "July 2022 - December 2022",
+          "logo": "../Resources/Database/SOE_Logo.jpg",
+          "description": "An object management editor tool published on the Unity Asset Store.",
+          "columns": true,
+          "details": [
+            "Designed to simplify Scriptable Object modification to improve developer workflow.",
+            "Aid game designers with folder management, object filtering, and type masking.",
+            "Multi-window user interface for centralized control over scriptable objects.",
+            "Supports user created assets and third party / custom packages.",
+            "Tested and built for all versions of Unity past '2019.4'.",
+            "Provides the user with settings to tailor the experience towards the developer's needs.",
+            "Designed and Implemented modularly allowing for user driven additions to be made.",
+            "Easily customisable UI designed to be bent to the user's visual taste."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "University Projects",
+      "icon": "../Resources/SVGs/Group.svg",
+      "list": [
+        {
+          "project": "Summit - Lead Programmer",
+          "location": "MQU",
+          "date": "July 2022 - November 2022",
+          "logo": "../Resources/Database/Summit.jpg",
+          "description": "Student project with 5 team members, 3 programmers. 3D third person rogue-like made in Unity. 410+ personal hours dedicated.",
+          "columns": true,
+          "details": [
+            "Re-engineered existing codebase focusing on efficiency, modularity, and simplicity.",
+            "Acted as senior developer to manage & aid development processes across the board (including design and art).",
+            "Designed and implemented all backend systems related to gameplay and structure.",
+            "Designed and implemented custom Boss State Machine.",
+            "Modularized boss states for designer friendly implementation.",
+            "Implemented modular animation event listeners to control states",
+            "Implemented modularized scene management with asynchoronous loading.",
+            "Designed and assisted implementation of power-ups.",
+            "Designed and implemented a custom interaction system utlizing listeners for modularity.",
+            "Developed announcement and dialogue systems.",
+            "Custom camera handler for panning, effects, and 3rd person perspective.",
+            "Managed custom lighting and skybox handling."
+          ]
+        },
+        {
+          "project": "CQU Statistics Project - Lead Programmer",
+          "location": "MQU",
+          "date": "Feburary 2022 - June 2022",
+          "logo": "../Resources/Database/CQU.jpg",
+          "description": "Student project with 5 team members, 1 programmers. Gamification visual novel made in Unity.",
+          "columns": true,
+          "details": [
+            "Apart of the PACE Internship program at Macquarie University, dedicated client was Central Queensland University.",
+            "Designed, implemented, and mantained systems in accordance to requirements given by the client.",
+            "Client task: Create a gamified quiz to track student's knowledge of statisitics.",
+            "Custom Dynamic Dialogue System with dialogue.",
+            "Full intergration with Google Sheets API v4.",
+            "Records and collects player completion data using google database.",
+            "Completely automated visual novel setup without additional programming.",
+            "Dialogue options used to create diverging pathways for player progress based on their performance.",
+            "Custom commands and modifiers used to enhance dialogue with effects, sprite changes, and more.",
+            "Framework creates game content based on .json level files.",
+            "Full intergration with Json.NET framework using custom class & interface based serialization."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Personal Projects",
+      "icon": "../Resources/SVGs/Profile.svg",
+      "list": [
+        {
+          "project": "Dark Light",
+          "location": "",
+          "date": "July 2019 - Present",
+          "logo": "",
+          "description": "2D metroidvania inspirated by Hollow Knight and the Soulsbourne Series. Paused development while at Univeristy.",
+          "columns": false,
+          "details": [
+            "Custom player state machine.",
+            "Custom velocity based movement for fast paced mobility and combat.",
+            "Command based custom input system used to handle player movement. Allows for control over the player to be utilized in systems handling cutscenes and event triggers.",
+            "Custom input system derived from Unity Events to allow for control configuration and keybinding storing.",
+            "Modular interface based save system using Json.NET (Works with binary serialization).",
+            "From scratch A* pathfinding for non-player entities."
+          ]
+        }
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institute": "Macquarie University",
+      "location": "Sydney, Australia",
+      "date": "2020 - 2022",
+      "degree": "Bachelor of Game Design & Development"
+    },
+    {
+      "institute": "Northern Sydney Institute TAFE",
+      "location": "Sydney, Australia",
+      "date": "2019",
+      "degree": "Diploma of Gaming Development"
+    }
+  ],
+  "legend": [
+    {
+      "title": "Professional",
+      "level": "6"
+    },
+    {
+      "title": "Advanced",
+      "level": "4"
+    },
+    {
+      "title": "Intermediate",
+      "level": "3"
+    },
+    {
+      "title": "Beginner",
+      "level": "1"
+    }
+  ],
+  "language": [
+    {
+      "title": "C#",
+      "level": "6"
+    },
+    {
+      "title": "C",
+      "level": "3"
+    },
+    {
+      "title": "C++",
+      "level": "1"
+    },
+    {
+      "title": ".NET",
+      "level": "4"
+    },
+    {
+      "title": "ShaderCore",
+      "level": "4"
+    },
+    {
+      "title": "HLSL",
+      "level": "3"
+    },
+    {
+      "title": "Rust",
+      "level": "1"
+    },
+    {
+      "title": "Java",
+      "level": "4"
+    },
+    {
+      "title": "JavaScript",
+      "level": "6"
+    },
+    {
+      "title": "HTML",
+      "level": "4"
+    },
+    {
+      "title": "CSS",
+      "level": "4"
+    },
+    {
+      "title": "PHP",
+      "level": "3"
+    },
+    {
+      "title": "Python",
+      "level": "1"
+    }
+  ],
+  "software": [
+    {
+      "name": "Game Engines",
+      "type": [
+        {
+          "title": "Unity",
+          "level": "6"
+        },
+        {
+          "title": "Unreal Engine 4",
+          "level": "1"
+        },
+        {
+          "title": "Greenfoot",
+          "level": "6"
+        }
+      ]
+    },
+    {
+      "name": "Version Control",
+      "type": [
+        {
+          "title": "Git Flow",
+          "level": "6"
+        },
+        {
+          "title": "Jenkins",
+          "level": "1"
+        },
+        {
+          "title": "Jira",
+          "level": "4"
+        }
+      ]
+    },
+    {
+      "name": "IDEs & Frameworks",
+      "type": [
+        {
+          "title": "Visual Studio",
+          "level": "6"
+        },
+        {
+          "title": "VSC",
+          "level": "6"
+        },
+        {
+          "title": "MySQL",
+          "level": "4"
+        },
+        {
+          "title": "React",
+          "level": "3"
+        },
+        {
+          "title": "ASP.NET",
+          "level": "3"
+        },
+        {
+          "title": "Blazor",
+          "level": "4"
+        }
+      ]
+    },
+    {
+      "name": "Art",
+      "type": [
+        {
+          "title": "Photoshop",
+          "level": "6"
+        },
+        {
+          "title": "Cinema 4D",
+          "level": "3"
+        },
+        {
+          "title": "Blender",
+          "level": "1"
+        }
+      ]
+    },
+    {
+      "name": "Media",
+      "type": [
+        {
+          "title": "FileZilla",
+          "level": "6"
+        },
+        {
+          "title": "Audacity",
+          "level": "4"
+        },
+        {
+          "title": "OBS",
+          "level": "6"
+        }
+      ]
+    },
+    {
+      "name": "Editing",
+      "type": [
+        {
+          "title": "Premier Pro",
+          "level": "4"
+        },
+
+        {
+          "title": "Sony Vegas",
+          "level": "4"
+        },
+        {
+          "title": "Davinci Resolve 16",
+          "level": "6"
+        }
+      ]
+    }
+  ]
+}

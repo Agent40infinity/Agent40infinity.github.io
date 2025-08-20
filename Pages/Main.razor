@@ -36,16 +36,16 @@
             </p>
             <img class="arrow" src="Resources/SVGs/ArrowDown_Icon.svg" alt="Arrow Down" />
         </article>
-        @if (ProjectTypes.Count > 0)
+        @if (Data.Projects.Count > 0)
         {
             <article class="chapter" id="chapter2">
                 <h2 class="title">Professional Work</h2>
-                <ProjectContainer Projects="@ProjectTypes["professional"]" />
+                <ProjectContainer Projects="@Data.Projects["professional"]" />
                 <img class="arrow" src="Resources/SVGs/ArrowDown_Icon.svg" alt="Arrow Down" />
             </article>
             <article class="chapter" id="chapter3">
                 <h2 class="title">Personal Work</h2>
-                <ProjectContainer Projects="@ProjectTypes["personal"]" />
+                <ProjectContainer Projects="@Data.Projects["personal"]" />
                 <img class="arrow" src="Resources/SVGs/ArrowDown_Icon.svg" alt="Arrow Down" />
             </article>
         }
@@ -54,15 +54,14 @@
 <Footer />
 
 @code {
-    public Dictionary<string, List<Project>> ProjectTypes = new Dictionary<string, List<Project>>();
-
     protected override async Task OnInitializedAsync()
     {
-        var projects = await http.GetFromJsonAsync<Dictionary<string, List<Project>>>("Data/Projects.json");
-
-        if (projects != null)
+        
+        if (Data.Projects != null)
         {
-            ProjectTypes = projects;
+            #pragma warning disable CS8601
+            Data.Projects = await http.GetFromJsonAsync<Dictionary<string, List<Project>>>("Data/Projects.json");
+            #pragma warning restore CS8601
         }
     }
 
