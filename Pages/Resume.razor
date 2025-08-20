@@ -29,13 +29,15 @@
             </div>
         </div>
         <div class="linkbar">
-            <a class="linkbar-item" href="https://github.com/Agent40infinity" target="_blank"> Github </a>
-            <p class="linkbar-item"> Portfolio: <a @onclick="@(async () => { Audio.Muted = wasMuted; Audio.SetVolume(js); await Navigation.NavigateTo(NavManager, js, "/"); })" target="_blank">https://aiden.fyi/</a></p>
-            <a class="linkbar-item" href="https://assetstore.unity.com/publishers/75209" target="_blank"> Unity </a>
-            <p class="web">Download: <a href="../projects/Aiden_NathanCV.pdf" target="_blank">Pdf Version</a></p>
+            <a class="linkbar-item" href="https://github.com/Agent40infinity" target="_blank"> <img class="linkbar-svg" src="../Resources/SVGs/Github_Lockup.svg" alt="icon" /> </a>
+            <hr class="vertical smol">
+            <a class="linkbar-item" @onclick="@(async () => { Audio.Muted = wasMuted; Audio.SetVolume(js); await Navigation.NavigateTo(NavManager, js, "/"); })" target="_blank">https://aiden.fyi/</a>
+            <hr class="vertical smol">
+            <a class="linkbar-item" href="https://assetstore.unity.com/publishers/75209" target="_blank"> <img class="linkbar-svg asset-store" src="../Resources/SVGs/Unity_Asset_Store.svg" alt="icon" /> </a>
         </div>
+        <p class="web">Download: <a href="../projects/Aiden_NathanCV.pdf" target="_blank">Pdf Version</a></p>
     </header>
-    @if (Data.Resume != null)
+    @if (Data.Resume != null && Data.Resume.Count != 0)
     {
         <main class="info">
             <section class="skills">
@@ -45,9 +47,9 @@
                         <div class="skill-box">
                             <div class="sub-box">
                                 <img class="sub-icon svg" src="../Resources/SVGs/Code_Icon.svg" alt="field">
-                                <p class="sub-title">@Data.Languages</p>
+                                <p class="sub-title">Languages</p>
                             </div>
-                            <SkillBar Data="@Data.Legend"/>
+                            <SkillBar Data="@Data.Languages"/>
                         </div>
                         <div class="skill-box">
                             <div class="sub-box">
@@ -88,12 +90,12 @@
 
         Audio.SetVolume(js);
 
-        if (Data.Resume == null)
+        if (Data.Resume != null && Data.Resume.Count != 0)
         {
             return;
         }
 
-        var resume = await http.GetFromJsonAsync<Dictionary<string, object>>("Data/Resume.json");
+        var resume = await http.GetFromJsonAsync<Dictionary<string, System.Text.Json.JsonElement>>("Data/Resume.json");
 
         if (resume == null)
         {
@@ -102,8 +104,6 @@
         }
 
         Data.Resume = resume;
-
-        await Task.Delay(10);
     }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
@@ -205,7 +205,17 @@
     }
 
     .linkbar-item {
-        margin: 0 100px 0 100px;
+        margin: auto 100px auto 100px;
+        width: 150px;
+    }
+
+    .linkbar-svg.asset-store {
+        height: 18px;
+    }
+
+    .linkbar-svg {
+        height: 21px;
+        width: auto;
     }
 
     .info {
@@ -416,6 +426,10 @@
         width: 100%;
         border-bottom: solid 2px white;
         border-top-width: 0px;
+    }
+
+    .vertical.smol {
+        min-height: 20px;
     }
 
     .vertical {
