@@ -2,10 +2,19 @@
 @inject IJSRuntime js
 
 <div class="hamburger-nav" id="ham-nav">
-    <a @onclick="@( () => Navigation.NavigateTo(NavManager, js,"/"))">Home</a>
-    <a @onclick="@( () => Navigation.NavigateTo(NavManager, js,"/projects"))">Projects</a>
-    <a onclick="ToBottom()">Contact Me</a>
-    <a @onclick="@( () => Navigation.NavigateTo(NavManager, js,"/projects/Resume"))">Resume</a>
+    <div class="nav-left">
+        <a @onclick="@(() => Navigation.NavigateTo(NavManager, js, "/"))">Home</a>
+        <a @onclick="@(() => Navigation.NavigateTo(NavManager, js, "/projects"))">Projects</a>
+        <a onclick="ToBottom()">Contact Me</a>
+        <a @onclick="@(() => Navigation.NavigateTo(NavManager, js, "/projects/Resume"))">Resume</a>
+    </div>
+    <div class="nav-right">
+        <img class="pfp" src="Resources/avatar.jpg" alt="It's Me.'" style="">
+        <p class="about">
+            This page is dedicated to my desire to express creativity and improvement over well-designed complex systems and tools. To view more in-depth
+            details about each project, click the cards below.
+        </p>
+    </div>
 </div>
 
 <style>
@@ -13,14 +22,14 @@
         position: fixed;
         display: flex;
         justify-content: left;
-        flex-direction: column;
+        flex-direction: row;
         top: 0px;
         left: 0px;
         height: 100%;
         width: 0px;
         background-color: rgb(26, 26, 26);
         z-index: 9;
-        padding-top: 135px;
+        padding-top: 110px;
         overflow-x: hidden;
         transition: all 0.5s;
     }
@@ -37,5 +46,26 @@
 
     .hamburger-nav a:hover {
         filter: invert(71%) sepia(3%) saturate(25%) hue-rotate(332deg) brightness(89%) contrast(97%);
+    }
+
+    .nav-left {
+        width: 30%;
+
+        display: flex;
+        justify-content: left;
+        flex-direction: column;
+    }
+
+    .nav-right {
+        width: 70%;
+        text-align: center;
+    }
+
+    .pfp {
+        max-height: 125px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        border: solid 2px black;
+        border-radius: 50%;
     }
 </style>
