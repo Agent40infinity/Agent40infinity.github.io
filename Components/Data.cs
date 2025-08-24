@@ -5,6 +5,8 @@ namespace aiden.fyi.Components
 {
     public static class Data
     {
+        public static bool isLocal;
+
         public static Dictionary<string, List<Project>> Projects = new Dictionary<string, List<Project>>();
         public static Dictionary<string, JsonElement> Resume = new Dictionary<string, JsonElement>();
 

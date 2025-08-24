@@ -35,7 +35,7 @@
             <hr class="vertical smol">
             <a class="linkbar-item" href="https://assetstore.unity.com/publishers/75209" target="_blank"> <img class="linkbar-svg asset-store" src="../Resources/SVGs/Unity_Asset_Store.svg" alt="icon" /> </a>
         </div>
-        <p class="web">Download: <a href="../projects/Aiden_NathanCV.pdf" target="_blank">Pdf Version</a></p>
+        <p class="web"><a href="@(Data.isLocal ? "https://aiden.fyi/projects/Resume" : "../projects/Aiden_NathanCV.pdf")" target="_blank">@(Data.isLocal ? "Web Version" : "Pdf Version")</a></p>
     </header>
     @if (Data.Resume != null && Data.Resume.Count != 0)
     {
@@ -184,8 +184,9 @@
     .web {
         position: absolute;
         font-size: 20px;
-        margin-top: 12px;
+        margin-top: 5px;
         right: 10px;
+        text-decoration: underline;
     }
 
     .linkbar {
@@ -207,6 +208,7 @@
     .linkbar-item {
         margin: auto 100px auto 100px;
         width: 150px;
+        text-align: center;
     }
 
     .linkbar-svg.asset-store {
@@ -218,7 +220,7 @@
         width: auto;
     }
 
-    .linkbar a:hover {
+    a:hover {
         filter: invert(30%) sepia(3%) saturate(25%) hue-rotate(332deg) brightness(89%) contrast(97%);
     }
 
@@ -414,10 +416,6 @@
     a {
         color: white;
         text-decoration: none;
-    }
-
-    a:hover {
-        color: white;
     }
 
     a:active {
