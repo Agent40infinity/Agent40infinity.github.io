@@ -113,5 +113,19 @@
         "level": "6"
       }
     ]
+  },
+  {
+    "name": "Project Management",
+    "type": [
+      {
+        "title": "Jira",
+        "level": "6"
+      },
+
+      {
+        "title": "Confluence",
+        "level": "6"
+      }
+    ]
   }
 ]

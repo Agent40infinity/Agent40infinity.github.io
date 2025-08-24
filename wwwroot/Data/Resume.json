@@ -256,12 +256,12 @@
           "level": "6"
         },
         {
-          "title": "Jenkins",
-          "level": "1"
+          "title": "Jira",
+          "level": "6"
         },
         {
-          "title": "Jira",
-          "level": "4"
+          "title": "Jenkins",
+          "level": "1"
         }
       ]
     },
@@ -342,6 +342,19 @@
         },
         {
           "title": "Davinci Resolve 16",
+          "level": "6"
+        }
+      ]
+    },
+    {
+      "name": "Project Management",
+      "type": [
+        {
+          "title": "Confluence",
+          "level": "6"
+        },
+        {
+          "title": "Obsidian",
           "level": "6"
         }
       ]
