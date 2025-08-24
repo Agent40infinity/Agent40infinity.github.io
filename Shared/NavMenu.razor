@@ -11,11 +11,21 @@
     <div class="nav-right">
         <img class="pfp" src="Resources/avatar.jpg" alt="It's Me.'" style="">
         <p class="about">
-            This page is dedicated to my desire to express creativity and improvement over well-designed complex systems and tools. To view more in-depth
-            details about each project, click the cards below.
+            Hi I'm Aiden, A Game Developer and Software Engineer previously known as Agent40.
         </p>
+        <div class="mini-list">
+            <a href="https://twitter.com/Agent40infinity/" target="_blank"><img class="mini-socials" src="../Resources/SVGs/Twitter.svg" alt="Twitter"></a>
+            <a href="https://www.linkedin.com/in/aiden-nathan-agent40/" target="_blank"><img class="mini-socials" src="../Resources/SVGs/LinkedIn.svg" alt="LinkedIn"></a>
+            <a href="https://github.com/Agent40infinity" target="_blank"><img class="mini-socials" src="../Resources/SVGs/Github.svg" alt="Github"></a>
+            <a href="@youtubeString" target="_blank"><img class="mini-socials" src="../Resources/SVGs/Instagram.svg" alt="Instagram"></a>
+            <a href="mailto: me@aiden.fyi" target="_blank"><img class="mini-socials" src="../Resources/SVGs/Email.svg" alt="Email"></a>
+        </div>
     </div>
 </div>
+
+@code {
+    private const string youtubeString = "https://www.youtube.com/@agent4084";
+}
 
 <style>
     .hamburger-nav {
@@ -67,5 +77,27 @@
         margin-bottom: 30px;
         border: solid 2px black;
         border-radius: 50%;
+    }
+
+    .mini-list {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    .mini-list a {
+        width: 30px;
+        padding: 5px;
+    }
+
+    .mini-socials {
+        height: 23px;
+        width: 23px;
+        filter: invert(100%);
+        cursor: pointer;
+    }
+
+    .mini-socials:hover {
+        filter: invert(71%) sepia(3%) saturate(25%) hue-rotate(332deg) brightness(89%) contrast(97%);
     }
 </style>
