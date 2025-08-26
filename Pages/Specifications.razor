@@ -10,8 +10,15 @@
 
 @if (selectedType != null)
 {
+    <div class="main-container">
+        <div class="main-box">
+            @renderFragment
+        </div>
+        <div class="main-details">
+            @renderFragment
+        </div>
+    </div>
 
-    @renderFragment
 }
 else
 {
@@ -120,7 +127,7 @@ else
         border-radius: 20px;
     }
 
-    .main-info {
+    .main-details {
         width: 200px;
         margin-left: 40px;
         margin-right: 40px;
