@@ -10,7 +10,14 @@
 
 @if (selectedType != null)
 {
-    @renderFragment
+    <div class="main-container">
+        <div class="main-box">
+            <h3 class="title">@Title</h3>
+            @renderFragment
+        </div>
+        <div class="main-details">
+        </div>
+    </div>
 }
 else
 {
@@ -44,7 +51,7 @@ else
 
     Type? selectedType;
 
-    RenderFragment renderFragment;
+    RenderFragment? renderFragment;
 
     protected override void OnInitialized()
     {
@@ -95,10 +102,41 @@ else
     }
 
     .title {
+        text-align: center;
         font-size: 48px;
     }
 
     .subtext {
+        text-align: center;
         font-size: 36px;
+    }
+
+    .main-container {
+        padding-top: 300px;
+        margin-left: 20%;
+        margin-right: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+
+    .main-box {
+        width: auto;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        padding: 5px;
+        border: solid 2px white;
+        border-radius: 20px;
+        flex-grow: 1;
+    }
+
+    .main-details {
+        width: 250px;
+        margin-left: 40px;
+        margin-right: 40px;
+        padding: 5px;
+        border: solid 2px white;
+        border-radius: 20px;
     }
 </style>
