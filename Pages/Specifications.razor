@@ -12,17 +12,10 @@
 {
     <div class="main-container">
         <div class="main-box">
+            <h3 class="title">@Title</h3>
             @renderFragment
-            <p>Hi</p>
-            <p>Hi</p>
-            <p>Hi</p>
-            <p>Hi</p>
         </div>
         <div class="main-details">
-            <p>Hi</p>
-            <p>Hi</p>
-            <p>Hi</p>
-            <p>Hi</p>
         </div>
     </div>
 }
@@ -58,7 +51,7 @@ else
 
     Type? selectedType;
 
-    RenderFragment renderFragment;
+    RenderFragment? renderFragment;
 
     protected override void OnInitialized()
     {
@@ -109,10 +102,12 @@ else
     }
 
     .title {
+        text-align: center;
         font-size: 48px;
     }
 
     .subtext {
+        text-align: center;
         font-size: 36px;
     }
 
