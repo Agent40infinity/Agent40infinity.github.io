@@ -8,16 +8,17 @@
         <a onclick="ToBottom()">Contact Me</a>
         <a @onclick="@(() => Navigation.NavigateTo(NavManager, js, "/projects/Resume"))">Resume</a>
     </div>
+    <hr class="vertical">
     <div class="nav-right">
         <img class="pfp" src="Resources/avatar.jpg" alt="It's Me.'" style="">
         <p class="about">
-            Hi I'm Aiden or <a href="https://www.youtube.com/c/Agent40infinity">Agent40</a>, A Game Developer and Software Engineer who has predominantly worked on Industry Training Simulators built with Unity.
+            Hi I'm Aiden or <a target="_blank" href="https://www.youtube.com/c/Agent40infinity">Agent40</a>, A Game Developer and Software Engineer who has predominantly worked on Industry Training Simulators built with Unity.
         </p>
         <p class ="about">
             Formerly worked at Red Cartel on Military Simulation and Electricial Training Simulators for Powercor Australia.
         </p>
         <p class="about">
-            Currently working on and publishing both open source and paid editor tools and systems for the Unity Game Engine. 
+            Currently working on and publishing both open source and paid editor tools and systems for the <a target="_blank" href="https://assetstore.unity.com/publishers/75209">Unity Game Engine</a>.
         </p>
         <div class="mini-list">
             <a href="mailto: me@aiden.fyi" target="_blank"><img class="mini-socials" src="../Resources/SVGs/Email.svg" alt="Email"></a>
@@ -67,7 +68,6 @@
 
     .nav-left {
         width: 40%;
-
         display: flex;
         justify-content: left;
         flex-direction: column;
@@ -116,5 +116,12 @@
 
     .mini-socials:hover {
         filter: invert(71%) sepia(3%) saturate(25%) hue-rotate(332deg) brightness(89%) contrast(97%);
+    }
+
+    .vertical {
+        margin-left: -30px;
+        height: 99%;
+        border-right: solid 1px rgb(45, 45, 45);
+        border-left-width: 0px;
     }
 </style>
