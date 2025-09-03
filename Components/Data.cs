@@ -10,6 +10,8 @@ namespace aiden.fyi.Components
         public static Dictionary<string, List<Project>> Projects = new Dictionary<string, List<Project>>();
         public static Dictionary<string, JsonElement> Resume = new Dictionary<string, JsonElement>();
 
+        public static List<ProjectSpecs> Specifications = new List<ProjectSpecs>();
+
         public static List<SkillItem>? Languages => JsonConvert.DeserializeObject<List<SkillItem>>(Resume["language"].ToString());
         public static List<SkillItem>? Legend => JsonConvert.DeserializeObject<List<SkillItem>>(Resume["legend"].ToString());
         public static List<SoftwareCategory>? Software => JsonConvert.DeserializeObject<List<SoftwareCategory>>(Resume["software"].ToString());
