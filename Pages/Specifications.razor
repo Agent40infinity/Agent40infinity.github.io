@@ -1,5 +1,6 @@
 ﻿@page "/projects/{Title}"
 @inject IJSRuntime js
+@inject HttpClient http
 @using System.Reflection;
 
 <script src='js/SubPage.js'></script>
@@ -67,6 +68,16 @@ else
             builder.OpenComponent(0, selectedType);
             builder.CloseComponent();
         };
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (Data.Specifications != null)
+        {
+            #pragma warning disable CS8601
+            Data.Specifications = await http.GetFromJsonAsync<List<ProjectSpecs>>("Data/Specifications.json");
+            #pragma warning restore CS8601
+        }
     }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)

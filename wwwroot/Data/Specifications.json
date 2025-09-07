@@ -1,0 +1,42 @@
+[
+  {
+    "project": "Operator",
+    "company": "Red Cartel",
+    "image": "../Resources/Database/RedCartel.jpg",
+    "dates": "Aug 2024 - Mar 2025",
+    "duration": "6 Months",
+    "link": "https://operatorxr.com/"
+  },
+  {
+    "project": "Varsity",
+    "company": "Powercor Australia",
+    "image": "../Resources/Database/Varsity.jpg",
+    "dates": "Feb 2023 - Jul 2024",
+    "duration": " 1.6 Years",
+    "link": "https://apps.apple.com/us/app/varsity-immersive-learning/id1535418137"
+  },
+  {
+    "project": "Scriptable Object Editor",
+    "company": "Sakura Void (Indie)",
+    "image": "../Resources/Database/Varsity.jpg",
+    "dates": "Jul 2022 - Dec 2022 & Mar 2025 - Oct 2025",
+    "duration": "12 Months",
+    "link": "https://assetstore.unity.com/packages/tools/utilities/scriptable-object-editor-235840"
+  },
+  {
+    "project": "Summit",
+    "company": "University",
+    "image": "../Resources/Database/Varsity.jpg",
+    "dates": "July 2022 - Nov 2022",
+    "duration": "4 Months",
+    "link": "https://coolevil98.itch.io/summitbuild"
+  },
+  {
+    "project": "Project Heart & Soul",
+    "company": "Sakura Void (Indie)",
+    "image": "../Resources/Database/Varsity.jpg",
+    "dates": "Mar 2025 - Ongoing",
+    "duration": "NA",
+    "link": "https://github.com/Agent40infinity/Pokemon-4th-Gen-Remake"
+  }
+]
