@@ -7,6 +7,19 @@
     * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 }
 
+* {
+    font-family: 'Perpetua';
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: black;
+    color: white;
+}
+
 a {
     color: white;
     text-decoration: none;
@@ -32,16 +45,4 @@ a:active {
 
 ::-webkit-scrollbar-thumb:hover {
     background: rgb(107, 107, 107);
-}
-
-@media (max-width: 1920px) {
-    #chapter1 {
-        margin: 90px 10% 400px 10%;
-    }
-}
-
-@media (min-width: 1921px) {
-    #chapter1 {
-        margin: 400px 10% 400px 10%;
-    }
 }
