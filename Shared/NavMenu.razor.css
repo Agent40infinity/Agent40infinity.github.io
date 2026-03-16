@@ -33,14 +33,14 @@
 }
 
 .nav-left {
-    width: 40%;
+    width: 35%;
     display: flex;
     justify-content: left;
     flex-direction: column;
 }
 
 .nav-right {
-    width: 60%;
+    width: 65%;
     text-align: center;
 }
 
@@ -85,7 +85,6 @@
 }
 
 .vertical {
-    margin-left: -30px;
     height: 99%;
     border-right: solid 1px rgb(45, 45, 45);
     border-left-width: 0px;
@@ -94,6 +93,22 @@
 
 @media (max-width: 700px) /*Mobile Responsive*/ {
     .ham-nav-expanded {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .vertical {
+        width: 99%;
+        height: 0px;
+        border-top: solid 1px rgb(45, 45, 45);
+        border-bottom-width: 0px;
+    }
+
+    .nav-left {
+        width: 100%;
+    }
+
+    .nav-right {
         width: 100%;
     }
 }
