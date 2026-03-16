@@ -1,0 +1,46 @@
+﻿a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+}
+
+a:active {
+    color: white;
+}
+
+header {
+    position: fixed;
+    height: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    opacity: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+header hr {
+    width: 80%;
+    border-bottom: solid 2px white;
+}
+
+.nav-item {
+    text-align: center;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.nav-title-top {
+    font-size: 26px;
+}
+
+.nav-title-sub {
+    font-size: 20px;
+}

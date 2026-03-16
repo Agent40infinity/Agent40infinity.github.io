@@ -14,7 +14,8 @@
     function ToggleMenu() {
         menuToggle = !menuToggle;
 
-        document.getElementById("ham-nav").style.width=menuToggle ? "700px" : "0px";
+        menuToggle ? document.getElementById("ham-nav").classList.add('ham-nav-expanded') : document.getElementById("ham-nav").classList.remove('ham-nav-expanded');
+
     }
 </script>
 
