@@ -39,20 +39,20 @@
   ],
   "personal": [
     {
-      "title": "Portfolio",
-      "image": "../Resources/Database/Untitled.jpg",
-      "description": "Aiden.fyi was created with raw HTML, CSS, & JS then later transitioned to Blazor.",
-      "key": [ "Click here to learn more about the development progress of my portfolio!" ],
-      "utility": [ "Blazor", ".NET", "Html", "CSS", "JavaScript" ],
-      "link": "https://github.com/Agent40infinity/Agent40infinity.github.io"
-    },
-    {
       "title": "Project Heart & Soul",
       "image": "../Resources/Database/SoulSilver.jpg",
-      "description": "A remake of 4th generation Pokémon titles, SoulSilver & HeartGold in Unity.",
+      "description": "A from scratch engine allowing recreations of Pokemon in Unity.",
       "key": [ "Open Sourced", "Custom Modular Systems", "Custom Tools" ],
       "utility": [ "Unity", "C#", "Remake" ],
       "link": "https://github.com/Agent40infinity/Pokemon-4th-Gen-Remake"
+    },
+    {
+      "title": "Portfolio",
+      "image": "../Resources/Database/Untitled.jpg",
+      "description": "Originally created with raw HTML, CSS, & JS, later transitioned to Blazor WASM.",
+      "key": [ "Click here to learn more about the development progress of my portfolio!" ],
+      "utility": [ "Blazor", "ASP.NET", "Html", "CSS", "JS" ],
+      "link": "https://github.com/Agent40infinity/Agent40infinity.github.io"
     },
     {
       "title": "Dark Light",
@@ -62,15 +62,16 @@
       "utility": [ "Unity", "C#", "HLSL", "Indie" ]
     },
     {
-      "title": "CQU Internship",
-      "image": "../Resources/Database/Statistics.jpg",
+      "title": "Internship Program",
+      "image": "../Resources/Database/Statistics2.jpg",
       "description": "Gamification visual novel created for Central Queensland University apart of a internship program at Macquarie University",
       "key": [ "Lead Programmer", "Custom Dynamic Dialogue System", "Scenario Setup using Modular Json Framework", "Completely modifiable w/o additional programming" ],
       "utility": [ "Unity", "C#", "Work-Experience", "University" ]
     },
     {
       "title": "Bright",
-      "image": "../Resources/Database/Bright.jpg",
+      "displayTitle": false,
+      "image": "../Resources/Database/Bright2.jpg",
       "description": "Bright is a top down, 2D horror dungeon crawler.",
       "key": [ "Procedural Dungeon Generation", "Custom Dungeon Camera", "Dynamic game events", "From scratch, A* styled pathfinding" ],
       "utility": [ "Unity", "C#", "University" ]
@@ -84,6 +85,7 @@
     },
     {
       "title": "Agent40",
+      "displayTitle": false,
       "image": "../Resources/Database/Agent40.jpg",
       "description": "Alias used for content creation, game development, gaming, and general use during my lifetime.",
       "key": [],

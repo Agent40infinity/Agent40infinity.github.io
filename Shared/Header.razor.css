@@ -27,6 +27,7 @@ header {
 }
 
 header hr {
+    margin: auto;
     width: 80%;
     border-bottom: solid 2px white;
 }
