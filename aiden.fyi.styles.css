@@ -79,12 +79,13 @@ hr[b-sndwby11xd] {
     width: 80%;
     text-align: center;
     display: inline-block;
-    margin: 400px 10% 400px 10%;
+    margin: 100px 10% 100px 10%;
 }
 
 #chapter2[b-sndwby11xd], #chapter3[b-sndwby11xd] {
     width: 100%;
-    margin: 400px 0px 400px 0px;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 #chapter1 .arrow[b-sndwby11xd] {
@@ -93,13 +94,13 @@ hr[b-sndwby11xd] {
 
 @media (max-width: 1920px) {
     #chapter1[b-sndwby11xd] {
-        margin: 90px 10% 400px 10%;
+        margin-top: 90px;
     }
 }
 
 @media (min-width: 1921px) {
     #chapter1[b-sndwby11xd] {
-        margin: 400px 10% 400px 10%;
+        margin-top: 400px;
     }
 }
 

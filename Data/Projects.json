@@ -6,7 +6,7 @@
       "image": "../Resources/Database/JNMechanical.jpg",
       "description": "Fullstack Web Development for JNMechanical.",
       "key": [ "Sole contractor for building JNMechanical's mobile mechanics business website.", "Front-end Developer", "Back-end Developer", "Built from scratch Blazor WASM front-end ", "Cloudflare Worker's Serverless Backend for API security", "STMP custom emailing template for customer inquiries" ],
-      "utility": [ "Blazor", "ASP.NET", "Cloudflare Workers", "SMTP", "Fullstack" ],
+      "utility": [ "Blazor", "ASP.NET", "Cloudflare Workers", "CI/CD", "SMTP", "Fullstack" ],
       "link": "https://jnmechanical.services/"
     },
     {
@@ -48,6 +48,14 @@
   ],
   "personal": [
     {
+      "title": "Hytale Crop Duplicator",
+      "image": "../Resources/Database/Hytale.jpg",
+      "description": "A tool designed to make modding Hytale easier by improving asset duplication for crops.",
+      "key": [ "Open Sourced", "Replicated simplistic UI for familiarity", "Mass duplication for all files required for a single crop.", "Automatically modifies asset fields to match duplicated target", "Puts the focus for modding back into creativity by eliminating busy-work" ],
+      "utility": [ "Unity", "C#", ".NET", "Java", "Hytale" ],
+      "link": "https://github.com/Agent40infinity/Hytale-Crop-Duplicator"
+    },
+    {
       "title": "Project Heart & Soul",
       "image": "../Resources/Database/SoulSilver.jpg",
       "description": "A from scratch engine allowing recreations of Pokemon in Unity.",
@@ -56,10 +64,11 @@
       "link": "https://github.com/Agent40infinity/Pokemon-4th-Gen-Remake"
     },
     {
-      "title": "Portfolio",
+      "title": "My Portfolio",
+      "displayTitle": false,
       "image": "../Resources/Database/Untitled.jpg",
       "description": "Originally created with raw HTML, CSS, & JS, later transitioned to Blazor WASM.",
-      "key": [ "Click here to learn more about the development progress of my portfolio!" ],
+      "key": [ "Click here to learn more about the development progress of my portfolio!", "Created solely from IDE without tools or builders", "Detailed process for coding my resume" ],
       "utility": [ "Blazor", "ASP.NET", "Html", "CSS", "JS" ],
       "link": "https://github.com/Agent40infinity/Agent40infinity.github.io"
     },
@@ -89,7 +98,7 @@
       "title": "Final Fantasy: Brave Exvius Battle System",
       "image": "../Resources/Database/FinalFantasy.jpg",
       "description": "A recreation of the FFBE Battle System created for a major project during my HSC.",
-      "key": [],
+      "key": [ "36 week final school project", "Replicated UI, base gameplay, and battle mechanics."],
       "utility": [ "Greenfoot", "Java", "Remake" ]
     },
     {
