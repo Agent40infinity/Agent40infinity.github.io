@@ -78,12 +78,13 @@ hr {
     width: 80%;
     text-align: center;
     display: inline-block;
-    margin: 400px 10% 400px 10%;
+    margin: 100px 10% 100px 10%;
 }
 
 #chapter2, #chapter3 {
     width: 100%;
-    margin: 400px 0px 400px 0px;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 #chapter1 .arrow {
@@ -92,13 +93,13 @@ hr {
 
 @media (max-width: 1920px) {
     #chapter1 {
-        margin: 90px 10% 400px 10%;
+        margin-top: 90px;
     }
 }
 
 @media (min-width: 1921px) {
     #chapter1 {
-        margin: 400px 10% 400px 10%;
+        margin-top: 400px;
     }
 }
 
