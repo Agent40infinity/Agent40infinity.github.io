@@ -18,16 +18,17 @@
 
 .main-container {
     padding-top: 200px;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     color: white;
 }
 
 .main-box {
-    width: auto;
+    max-width: 1178px;
+    width: 1178px;
     margin-top: 40px;
     margin-bottom: 40px;
     padding: 5px;
@@ -38,9 +39,70 @@
 
 .main-details {
     width: 250px;
-    margin-left: 40px;
-    margin-right: 40px;
+    margin: 40px;
     padding: 5px;
     border: solid 2px white;
     border-radius: 20px;
+}
+
+.main-details-flex {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 20px;
+}
+
+.main-details-title {
+    margin: 15px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.main-details-subtitle {
+    margin: 5px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.mini-list {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 20px 0 10px 0;
+}
+
+.mini-list a {
+    width: 30px;
+    padding: 5px;
+}
+
+.mini-socials {
+    height: 23px;
+    width: 23px;
+    filter: invert(100%);
+    cursor: pointer;
+}
+
+.mini-socials:hover {
+    filter: invert(71%) sepia(3%) saturate(25%) hue-rotate(332deg) brightness(89%) contrast(97%);
+}
+
+.main-details-ico {
+    filter: grayscale(1) invert(1) brightness(2.5) contrast(1);
+}
+
+@media (max-width: 1560px) {
+    .main-container {
+        margin-left: 5%;
+        margin-right: 5%;
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+
+    .main-box {
+        max-width: 1178px;
+        width: 90%;
+    }
 }
