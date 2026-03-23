@@ -7,6 +7,6 @@
         public string image { get; set; } = "";
         public string dates { get; set; } = "";
         public string duration { get; set; } = "";
-        public string link { get; set; } = "";
+        public string[] link { get; set; }
     }
 }

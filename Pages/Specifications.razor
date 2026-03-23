@@ -17,6 +17,32 @@
             @renderFragment
         </div>
         <div class="main-details">
+            <p class="main-details-title">Details</p>
+            <div class="main-details-company">
+                <p>@Data.Specifications[specIndex].company</p>
+            </div>
+            <div class="main-details-dates">
+                <p>@Data.Specifications[specIndex].dates</p>
+                <p>@Data.Specifications[specIndex].duration</p>
+            </div>
+            <div class="main-details-emgine">
+
+            </div>
+            <div class="main-details-languages">
+
+            </div>
+            <div class="main-details-role">
+
+            </div>
+            <div class="mini-list">
+                @foreach (var link in Data.Specifications[specIndex].link)
+                {
+                    var linkName = @link.Replace("https://", "").Split("/")[0];
+                    var favicon = "https://" + @linkName + "/favicon.ico";
+
+                    <a href="@link" target="_blank"><img class="mini-socials main-details-ico" src="@favicon" alt="@linkName"></a>
+                }
+            </div>
         </div>
     </div>
 }
@@ -43,6 +69,8 @@ else
 @code {
     [Parameter]
     public string Title { get; set; } = "";
+
+    private int specIndex;
 
     Type[] components => Assembly
         .GetExecutingAssembly()
@@ -77,6 +105,10 @@ else
             #pragma warning disable CS8601
             Data.Specifications = await http.GetFromJsonAsync<List<ProjectSpecs>>("Data/Specifications.json");
             #pragma warning restore CS8601
+
+            #pragma warning disable CS8602
+            specIndex = Data.Specifications.FindIndex(s => s.project == Title.Replace("-", " "));
+            #pragma warning restore CS8602
         }
     }
 
@@ -92,7 +124,7 @@ else
     }
 }
 
-<style>
+@* <style>
     * {
         font-family: 'Perpetua';
         margin: 0px;
@@ -151,4 +183,4 @@ else
         border: solid 2px white;
         border-radius: 20px;
     }
-</style>
+</style> *@

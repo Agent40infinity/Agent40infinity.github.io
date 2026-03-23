@@ -8,6 +8,5 @@
         public string image { get; set; } = "";
         public string[] key { get; set; }
         public string[] utility { get; set; }
-        public string link { get; set; } = "";
     }
 }
