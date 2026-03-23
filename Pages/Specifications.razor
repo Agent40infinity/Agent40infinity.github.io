@@ -16,34 +16,43 @@
             <h3 class="title">@Title</h3>
             @renderFragment
         </div>
-        <div class="main-details">
-            <p class="main-details-title">Details</p>
-            <div class="main-details-company">
-                <p>@Data.Specifications[specIndex].company</p>
-            </div>
-            <div class="main-details-dates">
-                <p>@Data.Specifications[specIndex].dates</p>
-                <p>@Data.Specifications[specIndex].duration</p>
-            </div>
-            <div class="main-details-emgine">
+        @if (Data.Specifications != null && Data.Specifications.Count != 0)
+        {
+            <div class="main-details">
+                <p class="main-details-title">Details</p>
+                <div class="main-details-company main-details-flex">
+                    <p class="main-details-subtitle">Company:</p>
+                    <p>@Data.Specifications[specIndex].company</p>
+                </div>
+                <div class="main-details-dates main-details-flex">
+                    <p class="main-details-subtitle">Date:</p>
+                    <p>@Data.Specifications[specIndex].dates</p>
+                </div>
+                <div class="main-details-dates main-details-flex">
+                    <p class="main-details-subtitle">Duration:</p>
+                    <p>@Data.Specifications[specIndex].duration</p>
+                </div>
+                <div class="main-details-emgine">
 
-            </div>
-            <div class="main-details-languages">
+                </div>
+                <div class="main-details-languages">
 
-            </div>
-            <div class="main-details-role">
+                </div>
+                <div class="main-details-role">
 
-            </div>
-            <div class="mini-list">
-                @foreach (var link in Data.Specifications[specIndex].link)
-                {
-                    var linkName = @link.Replace("https://", "").Split("/")[0];
-                    var favicon = "https://" + @linkName + "/favicon.ico";
+                </div>
+                <p class="main-details-subtitle" style="text-align: left">Links:</p>
+                <div class="mini-list">
+                    @foreach (var link in Data.Specifications[specIndex].link)
+                    {
+                        var linkName = @link.Replace("https://", "").Split("/")[0];
+                        var favicon = "https://" + @linkName + "/favicon.ico";
 
-                    <a href="@link" target="_blank"><img class="mini-socials main-details-ico" src="@favicon" alt="@linkName"></a>
-                }
+                        <a href="@link" target="_blank"><img class="mini-socials main-details-ico" src="@favicon" alt="@linkName"></a>
+                    }
+                </div>
             </div>
-        </div>
+        }
     </div>
 }
 else
@@ -109,6 +118,10 @@ else
             #pragma warning disable CS8602
             specIndex = Data.Specifications.FindIndex(s => s.project == Title.Replace("-", " "));
             #pragma warning restore CS8602
+
+            Console.WriteLine(specIndex);
+            Console.WriteLine(Data.Specifications.Count);
+            Console.WriteLine("Dumbass");
         }
     }
 
@@ -116,9 +129,17 @@ else
     {
         if (firstRender)
         {
+            while (Data.Specifications == null || Data.Specifications.Count == 0)
+            {
+                await Task.Delay(100);
+            }
+
             await js.InvokeVoidAsync("Rendered", Navigation.duration);
             await js.InvokeVoidAsync("OnFooterLoaded");
         }
+
+        Console.WriteLine(specIndex);
+        Console.WriteLine(Data.Specifications.Count);
 
         await base.OnAfterRenderAsync(firstRender);
     }
