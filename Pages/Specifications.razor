@@ -118,10 +118,6 @@ else
             #pragma warning disable CS8602
             specIndex = Data.Specifications.FindIndex(s => s.project == Title.Replace("-", " "));
             #pragma warning restore CS8602
-
-            Console.WriteLine(specIndex);
-            Console.WriteLine(Data.Specifications.Count);
-            Console.WriteLine("Dumbass");
         }
     }
 
@@ -137,9 +133,6 @@ else
             await js.InvokeVoidAsync("Rendered", Navigation.duration);
             await js.InvokeVoidAsync("OnFooterLoaded");
         }
-
-        Console.WriteLine(specIndex);
-        Console.WriteLine(Data.Specifications.Count);
 
         await base.OnAfterRenderAsync(firstRender);
     }
