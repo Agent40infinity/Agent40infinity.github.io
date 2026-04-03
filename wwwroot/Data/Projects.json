@@ -45,9 +45,10 @@
   "personal": [
     {
       "title": "Hytale Crop Duplicator",
-      "image": "../Resources/Database/Hytale.jpg",
+      "displayTitle": false,
+      "image": "../Resources/Database/HED.jpg",
       "description": "A tool designed to make modding Hytale easier by improving asset duplication for crops.",
-      "key": [ "Open Sourced", "Replicated simplistic UI for familiarity", "Mass duplication for all files required for a single crop.", "Automatically modifies asset fields to match duplicated target", "Puts the focus for modding back into creativity by eliminating busy-work" ],
+      "key": [ "Open Sourced", "Replicated simplistic UI for familiarity", "Mass duplicates all files required for a single crop", "Modifies all duplicated asset properties as needed", "Puts the focus for modding back into creativity by eliminating busy-work" ],
       "utility": [ "Unity", "C#", ".NET", "Java", "Hytale" ],
       "link": [ "https://github.com/Agent40infinity/Hytale-Crop-Duplicator" ]
     },
