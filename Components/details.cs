@@ -2,7 +2,6 @@
 {
     public class ProjectSpecs
     {
-        public string project { get; set; } = "";
         public string company { get; set; } = "";
         public string image { get; set; } = "";
         public string dates { get; set; } = "";

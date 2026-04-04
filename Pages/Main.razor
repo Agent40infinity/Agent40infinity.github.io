@@ -40,11 +40,11 @@
         {
             <article class="chapter" id="chapter2">
                 <h2 class="title">Professional & Industry</h2>
-                <ProjectContainer Projects="@Data.Projects["professional"]" />
+                <ProjectContainer Projects="@Data.Projects.Where(p => p.category == "professional").ToList()" />
             </article>
             <article class="chapter" id="chapter3">
                 <h2 class="title">Indie</h2>
-                <ProjectContainer Projects="@Data.Projects["personal"]" />
+                <ProjectContainer Projects="@Data.Projects.Where(p => p.category == "personal").ToList()" />
             </article>
         }
     </section>
@@ -57,7 +57,7 @@
         if (Data.Projects != null)
         {
             #pragma warning disable CS8601
-            Data.Projects = await http.GetFromJsonAsync<Dictionary<string, List<Project>>>("Data/Projects.json");
+            Data.Projects = await http.GetFromJsonAsync<List<Project>>("Data/Projects.json");
             #pragma warning restore CS8601
         }
     }

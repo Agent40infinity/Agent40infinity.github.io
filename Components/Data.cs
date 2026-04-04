@@ -7,7 +7,7 @@ namespace aiden.fyi.Components
     {
         public static bool isLocal;
 
-        public static Dictionary<string, List<Project>> Projects = new Dictionary<string, List<Project>>();
+        public static List<Project> Projects = new List<Project>();
         public static Dictionary<string, JsonElement> Resume = new Dictionary<string, JsonElement>();
 
         public static List<ProjectSpecs> Specifications = new List<ProjectSpecs>();
