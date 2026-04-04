@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "aiden.fyi",
   "resources": {
-    "hash": "sha256-7futX4kAsJO4RoEkWGik/PdweDKM2+MDbhXrFIjSVFw=",
+    "hash": "sha256-xlrz3ibbP2GDg7ajYI2PEn8pVubNH+W5ylaFqMAKLPc=",
     "jsModuleNative": {
       "dotnet.native.8.0.25.r7rulxohkt.js": "sha256-A16ka545FHaB+QXjyJ4exXh7XpBAAIFnX8YkC4xAng8="
     },
@@ -17,7 +17,7 @@
       "icudt_no_CJK.dat": "sha256-L7sV7NEYP37/Qr2FPCePo5cJqRgTXRwGHuwF5Q+0Nfs="
     },
     "assembly": {
-      "aiden.fyi.wasm": "sha256-CSjlGcM+G4pFZSZ7C7sD4613ImSpnc3Do812EcIXzVI=",
+      "aiden.fyi.wasm": "sha256-XRICanJIbNAViCloGc3iizxuE8fAF2jFmVf1/Yeicic=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-EeY7cBThVKMP//IXKk69ZumOowhrShWKNRWamM9TJvI=",
       "Microsoft.AspNetCore.Components.Web.wasm": "sha256-o3dUFaYZ86Ri9/f+gxNOJf4LxhqxORvIZM29feN1GHk=",
       "Microsoft.AspNetCore.Components.WebAssembly.wasm": "sha256-1/q8HCnkfx2cBfBoL7rb6O3Y7KIh1kZ4j9xG3A72XlU=",
@@ -48,7 +48,7 @@
       "System.Drawing.Primitives.wasm": "sha256-Sow8BvH+B9Tt6vOOu/OWSeqSN2joSdTWQXxcMdZIhn8=",
       "System.Drawing.wasm": "sha256-iTYaFiV1ZIwbzyDQJI0L4w5sTGQUMDoynOB+kcCzVlo=",
       "System.Linq.Expressions.wasm": "sha256-L2LT6wQSGvRpGvu3PCguCOdE+qyzP7lcVUt72vcLxjo=",
-      "System.Linq.wasm": "sha256-G9Qp24wLvA6e3DMekX3TLBWR+K7gECrsPesLk2FCwU8=",
+      "System.Linq.wasm": "sha256-EO0+DcHS4DhR+spdnnjI84FxXLX1nQU93gzCSEYxFi4=",
       "System.Memory.wasm": "sha256-5tBhihtNk5/dL9Q1X61GNhTitEsp+gKkcmtfqXHndwE=",
       "System.Net.Http.Json.wasm": "sha256-mItG3hLTS6zncN4a3u8Fu03LFgbdOJJp05ctQ/NePpI=",
       "System.Net.Http.wasm": "sha256-CNMDdQi5fjnZtcVmvShxUrg6L/fff48EMEuvwec+5OE=",
