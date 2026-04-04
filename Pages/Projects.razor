@@ -19,9 +19,14 @@
 
     protected override async Task OnInitializedAsync()
     {
-        var ProjectTypes = await http.GetFromJsonAsync<Dictionary<string, List<Project>>>("Data/Projects.json");
-        AllProjects = ProjectTypes["professional"];
-        AllProjects.AddRange(ProjectTypes["personal"]);
+        if (Data.Projects != null)
+        {
+            #pragma warning disable CS8601
+            Data.Projects = await http.GetFromJsonAsync<List<Project>>("Data/Projects.json");
+            #pragma warning restore CS8601
+        }
+
+        AllProjects = Data.Projects.OrderByDescending(p => p.startDate).ToList();
     }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)

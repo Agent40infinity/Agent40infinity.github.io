@@ -1,111 +1,187 @@
-{
-  "professional": [
-    {
-      "title": "JNMechanical",
-      "displayTitle": false,
-      "image": "../Resources/Database/JNMechanical.jpg",
-      "description": "Fullstack Web Development for JNMechanical.",
-      "key": [ "Sole contractor for building JNMechanical's mobile mechanics business website.", "Front-end Developer", "Back-end Developer", "Built from scratch Blazor WASM front-end ", "Cloudflare Worker's Serverless Backend for API security", "STMP custom emailing template for customer inquiries" ],
-      "utility": [ "Blazor", "ASP.NET", "Cloudflare Workers", "CI/CD", "SMTP", "Fullstack" ],
-      "link": [ "https://jnmechanical.services/" ]
-    },
-    {
-      "title": "Operator",
-      "displayTitle": false,
+[
+  {
+    "title": "JNMechanical",
+    "category": "professional",
+    "startDate": 2025.9,
+    "displayTitle": false,
+    "image": "../Resources/Database/JNMechanical.jpg",
+    "description": "Fullstack Web Development for JNMechanical.",
+    "key": [ "Sole contractor for building JNMechanical's mobile mechanics business website.", "Front-end Developer", "Back-end Developer", "Built from scratch Blazor WASM front-end ", "Cloudflare Worker's Serverless Backend for API security", "STMP custom emailing template for customer inquiries" ],
+    "utility": [ "Blazor", "ASP.NET", "Cloudflare Workers", "CI/CD", "SMTP", "Fullstack" ],
+    "link": [ "https://jnmechanical.services/" ],
+    "specs": null
+  },
+  {
+    "title": "Operator",
+    "category": "professional",
+    "startDate": 2024.9,
+    "displayTitle": false,
+    "image": "../Resources/Database/RedCartel.jpg",
+    "description": "Game Developer & Software Engineer at Red Cartel, XRG.",
+    "key": [ "Operator XR is a specialised Police Training & Military Simulation System for Virtual Reality.", "Game Developer", "Software Engineer", "Reconstructured multi-platform all-in-one camera system.", "VR Perspective, Top-Down Controller, First-Person, & Track-Aligned." ],
+    "utility": [ "Unity", "C#", ".NET", "Red Cartel", "XRG" ],
+    "specs": {
+      "project": "Operator",
+      "company": "Red Cartel",
       "image": "../Resources/Database/RedCartel.jpg",
-      "description": "Game Developer & Software Engineer at Red Cartel, XRG.",
-      "key": [ "Operator XR is a specialised Police Training & Military Simulation System for Virtual Reality.", "Game Developer", "Software Engineer", "Reconstructured multi-platform all-in-one camera system.", "VR Perspective, Top-Down Controller, First-Person, & Track-Aligned." ],
-      "utility": [ "Unity", "C#", ".NET", "Red Cartel", "XRG" ]
-    },
-    {
-      "title": "Varsity",
-      "displayTitle": false,
+      "dates": "Aug 2024 - Mar 2025",
+      "duration": "6 Months",
+      "link": [ "https://operatorxr.com/" ]
+    }
+  },
+  {
+    "title": "Varsity",
+    "category": "professional",
+    "startDate": 2023.2,
+    "displayTitle": false,
+    "image": "../Resources/Database/Varsity.jpg",
+    "description": "Game Developer at Powercor, working on Varsity.",
+    "key": [ "Varsity is a Training Application for Powercor & Citipower Electricians and Lineies with a VR counterpart.", "Game Developer", "Fullstack Web Development", "Immersive Technology (VR)" ],
+    "utility": [ "Unity", "C#", "HLSL", ".NET", "Blazor", "Powercor" ],
+    "specs": {
+      "project": "Varsity",
+      "company": "Powercor Australia",
       "image": "../Resources/Database/Varsity.jpg",
-      "description": "Game Developer at Powercor, working on Varsity.",
-      "key": [ "Varsity is a Training Application for Powercor & Citipower Electricians and Lineies with a VR counterpart.", "Game Developer", "Fullstack Web Development", "Immersive Technology (VR)" ],
-      "utility": [ "Unity", "C#", "HLSL", ".NET", "Blazor", "Powercor" ]
-    },
-    {
-      "title": "Scriptable Object Editor",
-      "displayTitle": false,
-      "image": "../Resources/Database/SOE.jpg",
-      "description": "The ScriptableObject Editor is a tool designed to centralize the management proccesses behind modifying ScriptableObjects.",
-      "key": [ "System.Type manipulation", "Serialized object & property modification", "Modular Editor Tool", "Custom Creation Window" ],
-      "utility": [ "Unity", "C#", "Package", "Editor Tool", "Systems Development" ]
-    },
-    {
-      "title": "Summit",
-      "displayTitle": false,
-      "image": "../Resources/Database/Summit.jpg",
-      "description": "Summit is a 3D third person Rogue-Like inspired by Risk of Rain 2.",
-      "key": [ "Lead Programmer", "Modular Boss State Machine", "Systems Development", "Modular Scene Mangement", "Core Game Structure" ],
-      "utility": [ "Unity", "C#", "HLSL", "University", "Indie" ]
+      "dates": "Feb 2023 - Jul 2024",
+      "duration": " 1 Year 6 Months",
+      "link": [ "https://apps.apple.com/us/app/varsity-immersive-learning/id1535418137" ]
     }
-  ],
-  "personal": [
-    {
-      "title": "Hytale Crop Duplicator",
-      "displayTitle": false,
-      "image": "../Resources/Database/HED.jpg",
-      "description": "A tool designed to make modding Hytale easier by improving asset duplication for crops.",
-      "key": [ "Open Sourced", "Replicated simplistic UI for familiarity", "Mass duplicates all files required for a single crop", "Modifies all duplicated asset properties as needed", "Puts the focus for modding back into creativity by eliminating busy-work" ],
-      "utility": [ "Unity", "C#", ".NET", "Java", "Hytale" ],
-      "link": [ "https://github.com/Agent40infinity/Hytale-Crop-Duplicator" ]
-    },
-    {
-      "title": "Project Heart & Soul",
-      "image": "../Resources/Database/SoulSilver.jpg",
-      "description": "A from scratch engine allowing recreations of Pokemon in Unity.",
-      "key": [ "Open Sourced", "Custom Modular Systems", "Custom Tools" ],
-      "utility": [ "Unity", "C#", "Remake" ]
-    },
-    {
-      "title": "My Portfolio",
-      "displayTitle": false,
-      "image": "../Resources/Database/Untitled.jpg",
-      "description": "Originally created with raw HTML, CSS, & JS, later transitioned to Blazor WASM.",
-      "key": [ "Click here to learn more about the development progress of my portfolio!", "Created solely from IDE without tools or builders", "Detailed process for coding my resume" ],
-      "utility": [ "Blazor", "ASP.NET", "Html", "CSS", "JS" ],
-      "link": [ "https://aiden.fyi/", "https://github.com/Agent40infinity/Agent40infinity.github.io" ]
-    },
-    {
-      "title": "Dark Light",
-      "image": "../Resources/Database/DarkLight.jpg",
-      "description": "Dark Light is a 2D metroidvania inspirated by Hollow Knight and the Soulsbourne Series.",
-      "key": [ "Entity state machines", "Modular interpreter save system", "Velocity-based 2D physics controller" ],
-      "utility": [ "Unity", "C#", "HLSL", "Indie" ]
-    },
-    {
-      "title": "Internship Program",
-      "image": "../Resources/Database/Statistics2.jpg",
-      "description": "Gamification visual novel created for Central Queensland University apart of a internship program at Macquarie University",
-      "key": [ "Lead Programmer", "Custom Dynamic Dialogue System", "Scenario Setup using Modular Json Framework", "Completely modifiable w/o additional programming" ],
-      "utility": [ "Unity", "C#", "Work-Experience", "University" ],
-      "link": [ "https://github.com/Agent40infinity/Untitled-Statistics-Project/" ]
-    },
-    {
-      "title": "Bright",
-      "displayTitle": false,
-      "image": "../Resources/Database/Bright2.jpg",
-      "description": "Bright is a top down, 2D horror dungeon crawler.",
-      "key": [ "Procedural Dungeon Generation", "Custom Dungeon Camera", "Dynamic game events", "From scratch, A* styled pathfinding" ],
-      "utility": [ "Unity", "C#", "University" ],
-      "link": [ "https://github.com/Agent40infinity/Bright" ]
-    },
-    {
-      "title": "Final Fantasy: Brave Exvius Battle System",
-      "image": "../Resources/Database/FinalFantasy.jpg",
-      "description": "A recreation of the FFBE Battle System created for a major project during my HSC.",
-      "key": [ "36 week final school project", "Replicated UI, base gameplay, and battle mechanics."],
-      "utility": [ "Greenfoot", "Java", "Remake" ]
-    },
-    {
-      "title": "Agent40",
-      "displayTitle": false,
-      "image": "../Resources/Database/Agent40.jpg",
-      "description": "Alias used for content creation, game development, gaming, and general use during my lifetime.",
-      "key": [],
-      "utility": [ "Youtube", "Twitch", "Content Creator", "Game Development" ]
+  },
+  {
+    "title": "Scriptable Object Editor",
+    "category": "professional",
+    "startDate": 2022.7,
+    "displayTitle": false,
+    "image": "../Resources/Database/SOE.jpg",
+    "description": "The ScriptableObject Editor is a tool designed to centralize the management proccesses behind modifying ScriptableObjects.",
+    "key": [ "System.Type manipulation", "Serialized object & property modification", "Modular Editor Tool", "Custom Creation Window" ],
+    "utility": [ "Unity", "C#", "Package", "Editor Tool", "Systems Development" ],
+    "specs": {
+      "project": "Scriptable Object Editor",
+      "company": "Sakura Void (Indie)",
+      "image": "../Resources/Database/Varsity.jpg",
+      "dates": "Jul 2022 - Dec 2022 Ongoing",
+      "duration": "12 Months",
+      "link": [ "https://assetstore.unity.com/packages/tools/utilities/scriptable-object-editor-235840" ]
     }
-  ]
-}
+  },
+  {
+    "title": "Summit",
+    "category": "professional",
+    "startDate": 2022.7,
+    "displayTitle": false,
+    "image": "../Resources/Database/Summit.jpg",
+    "description": "Summit is a 3D third person Rogue-Like inspired by Risk of Rain 2.",
+    "key": [ "Lead Programmer", "Modular Boss State Machine", "Systems Development", "Modular Scene Mangement", "Core Game Structure" ],
+    "utility": [ "Unity", "C#", "HLSL", "University", "Indie" ],
+    "specs": {
+      "project": "Summit",
+      "company": "University",
+      "image": "../Resources/Database/Varsity.jpg",
+      "dates": "July 2022 - Nov 2022",
+      "duration": "4 Months",
+      "link": [ "https://coolevil98.itch.io/summitbuild", "https://github.com/Agent40infinity/Summit" ]
+    }
+  },
+  {
+    "title": "Hytale Crop Duplicator",
+    "category": "personal",
+    "startDate": 2026.2,
+    "displayTitle": false,
+    "image": "../Resources/Database/HED.jpg",
+    "description": "A tool designed to make modding Hytale easier by improving asset duplication for crops.",
+    "key": [ "Open Sourced", "Replicated simplistic UI for familiarity", "Mass duplicates all files required for a single crop", "Modifies all duplicated asset properties as needed", "Puts the focus for modding back into creativity by eliminating busy-work" ],
+    "utility": [ "Unity", "C#", ".NET", "Java", "Hytale" ],
+    "link": [ "https://github.com/Agent40infinity/Hytale-Crop-Duplicator" ],
+    "specs": null
+  },
+  {
+    "title": "Project Heart & Soul",
+    "category": "personal",
+    "startDate": 2025.3,
+    "image": "../Resources/Database/SoulSilver.jpg",
+    "description": "A from scratch engine allowing recreations of Pokemon in Unity.",
+    "key": [ "Open Sourced", "Custom Modular Systems", "Custom Tools" ],
+    "utility": [ "Unity", "C#", "Remake" ],
+    "specs": {
+      "project": "Project Heart & Soul",
+      "company": "Sakura Void (Indie)",
+      "image": "../Resources/Database/Varsity.jpg",
+      "dates": "Mar 2025 - Ongoing",
+      "duration": "NA",
+      "link": [ "https://github.com/Agent40infinity/Pokemon-4th-Gen-Remake" ]
+    }
+  },
+  {
+    "title": "My Portfolio",
+    "category": "personal",
+    "startDate": 2022.8,
+    "displayTitle": false,
+    "image": "../Resources/Database/Untitled.jpg",
+    "description": "Originally created with raw HTML, CSS, & JS, later transitioned to Blazor WASM.",
+    "key": [ "Click here to learn more about the development progress of my portfolio!", "Created solely from IDE without tools or builders", "Detailed process for coding my resume" ],
+    "utility": [ "Blazor", "ASP.NET", "Html", "CSS", "JS" ],
+    "link": [ "https://aiden.fyi/", "https://github.com/Agent40infinity/Agent40infinity.github.io" ],
+    "specs": null
+  },
+  {
+    "title": "Dark Light",
+    "category": "personal",
+    "startDate": 2024.8,
+    "image": "../Resources/Database/DarkLight.jpg",
+    "description": "Dark Light is a 2D metroidvania inspirated by Hollow Knight and the Soulsbourne Series.",
+    "key": [ "Entity state machines", "Modular interpreter save system", "Velocity-based 2D physics controller" ],
+    "utility": [ "Unity", "C#", "HLSL", "Indie" ],
+    "specs": null
+  },
+  {
+    "title": "Internship Program",
+    "category": "personal",
+    "startDate": 2022.6,
+    "image": "../Resources/Database/Statistics2.jpg",
+    "description": "Gamification visual novel created for Central Queensland University apart of a internship program at Macquarie University",
+    "key": [ "Lead Programmer", "Custom Dynamic Dialogue System", "Scenario Setup using Modular Json Framework", "Completely modifiable w/o additional programming" ],
+    "utility": [ "Unity", "C#", "Work-Experience", "University" ],
+    "link": [ "https://github.com/Agent40infinity/Untitled-Statistics-Project/" ],
+    "specs": null
+  },
+  {
+    "title": "Bright",
+    "category": "personal",
+    "startDate": 2021.11,
+    "displayTitle": false,
+    "image": "../Resources/Database/Bright2.jpg",
+    "description": "Bright is a top down, 2D horror dungeon crawler.",
+    "key": [ "Procedural Dungeon Generation", "Custom Dungeon Camera", "Dynamic game events", "From scratch, A* styled pathfinding" ],
+    "utility": [ "Unity", "C#", "University" ],
+    "link": [ "https://github.com/Agent40infinity/Bright" ],
+    "specs": null
+  },
+  {
+    "title": "Final Fantasy: Brave Exvius Battle System",
+    "category": "personal",
+    "startDate": 2018.6,
+    "image": "../Resources/Database/FinalFantasy.jpg",
+    "description": "A recreation of the FFBE Battle System created for a major project during my HSC.",
+    "key": [ "36 week final school project", "Replicated UI, base gameplay, and battle mechanics." ],
+    "utility": [ "Greenfoot", "Java", "Remake" ],
+    "specs": null
+  },
+  {
+    "title": "Agent40",
+    "category": "personal",
+    "startDate": 2010.10,
+    "displayTitle": false,
+    "image": "../Resources/Database/Agent40.jpg",
+    "description": "Alias used for content creation, game development, gaming, and general use during my lifetime.",
+    "key": [],
+    "utility": [ "Youtube", "Twitch", "Content Creator", "Game Development" ],
+    "specs": {
+      "company": "It Me",
+      "image": "../Resources/Database/Varsity.jpg",
+      "dates": "Oct 2010 - Ongoing",
+      "duration": "16+ years",
+      "link": [ "https://github.com/Agent40infinity/", "https://www.youtube.com/@Agent40infinity/", "https://www.twitch.tv/agent40", "https://assetstore.unity.com/publishers/75209", "https://steamcommunity.com/id/Agent40" ]
+    }
+  }
+]
