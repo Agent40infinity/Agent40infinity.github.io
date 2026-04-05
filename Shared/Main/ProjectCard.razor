@@ -1,0 +1,38 @@
+﻿@inject IJSRuntime js
+@inject NavigationManager NavManager
+
+<div class="Project-item">
+    <a @onclick="@(() => Navigation.NavigateTo(NavManager, js, "/projects/" + Project.title))">
+        <div class="Project-header">
+            <img class="Project-img" src="@Project.image" alt="Project-item-@Project.title-image" />
+            @if (Project.displayTitle)
+            {
+                <p class="Project-title"> @Project.title </p>
+            }
+        </div>
+        <div class="Project-utility">
+            @foreach (var utility in Project.utility)
+            {
+                <span class="Project-utility-item"> @utility </span>
+            }
+        </div>
+        <div class="Project-info">
+            <p class="Project-description"> @Project.description </p>
+            @if (Project.key.Count() > 0)
+            {
+                <div class="Project-list">
+                    <p class=Project-list-key> Notable Contributions: </p>
+                    @foreach (var key in Project.key)
+                    {
+                        <p class="Project-list-key">- @key</p>
+                    }
+                </div>
+            }
+        </div>
+    </a>
+</div>
+
+@code {
+    [Parameter]
+    public Project Project { get; set; } = new Project();
+}
