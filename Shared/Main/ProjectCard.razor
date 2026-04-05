@@ -1,30 +1,30 @@
 ﻿@inject IJSRuntime js
 @inject NavigationManager NavManager
 
-<div class="Project-item">
-    <a @onclick="@(() => Navigation.NavigateTo(NavManager, js, "/projects/" + Project.title))">
-        <div class="Project-header">
-            <img class="Project-img" src="@Project.image" alt="Project-item-@Project.title-image" />
-            @if (Project.displayTitle)
+<div class="project-item">
+    <a @onclick="@( () => Navigation.NavigateTo(NavManager, js, "/projects/" + project.title))">
+        <div class="project-header">
+            <img class="project-img" src="@project.image" alt="project-item-@project.title-image" />
+            @if (project.displayTitle)
             {
-                <p class="Project-title"> @Project.title </p>
+                <p class="project-title"> @project.title </p>
             }
         </div>
-        <div class="Project-utility">
-            @foreach (var utility in Project.utility)
+        <div class="project-utility">
+            @foreach (var utility in project.utility)
             {
-                <span class="Project-utility-item"> @utility </span>
+                <span class="project-utility-item"> @utility </span>
             }
         </div>
-        <div class="Project-info">
-            <p class="Project-description"> @Project.description </p>
-            @if (Project.key.Count() > 0)
+        <div class="project-info">
+            <p class="project-description"> @project.description </p>
+            @if (project.key.Count() > 0)
             {
-                <div class="Project-list">
-                    <p class=Project-list-key> Notable Contributions: </p>
-                    @foreach (var key in Project.key)
+                <div class="project-list">
+                    <p class=project-list-key> Notable Contributions: </p>
+                    @foreach (var key in project.key)
                     {
-                        <p class="Project-list-key">- @key</p>
+                        <p class="project-list-key">- @key</p>
                     }
                 </div>
             }
@@ -34,5 +34,9 @@
 
 @code {
     [Parameter]
-    public Project Project { get; set; } = new Project();
+    public Project project { get; set; } = new Project();
 }
+
+<style> 
+    
+</style>

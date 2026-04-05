@@ -1,12 +1,39 @@
-﻿<div class="project-container">
-    <ProjectToggle />
-    @foreach (var project in Data.Projects)
-    { 
-        <ProjectCard Project=@project/>
-    }
-</div>
+﻿<ProjectToggle @bind-Toggle=Toggle />
+@if (Toggle)
+{
+    <article class="chapter" id="chapter3">
+        <h2 class="title">Sorted By Date</h2>
+        <div class="project-container">
+            @foreach (var project in Data.Projects.OrderByDescending(p => p.startDate))
+            {
+                <ProjectCard project=@project />
+            }
+        </div>
+    </article>
+}
+else
+{
+    <article class="chapter" id="chapter2">
+        <h2 class="title">Professional & Industry</h2>
+        <div class="project-container">
+            @foreach (var project in Data.Projects.Where(p => p.category == "professional").ToList())
+            {
+                <ProjectCard project=@project />
+            }
+        </div>
+    </article>
+    <article class="chapter" id="chapter3">
+        <h2 class="title">Indie</h2>
+        <div class="project-container">
+            @foreach (var project in Data.Projects.Where(p => p.category == "personal").ToList())
+            {
+                <ProjectCard project=@project />
+            }
+        </div>
+    </article>
+}
 
 @code {
     [Parameter]
-    public List<Project> Projects { get; set; } = new List<Project>();
+    public bool Toggle { get; set; } = false;
 }

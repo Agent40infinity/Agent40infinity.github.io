@@ -6,3 +6,14 @@
     max-width: 1920px;
     margin: auto;
 }
+
+.title {
+    font-size: 48px;
+}
+
+.chapter {
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    margin: 100px 0px 100px 0px;
+}

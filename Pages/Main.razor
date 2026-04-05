@@ -38,14 +38,7 @@
         </article>
         @if (Data.Projects.Count > 0)
         {
-            <article class="chapter" id="chapter2">
-                <h2 class="title">Professional & Industry</h2>
-                <ProjectContainer Projects="@Data.Projects.Where(p => p.category == "professional").ToList()" />
-            </article>
-            <article class="chapter" id="chapter3">
-                <h2 class="title">Indie</h2>
-                <ProjectContainer Projects="@Data.Projects.Where(p => p.category == "personal").ToList()" />
-            </article>
+            <ProjectContainer />
         }
     </section>
 </main>
