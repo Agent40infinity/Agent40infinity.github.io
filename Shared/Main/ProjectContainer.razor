@@ -1,10 +1,10 @@
-﻿@if (Toggle)
+﻿<div class="header-flex">
+    <h2 class="title">@(Toggle ? "Projects (By Date)" : "Professional & Industry")</h2>
+    <ProjectToggle @bind-Toggle=Toggle />
+</div>
+@if (Toggle)
 {
     <article class="chapter" id="chapter3">
-        <div class="header-flex">
-            <h2 class="title">Projects (By Date)</h2>
-            <ProjectToggle @bind-Toggle=Toggle />
-        </div>
         <div class="project-container">
             @foreach (var project in Data.Projects.OrderByDescending(p => p.startDate))
             {
@@ -16,10 +16,6 @@
 else
 {
     <article class="chapter" id="chapter2">
-        <div class="header-flex">
-            <h2 class="title">Professional & Industry</h2>
-            <ProjectToggle @bind-Toggle=Toggle />
-        </div>
         <div class="project-container">
             @foreach (var project in Data.Projects.Where(p => p.category == "professional").ToList())
             {

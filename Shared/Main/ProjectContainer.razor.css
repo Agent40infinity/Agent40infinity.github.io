@@ -20,6 +20,11 @@
 
 .header-flex {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: end;
     align-items: center;
+    margin: 30px;
+    max-width: 1920px;
+    margin: auto;
+    margin-bottom: 0px;
 }
