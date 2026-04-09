@@ -1,0 +1,38 @@
+﻿<div class="toggle-button-cover">
+    <div class="button r" id="button-3">
+		<input type="checkbox" class="checkbox" @bind="Binding" @bind:event="oninput">
+        <div class="knobs">
+			<div class="before">
+
+			</div>
+		</div>
+        <div class="layer"></div>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public bool Toggle { get; set; }
+
+
+    public bool Binding
+    {
+        get
+        {
+            return Toggle;
+        }
+        set
+        {
+            Toggle = value;
+            UpdateToggle();
+        }
+    }
+
+    [Parameter]
+    public EventCallback<bool> ToggleChanged { get; set; }
+
+    async Task UpdateToggle()
+    {
+        await ToggleChanged.InvokeAsync(Toggle);
+    }
+}

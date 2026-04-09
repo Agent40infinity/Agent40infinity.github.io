@@ -18,10 +18,13 @@
         </div>
         <div class="main-details">
             <p class="main-details-title">Details</p>
-            <div class="main-details-company main-details-flex">
-                <p class="main-details-subtitle">Company:</p>
-                <p>@Data.Projects[specIndex].specs.company</p>
-            </div>
+            @if (string.IsNullOrEmpty(Data.Projects[specIndex].specs.company))
+            {
+                <div class="main-details-company main-details-flex">
+                    <p class="main-details-subtitle">Company:</p>
+                    <p>@Data.Projects[specIndex].specs.company</p>
+                </div>
+            }
             <div class="main-details-dates main-details-flex">
                 <p class="main-details-subtitle">Date:</p>
                 <p>@Data.Projects[specIndex].specs.dates</p>

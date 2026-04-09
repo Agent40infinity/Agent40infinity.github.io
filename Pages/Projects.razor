@@ -9,14 +9,12 @@
 <Header Toggled="true" />
 
 <main class="content">
-    <ProjectContainer Projects="@AllProjects" />
+    <ProjectContainer Toggle=true />
 </main>
 
 <Footer />
 
 @code {
-    public List<Project> AllProjects = new List<Project>();
-
     protected override async Task OnInitializedAsync()
     {
         if (Data.Projects != null)
@@ -25,8 +23,6 @@
             Data.Projects = await http.GetFromJsonAsync<List<Project>>("Data/Projects.json");
             #pragma warning restore CS8601
         }
-
-        AllProjects = Data.Projects.OrderByDescending(p => p.startDate).ToList();
     }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
