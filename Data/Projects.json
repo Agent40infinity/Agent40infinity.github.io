@@ -9,7 +9,12 @@
     "key": [ "Sole contractor for building JNMechanical's mobile mechanics business website.", "Front-end Developer", "Back-end Developer", "Built from scratch Blazor WASM front-end ", "Cloudflare Worker's Serverless Backend for API security", "STMP custom emailing template for customer inquiries" ],
     "utility": [ "Blazor", "ASP.NET", "Cloudflare Workers", "CI/CD", "SMTP", "Fullstack" ],
     "link": [ "https://jnmechanical.services/" ],
-    "specs": null
+    "specs": {
+      "company": "JNMechanical",
+      "dates": "November 2025 - Jan 2026",
+      "duration": "5 Months",
+      "link": [ "https://jnmechanical.services/" ]
+    }
   },
   {
     "title": "Operator",
@@ -21,9 +26,7 @@
     "key": [ "Operator XR is a specialised Police Training & Military Simulation System for Virtual Reality.", "Game Developer", "Software Engineer", "Reconstructured multi-platform all-in-one camera system.", "VR Perspective, Top-Down Controller, First-Person, & Track-Aligned." ],
     "utility": [ "Unity", "C#", ".NET", "Red Cartel", "XRG" ],
     "specs": {
-      "project": "Operator",
       "company": "Red Cartel",
-      "image": "../Resources/Database/RedCartel.jpg",
       "dates": "Aug 2024 - Mar 2025",
       "duration": "6 Months",
       "link": [ "https://operatorxr.com/" ]
@@ -39,9 +42,7 @@
     "key": [ "Varsity is a Training Application for Powercor & Citipower Electricians and Lineies with a VR counterpart.", "Game Developer", "Fullstack Web Development", "Immersive Technology (VR)" ],
     "utility": [ "Unity", "C#", "HLSL", ".NET", "Blazor", "Powercor" ],
     "specs": {
-      "project": "Varsity",
       "company": "Powercor Australia",
-      "image": "../Resources/Database/Varsity.jpg",
       "dates": "Feb 2023 - Jul 2024",
       "duration": " 1 Year 6 Months",
       "link": [ "https://apps.apple.com/us/app/varsity-immersive-learning/id1535418137" ]
@@ -57,9 +58,7 @@
     "key": [ "System.Type manipulation", "Serialized object & property modification", "Modular Editor Tool", "Custom Creation Window" ],
     "utility": [ "Unity", "C#", "Package", "Editor Tool", "Systems Development" ],
     "specs": {
-      "project": "Scriptable Object Editor",
       "company": "Sakura Void (Indie)",
-      "image": "../Resources/Database/Varsity.jpg",
       "dates": "Jul 2022 - Dec 2022 Ongoing",
       "duration": "12 Months",
       "link": [ "https://assetstore.unity.com/packages/tools/utilities/scriptable-object-editor-235840" ]
@@ -75,10 +74,8 @@
     "key": [ "Lead Programmer", "Modular Boss State Machine", "Systems Development", "Modular Scene Mangement", "Core Game Structure" ],
     "utility": [ "Unity", "C#", "HLSL", "University", "Indie" ],
     "specs": {
-      "project": "Summit",
       "company": "University",
-      "image": "../Resources/Database/Varsity.jpg",
-      "dates": "July 2022 - Nov 2022",
+      "dates": "Jul 2022 - Nov 2022",
       "duration": "4 Months",
       "link": [ "https://coolevil98.itch.io/summitbuild", "https://github.com/Agent40infinity/Summit" ]
     }
@@ -86,14 +83,19 @@
   {
     "title": "Hytale Crop Duplicator",
     "category": "personal",
-    "startDate": 2026.2,
+    "startDate": 2026.1,
     "displayTitle": false,
     "image": "../Resources/Database/HED.jpg",
     "description": "A tool designed to make modding Hytale easier by improving asset duplication for crops.",
     "key": [ "Open Sourced", "Replicated simplistic UI for familiarity", "Mass duplicates all files required for a single crop", "Modifies all duplicated asset properties as needed", "Puts the focus for modding back into creativity by eliminating busy-work" ],
     "utility": [ "Unity", "C#", ".NET", "Java", "Hytale" ],
     "link": [ "https://github.com/Agent40infinity/Hytale-Crop-Duplicator" ],
-    "specs": null
+    "specs": {
+      "company": "Sakura Void (Indie)",
+      "dates": "Jan 2026 - ",
+      "duration": "Ongoing",
+      "link": [ "https://github.com/Agent40infinity/Hytale-Crop-Duplicator" ]
+    }
   },
   {
     "title": "Project Heart & Soul",
@@ -104,11 +106,9 @@
     "key": [ "Open Sourced", "Custom Modular Systems", "Custom Tools" ],
     "utility": [ "Unity", "C#", "Remake" ],
     "specs": {
-      "project": "Project Heart & Soul",
       "company": "Sakura Void (Indie)",
-      "image": "../Resources/Database/Varsity.jpg",
-      "dates": "Mar 2025 - Ongoing",
-      "duration": "NA",
+      "dates": "Mar 2025 - ",
+      "duration": "Ongoing",
       "link": [ "https://github.com/Agent40infinity/Pokemon-4th-Gen-Remake" ]
     }
   },
@@ -122,7 +122,11 @@
     "key": [ "Click here to learn more about the development progress of my portfolio!", "Created solely from IDE without tools or builders", "Detailed process for coding my resume" ],
     "utility": [ "Blazor", "ASP.NET", "Html", "CSS", "JS" ],
     "link": [ "https://aiden.fyi/", "https://github.com/Agent40infinity/Agent40infinity.github.io" ],
-    "specs": null
+    "specs": {
+      "dates": "Aug 2022 - ",
+      "duration": "Ongoing",
+      "link": [ "https://aiden.fyi/", "https://github.com/Agent40infinity/Agent40infinity.github.io" ]
+    }
   },
   {
     "title": "Dark Light",
@@ -132,7 +136,12 @@
     "description": "Dark Light is a 2D metroidvania inspirated by Hollow Knight and the Soulsbourne Series.",
     "key": [ "Entity state machines", "Modular interpreter save system", "Velocity-based 2D physics controller" ],
     "utility": [ "Unity", "C#", "HLSL", "Indie" ],
-    "specs": null
+    "specs": {
+      "company": "Sakura Void (Indie)",
+      "dates": "Aug 2024 - ",
+      "duration": "Ongoing",
+      "link": [ "https://github.com/Agent40infinity/Dark-Light-Legacy" ]
+    }
   },
   {
     "title": "Internship Program",
@@ -142,20 +151,30 @@
     "description": "Gamification visual novel created for Central Queensland University apart of a internship program at Macquarie University",
     "key": [ "Lead Programmer", "Custom Dynamic Dialogue System", "Scenario Setup using Modular Json Framework", "Completely modifiable w/o additional programming" ],
     "utility": [ "Unity", "C#", "Work-Experience", "University" ],
-    "link": [ "https://github.com/Agent40infinity/Untitled-Statistics-Project/" ],
-    "specs": null
+    "specs": {
+      "project": "Untitled Statistics Project",
+      "company": "University",
+      "dates": "Jun 2022 - Nov 2022",
+      "duration": "6 Months",
+      "link": [ "https://github.com/Agent40infinity/Untitled-Statistics-Project/" ]
+    }
   },
   {
     "title": "Bright",
     "category": "personal",
-    "startDate": 2021.11,
+    "startDate": 2021.6,
     "displayTitle": false,
     "image": "../Resources/Database/Bright2.jpg",
     "description": "Bright is a top down, 2D horror dungeon crawler.",
     "key": [ "Procedural Dungeon Generation", "Custom Dungeon Camera", "Dynamic game events", "From scratch, A* styled pathfinding" ],
     "utility": [ "Unity", "C#", "University" ],
     "link": [ "https://github.com/Agent40infinity/Bright" ],
-    "specs": null
+    "specs": {
+      "company": "University",
+      "dates": "Jun 2021 - Nov 2021",
+      "duration": "6 Months",
+      "link": [ "https://github.com/Agent40infinity/Bright" ]
+    }
   },
   {
     "title": "Final Fantasy: Brave Exvius Battle System",

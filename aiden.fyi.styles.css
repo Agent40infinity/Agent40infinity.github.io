@@ -380,6 +380,78 @@ header hr[b-cerw4wlxbw] {
 .nav-title-sub[b-cerw4wlxbw] {
     font-size: 20px;
 }
+/* /Shared/Main/ProjectCard.razor.rz.scp.css */
+.project-item[b-t4doyo3o32] {
+    width: 400px;
+    margin: 15px;
+    background-color: rgb(26, 26, 26);
+    border-radius: 25px;
+    transition: all 0.2s;
+}
+
+.project-item:hover[b-t4doyo3o32] {
+    transform: scale(1.05);
+}
+
+.project-header[b-t4doyo3o32] {
+    height: 250px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    border-radius: 25px 25px 0px 0px;
+    overflow: hidden;
+}
+
+.project-img[b-t4doyo3o32] {
+    display: block;
+    position: absolute;
+    left: 50%;
+    min-width: 100%;
+    height: 100%;
+    transform: translateX(-50%);
+}
+
+.project-title[b-t4doyo3o32] {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    font-size: 24px;
+    padding: 15px 0 15px 0;
+}
+
+.project-info[b-t4doyo3o32] {
+    font-size: 20px;
+    padding: 15px;
+}
+
+.project-description[b-t4doyo3o32] {
+    margin-bottom: 20px;
+}
+
+.project-list[b-t4doyo3o32] {
+    text-align: left;
+}
+
+.project-list-key[b-t4doyo3o32] {
+    margin: 5px 0px 5px 0px;
+}
+
+.project-utility[b-t4doyo3o32] {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-between;
+    padding: 7px 12px 12px 12px;
+}
+
+.project-utility-item[b-t4doyo3o32] {
+    padding: 5px 15px 5px 15px;
+    margin: 5px 5px 0px 5px;
+    border-radius: 5px;
+    background-color: rgb(45, 45, 45);
+}
 /* /Shared/Main/ProjectContainer.razor.rz.scp.css */
 .project-container[b-la45odhp62] {
     display: flex;
@@ -390,76 +462,140 @@ header hr[b-cerw4wlxbw] {
     margin: auto;
 }
 
-.project-item[b-la45odhp62] {
-    width: 400px;
-    margin: 15px;
-    background-color: rgb(26, 26, 26);
-    border-radius: 25px;
-    transition: all 0.2s;
+.title[b-la45odhp62] {
+    font-size: 48px;
 }
 
-.project-item:hover[b-la45odhp62] {
-    transform: scale(1.05);
+.chapter[b-la45odhp62] {
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    margin: 100px 0px 100px 0px;
 }
 
-.project-header[b-la45odhp62] {
-    height: 250px;
-    position: relative;
-    justify-content: center;
+.header-flex[b-la45odhp62] {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
     align-items: center;
-    margin-bottom: 5px;
-    border-radius: 25px 25px 0px 0px;
+    margin: 30px;
+    max-width: 1920px;
+    margin: auto;
+    margin-bottom: 0px;
+}
+/* /Shared/Main/ProjectToggle.razor.rz.scp.css */
+/*By JaydipPrajapati1910*/
+
+.toggle-button-cover[b-moklkcyvji] {
+    display: table-cell;
+    position: relative;
+    width: 150px;
+    height: 140px;
+    box-sizing: border-box;
+}
+
+.button-cover[b-moklkcyvji] {
+    height: 100px;
+    margin: 20px;
+    background-color: #fff;
+    box-shadow: 0 10px 20px -8px #c5d6d6;
+    border-radius: 4px;
+}
+
+.button-cover[b-moklkcyvji]:before {
+    counter-increment: button-counter;
+    content: counter(button-counter);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #d7e3e3;
+    font-size: 12px;
+    line-height: 1;
+    padding: 5px;
+}
+
+.button-cover[b-moklkcyvji],
+.knobs[b-moklkcyvji],
+.layer[b-moklkcyvji] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.button[b-moklkcyvji] {
+    position: relative;
+    top: 50%;
+    width: 74px;
+    height: 36px;
+    margin: -20px auto 0 auto;
     overflow: hidden;
 }
 
-.project-img[b-la45odhp62] {
-    display: block;
-    position: absolute;
-    left: 50%;
-    min-width: 100%;
-    height: 100%;
-    transform: translateX(-50%);
-}
-
-.project-title[b-la45odhp62] {
-    position: absolute;
-    bottom: 0;
+.checkbox[b-moklkcyvji] {
+    position: relative;
     width: 100%;
-    background: rgba(0, 0, 0, 0.85);
-    font-size: 24px;
-    padding: 15px 0 15px 0;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
 }
 
-.project-info[b-la45odhp62] {
-    font-size: 20px;
-    padding: 15px;
+.knobs[b-moklkcyvji] {
+    z-index: 2;
 }
 
-.project-description[b-la45odhp62] {
-    margin-bottom: 20px;
+.layer[b-moklkcyvji] {
+    width: 100%;
+    background-color: #ebf7fc;
+    transition: 0.3s ease all;
+    z-index: 1;
 }
 
-.project-list[b-la45odhp62] {
-    text-align: left;
+.button.r[b-moklkcyvji],
+.button.r .layer[b-moklkcyvji] {
+    border-radius: 100px;
 }
 
-.project-list-key[b-la45odhp62] {
-    margin: 5px 0px 5px 0px;
+#button-3 .knobs[b-moklkcyvji]:before {
+    content: "Split";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 20px;
+    height: 10px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    padding: 9px 4px;
+    background-color: #000000;
+    border-radius: 50%;
+    transition: 0.3s ease all, left 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15);
 }
 
-.project-utility[b-la45odhp62] {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: space-between;
-    padding: 7px 12px 12px 12px;
+#button-3 .checkbox:active + .knobs[b-moklkcyvji]:before {
+    width: 46px;
+    border-radius: 100px;
 }
 
-.project-utility-item[b-la45odhp62] {
-    padding: 5px 15px 5px 15px;
-    margin: 5px 5px 0px 5px;
-    border-radius: 5px;
-    background-color: rgb(45, 45, 45)
+#button-3 .checkbox:checked:active + .knobs[b-moklkcyvji]:before {
+    margin-left: -26px;
+}
+
+#button-3 .checkbox:checked + .knobs[b-moklkcyvji]:before {
+    content: "All";
+    left: 42px;
+    color: #000000;
+    background-color: #ffffff;
+}
+
+#button-3 .checkbox:checked ~ .layer[b-moklkcyvji] {
+    background-color: rgb(45, 45, 45);
 }
 /* /Shared/Main/VolumeSlider.razor.rz.scp.css */
 .volume-container[b-kw0r4rkiae] {
