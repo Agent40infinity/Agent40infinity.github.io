@@ -5,13 +5,43 @@
       "icon": "../Resources/SVGs/Company.svg",
       "list": [
         {
+          "project": "Hytale Entity Duplicator",
+          "location": "Indie",
+          "date": "February 2026 - Ongoing",
+          "logo": "../Resources/Database/HED_Logo.jpg",
+          "description": "Fiscally sponsored by HytaleModding Grant Program",
+          "columns": false,
+          "selected": true,
+          "details": [
+            "Official sponsored with HytaleModding for tool development.",
+            "Allows modders aims to eliminate modding busy-work by duplicating all assets referenced within a original asset.",
+            "Extents upon the asset editor provided by Hytale and improves the functionality of asset creation.",
+            "Provides vauable resources that allows for the focus of creative processes such as programming, modelling, and designing."
+          ]
+        },
+        {
+          "project": "Full-Stack Web Developer",
+          "location": "JNMechanical",
+          "date": "September 2025 - January 2026",
+          "logo": "../Resources/Database/JNMechanical_Logo.jpg",
+          "description": "JN Mechanical - NSW, Australia",
+          "columns": false,
+          "details": [
+            "Worked in a team of 20+ including programmers, designers, artists, engineers, and admin.",
+            "Collaborated with clients to design and implement core gameplay features and resolve bugs.",
+            "Minimized user blunder by providing operators with tools for monitoring user training progress.",
+            "Lead the development of automated gameplay unit testing to eliminate redundancies within development and quality assurance.",
+            "Reconstructed multi-platform camera system into a modular perspective system that greatly improved operator accessibility and user experience.",
+            "Maintained Asset Bundles used for cross platform data sharing, allowing for optimised performance and reduced customer frustration."
+          ]
+        },
+        {
           "project": "Game Developer & Software Engineer",
           "location": "Red Cartel",
           "date": "August 2024 - March 2025",
           "logo": "../Resources/Database/RedCartel_Logo.jpg",
           "description": "Red Cartel, xReality Group - NSW, Australia",
           "columns": false,
-          "selected": true,
           "details": [
             "Worked in a team of 20+ including programmers, designers, artists, engineers, and admin.",
             "Collaborated with clients to design and implement core gameplay features and resolve bugs.",
