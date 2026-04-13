@@ -7,7 +7,7 @@
         {
           "project": "Hytale Entity Duplicator",
           "location": "Indie",
-          "date": "February 2026 - Ongoing",
+          "date": "February 2026 - Present",
           "logo": "../Resources/Database/HED_Logo.jpg",
           "description": "Fiscally sponsored by HytaleModding Grant Program",
           "columns": false,
@@ -27,12 +27,6 @@
           "description": "JN Mechanical - NSW, Australia",
           "columns": false,
           "details": [
-            "Worked in a team of 20+ including programmers, designers, artists, engineers, and admin.",
-            "Collaborated with clients to design and implement core gameplay features and resolve bugs.",
-            "Minimized user blunder by providing operators with tools for monitoring user training progress.",
-            "Lead the development of automated gameplay unit testing to eliminate redundancies within development and quality assurance.",
-            "Reconstructed multi-platform camera system into a modular perspective system that greatly improved operator accessibility and user experience.",
-            "Maintained Asset Bundles used for cross platform data sharing, allowing for optimised performance and reduced customer frustration."
           ]
         },
         {
@@ -156,9 +150,19 @@
       "icon": "../Resources/SVGs/Profile.svg",
       "list": [
         {
+          "project": "Project Heart & Soul",
+          "location": "",
+          "date": "March 2025 - HED_Logo.jpg",
+          "logo": "",
+          "description": "",
+          "columns": false,
+          "details": [
+          ]
+        },
+        {
           "project": "Dark Light",
           "location": "",
-          "date": "July 2019 - Present",
+          "date": "July 2019 - On Hold",
           "logo": "",
           "description": "2D metroidvania inspirated by Hollow Knight and the Soulsbourne Series. Paused development while at Univeristy.",
           "columns": false,
