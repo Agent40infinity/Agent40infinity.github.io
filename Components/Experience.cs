@@ -4,6 +4,7 @@
     {
         public string project { get; set; } = "";
         public string location { get; set; } = "";
+        public string link { get; set; } = "";
         public string date { get; set; } = "";
         public string logo { get; set; } = "";
         public string description { get; set; } = "";

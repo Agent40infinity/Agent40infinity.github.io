@@ -7,6 +7,7 @@
         {
           "project": "Hytale Entity Duplicator",
           "location": "Indie",
+          "link": "Hytale Crop Duplicator",
           "date": "February 2026 - Present",
           "logo": "../Resources/Database/HED_Logo.jpg",
           "description": "Fiscally sponsored by HytaleModding Grant Program",
@@ -22,6 +23,7 @@
         {
           "project": "Full-Stack Web Developer",
           "location": "JNMechanical",
+          "link": "JNMechanical",
           "date": "September 2025 - January 2026",
           "logo": "../Resources/Database/JNMechanical_Logo.jpg",
           "description": "JN Mechanical - NSW, Australia",
@@ -32,6 +34,7 @@
         {
           "project": "Game Developer & Software Engineer",
           "location": "Red Cartel",
+          "link": "Operator",
           "date": "August 2024 - March 2025",
           "logo": "../Resources/Database/RedCartel_Logo.jpg",
           "description": "Red Cartel, xReality Group - NSW, Australia",
@@ -48,6 +51,7 @@
         {
           "project": "Game Developer",
           "location": "Powercor",
+          "link": "Varsity",
           "date": "April 2023 - July 2024",
           "logo": "../Resources/Database/Varsity_Logo.jpg",
           "description": "Powercor Australia - Victoria, Australia",
@@ -65,6 +69,7 @@
         {
           "project": "Jr Game Developer",
           "location": "Powercor",
+          "link": "Varsity",
           "date": "Feburary 2023 - April 2023",
           "description": "Powercor Australia - Victoria, Australia",
           "columns": false,
@@ -79,6 +84,7 @@
         {
           "project": "ScriptableObject Editor",
           "location": "Indie",
+          "link": "Scriptable Object Editor",
           "date": "July 2022 - December 2022",
           "logo": "../Resources/Database/SOE_Logo.jpg",
           "description": "An object management editor tool published on the Unity Asset Store.",
@@ -103,6 +109,7 @@
         {
           "project": "Summit - Lead Programmer",
           "location": "MQU",
+          "link": "Summit",
           "date": "July 2022 - November 2022",
           "logo": "../Resources/Database/Summit.jpg",
           "description": "Student project with 5 team members, 3 programmers. 3D third person rogue-like made in Unity. 410+ personal hours dedicated.",
@@ -125,6 +132,7 @@
         {
           "project": "CQU Statistics Project - Lead Programmer",
           "location": "MQU",
+          "link": "Internship Program",
           "date": "Feburary 2022 - June 2022",
           "logo": "../Resources/Database/CQU.jpg",
           "description": "Student project with 5 team members, 1 programmers. Gamification visual novel made in Unity.",
@@ -152,6 +160,7 @@
         {
           "project": "Project Heart & Soul",
           "location": "",
+          "link": "Project Heart & Soul",
           "date": "March 2025 - HED_Logo.jpg",
           "logo": "",
           "description": "",
@@ -162,6 +171,7 @@
         {
           "project": "Dark Light",
           "location": "",
+          "link": "Dark Light",
           "date": "July 2019 - On Hold",
           "logo": "",
           "description": "2D metroidvania inspirated by Hollow Knight and the Soulsbourne Series. Paused development while at Univeristy.",

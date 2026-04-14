@@ -123,6 +123,10 @@
 }
 
 <style>
+    body {
+        overflow-y: visible;
+    }
+
     .header-bar {
         padding: 10px 30px 10px 30px;
         background-color: rgb(26, 26, 26);
@@ -207,7 +211,7 @@
         width: auto;
     }
 
-    a:hover {
+    a:hover:not(.project-item) {
         filter: invert(30%) sepia(3%) saturate(25%) hue-rotate(332deg) brightness(89%) contrast(97%);
     }
 

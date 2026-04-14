@@ -1,6 +1,9 @@
-﻿@foreach (var experience in Data.Where(x => !registered.Contains(x)))
+﻿@inject IJSRuntime js
+@inject NavigationManager NavManager
+
+@foreach (var experience in Data.Where(x => !registered.Contains(x)))
 {
-    <div class="project-item @(experience.selected ? "selected" : "")">
+    <a class="project-item @(experience.selected ? "selected" : "")" @onclick="@(() => Navigation.NavigateTo(NavManager, js, "/projects/" + experience.link))">
         @if (experience.logo != "")
         {
             <img class="bar-pfp" src="@experience.logo" alt="@(experience.project) logo">
@@ -43,7 +46,7 @@
                 </div>
             }
         </div>
-    </div>
+    </a>
 }
 
 @code {
