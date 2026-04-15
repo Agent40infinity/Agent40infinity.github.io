@@ -912,3 +912,37 @@ input[type=range].styled-slider.slider-progress:active[b-kw0r4rkiae]::-ms-fill-l
         margin: 0 30px 20px 30px;
     }
 }
+/* /Shared/Resume/Legend.razor.rz.scp.css */
+.skill-legend[b-hadh2ik5iz] {
+    min-width: 170px;
+    width: 13%;
+    max-width: 205px;
+    margin: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 5px;
+    text-align: left;
+    border: solid 2px white;
+    border-radius: 20px;
+}
+
+.legend-item[b-hadh2ik5iz] {
+    padding: 2px 5px 2px 5px;
+    margin: 5px 4px 5px 4px;
+    border-radius: 8px;
+    background-color: rgb(45, 45, 45);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.legend-item-icon[b-hadh2ik5iz] {
+    height: 25px;
+    width: 25px;
+    margin-left: 2px;
+    transform: translateY(-1px);
+}
+
+.legend-item-name[b-hadh2ik5iz] {
+    font-size: 20px;
+}

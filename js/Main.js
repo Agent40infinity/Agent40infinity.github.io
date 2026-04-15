@@ -22,7 +22,6 @@ $(document).ready(function()
             break;
     }
 
-    // I can't remember what this does for the life of me.
     $(".arrow").on("click", function() {
         element = 0;
         scrollElement = "";
