@@ -14,7 +14,7 @@
           "columns": false,
           "selected": true,
           "details": [
-            "Official sponsored with HytaleModding for tool development.",
+            "Official sponsored by HytaleModding Grant Program for open-sourced Hytale tool development.",
             "Allows modders aims to eliminate modding busy-work by duplicating all assets referenced within a original asset.",
             "Extents upon the asset editor provided by Hytale and improves the functionality of asset creation.",
             "Provides vauable resources that allows for the focus of creative processes such as programming, modelling, and designing."
@@ -29,6 +29,11 @@
           "description": "JN Mechanical - NSW, Australia",
           "columns": false,
           "details": [
+            "Solely designed and developed both front-end and back-end of the JN Mobile Mechanics business page under contract.",
+            "Built from scratch Blazor WASM front-end designed for easy customer readability and developer future maintainability.",
+            "Utilises Github Actions for CI/CD and Cloudflare Workers for automatic publication and update handling.",
+            "Uses Cloudflare Worker's serverless backend for improved user security with API handling.",
+            "Handles SMTP requests for easy customer communication by utilising a custom template and security layer."
           ]
         },
         {
@@ -161,11 +166,16 @@
           "project": "Project Heart & Soul",
           "location": "",
           "link": "Project Heart & Soul",
-          "date": "March 2025 - HED_Logo.jpg",
+          "date": "March 2025 - Present",
           "logo": "",
-          "description": "",
+          "description": "Collection of Pokemon systems and tools designed to create an Engine within Unity.",
           "columns": false,
           "details": [
+            "Built to give the Pokemon fanbase the ability to easily create their own Pokemon titles within the Unity game engine.",
+            "Reverse engineered systems and mechanics ripped to be improved with OOP in the .NET framework.",
+            "Designed with the purpose of creating an engine like environment for Unity developers to easily create their own Pokemon titles.",
+            "Custom modular monster, battle, and capture system designed to be modified by the user in anyway.",
+            "Full overworld mechanics including input buffering and custom command pattern event handling."
           ]
         },
         {
