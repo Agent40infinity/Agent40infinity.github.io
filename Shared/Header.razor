@@ -26,8 +26,12 @@
     // Makes the header / navigation banner transparent.
     $(window).scroll(function () {
         var screenTop = $(window).scrollTop();
+        var screenWidth = window.innerWidth;
 
-        $('header').css(screenTop >= headerAnimateDist ? {"background-color": "rgba(0, 0, 0, 0.7)", "transition": "0.5s"} : {"background-color": "rgba(0, 0, 0, 1)", "transition": "0.5s"});
+        if (screenWidth > 700)
+        {
+            $('header').css(screenTop >= headerAnimateDist ? {"background-color": "rgba(0, 0, 0, 0.7)", "transition": "0.5s"} : {"background-color": "rgba(0, 0, 0, 1)", "transition": "0.5s"});
+        }
     });
 </script>
 

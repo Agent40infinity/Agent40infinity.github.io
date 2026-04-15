@@ -10,7 +10,7 @@
                 <img class="bar-pfp" src="../Resources/pfp.jpg" alt="Me">
                 <div>
                     <p class="bar-name">Aiden Nathan</p>
-                    <p class="bar-sub">Game Programmer & Designer</p>
+                    <p class="bar-sub">Game Developer & Software Engineer</p>
                 </div>
             </div>
             <div class="bar-info bar-item">
@@ -75,7 +75,7 @@
     <footer>
         <section class="copyright">
             <p>Copyright © 2025 by Aiden Nathan | All images, logos and names are used with permission.</p>
-            <p>Portfolio & Resume made with Blazor. Version 1.5</p>
+            <p>Portfolio & Resume made with Blazor. Version 1.6.0</p>
         </section>
     </footer>
 </body>
@@ -123,6 +123,10 @@
 }
 
 <style>
+    body {
+        overflow-y: visible;
+    }
+
     .header-bar {
         padding: 10px 30px 10px 30px;
         background-color: rgb(26, 26, 26);
@@ -207,7 +211,7 @@
         width: auto;
     }
 
-    a:hover {
+    a:hover:not(.project-item) {
         filter: invert(30%) sepia(3%) saturate(25%) hue-rotate(332deg) brightness(89%) contrast(97%);
     }
 
