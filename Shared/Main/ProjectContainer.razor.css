@@ -20,11 +20,25 @@
 
 .header-flex {
     display: flex;
-    flex-direction: column;
-    justify-content: end;
+    justify-content: space-between;
     align-items: center;
     margin: 30px;
     max-width: 1920px;
     margin: auto;
     margin-bottom: 0px;
+}
+
+.flex-holder {
+    width: 150px;
+}
+
+@media (max-width: 865px) {
+    .header-flex {
+        flex-direction: column;
+        justify-content: end;
+    }
+
+    .flex-holder {
+        display: none;
+    }
 }
