@@ -475,13 +475,27 @@ header hr[b-cerw4wlxbw] {
 
 .header-flex[b-la45odhp62] {
     display: flex;
-    flex-direction: column;
-    justify-content: end;
+    justify-content: space-between;
     align-items: center;
     margin: 30px;
     max-width: 1920px;
     margin: auto;
     margin-bottom: 0px;
+}
+
+.flex-holder[b-la45odhp62] {
+    width: 150px;
+}
+
+@media (max-width: 865px) {
+    .header-flex[b-la45odhp62] {
+        flex-direction: column;
+        justify-content: end;
+    }
+
+    .flex-holder[b-la45odhp62] {
+        display: none;
+    }
 }
 /* /Shared/Main/ProjectToggle.razor.rz.scp.css */
 /*By JaydipPrajapati1910*/

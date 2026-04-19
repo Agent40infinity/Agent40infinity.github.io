@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "aiden.fyi",
   "resources": {
-    "hash": "sha256-U604RtoaY2Galib/6/jYqkRXCmwqg8BFAZrBgUl/XDk=",
+    "hash": "sha256-iZbefFxdoxEbFYyOaBDo+PkkcTpfLL8bQpBF34wXarI=",
     "jsModuleNative": {
       "dotnet.native.8.0.26.yqyyyer2nf.js": "sha256-nElGk+CZFyq0PbPm4JU8avD6lER7x9Z1C54BK7qY12Q="
     },
@@ -17,7 +17,7 @@
       "icudt_no_CJK.dat": "sha256-L7sV7NEYP37/Qr2FPCePo5cJqRgTXRwGHuwF5Q+0Nfs="
     },
     "assembly": {
-      "aiden.fyi.wasm": "sha256-x1Ve2X1ABbXSKHaHvyQb2/cu4UZiEiMM+NhhKqduYR4=",
+      "aiden.fyi.wasm": "sha256-atOSAxk9raj3ELCCEbOr9I8oFXZBvsmYuul/58dtTr4=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-ZPkwi0zmINabwrT+6Hm4AtIkAtuIJOHsPlbfqjUoTkc=",
       "Microsoft.AspNetCore.Components.Web.wasm": "sha256-o3dUFaYZ86Ri9/f+gxNOJf4LxhqxORvIZM29feN1GHk=",
       "Microsoft.AspNetCore.Components.WebAssembly.wasm": "sha256-1/q8HCnkfx2cBfBoL7rb6O3Y7KIh1kZ4j9xG3A72XlU=",
