@@ -477,14 +477,14 @@ header hr[b-cerw4wlxbw] {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 30px;
-    max-width: 1920px;
-    margin: auto;
+    margin: 0px;
+    width: 100%;
     margin-bottom: 0px;
 }
 
 .flex-holder[b-la45odhp62] {
     width: 150px;
+    height: 140px;
 }
 
 @media (max-width: 865px) {
